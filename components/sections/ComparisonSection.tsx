@@ -95,7 +95,7 @@ export function ComparisonSection() {
             <motion.div
               key={col.id}
               variants={fadeUp}
-              className={`${col.borderClass} ${col.bgClass} p-6`}
+              className={`${col.borderClass} ${col.bgClass} p-6 ${col.id === 'igc' ? 'order-first md:order-none' : ''}`}
             >
               {/* Column label */}
               <p

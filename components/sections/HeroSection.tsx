@@ -154,11 +154,11 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.7, ease: [...ease] }}
-          className="w-full mt-20 pt-8 border-t border-[rgba(242,237,228,0.08)] grid grid-cols-3 gap-6"
+          className="w-full mt-20 pt-8 border-t border-[rgba(242,237,228,0.08)] grid grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-6 divide-y divide-[rgba(242,237,228,0.06)] sm:divide-y-0"
           aria-hidden="true"
         >
           {metrics.map((metric) => (
-            <div key={metric.label} className="flex flex-col items-center gap-1">
+            <div key={metric.label} className="flex flex-col items-center gap-1 py-5 sm:py-0">
               <div className="flex items-baseline gap-1.5 justify-center">
                 <span className="font-display text-[1.75rem] leading-tight text-[#F2EDE4]">
                   {metric.value}

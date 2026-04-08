@@ -101,7 +101,7 @@ export function TrustSection() {
             </motion.div>
           ))}
 
-          <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#2D2A27]">
+          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#2D2A27]">
             <div className="border-l-2 border-[#C9922A]/30 pl-6">
               <Button href="/diagnostic" variant="primary" size="md">
                 Book a Diagnostic

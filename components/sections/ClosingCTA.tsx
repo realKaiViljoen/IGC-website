@@ -10,7 +10,7 @@ export function ClosingCTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#080808] px-6 md:px-10 lg:px-16 py-32 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center bg-[#080808] px-6 md:px-10 lg:px-16 py-20 md:py-32 overflow-hidden">
       {/* Large decorative background text */}
       <span
         className="absolute bottom-0 left-0 right-0 font-display text-[#F2EDE4]/[0.04] select-none pointer-events-none text-center leading-none"

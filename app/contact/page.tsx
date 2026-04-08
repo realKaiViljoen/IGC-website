@@ -39,7 +39,7 @@ export default function ContactPage() {
               name="name"
               type="text"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200"
+              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="Full name"
             />
           </div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
               name="clinic"
               type="text"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200"
+              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="Clinic or practice name"
             />
           </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               name="email"
               type="email"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200"
+              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="you@clinic.co.za"
             />
           </div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
               id="phone"
               name="phone"
               type="tel"
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200"
+              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="+27 __ ___ ____"
             />
           </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
               id="challenge"
               name="challenge"
               rows={4}
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 resize-none"
+              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 resize-none appearance-none rounded-none"
               placeholder="Be specific. It helps us prepare."
             />
           </div>

@@ -76,7 +76,7 @@ export function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-start justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-1 focus-visible:ring-offset-[#111110]"
+                className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-1 focus-visible:ring-offset-[#111110]"
                 aria-expanded={openIndex === index}
               >
                 <span className={`font-sans font-medium text-xl leading-snug transition-colors duration-300 ${openIndex === index ? 'text-[#F2EDE4]' : 'text-[#C5C0BB]'}`}>

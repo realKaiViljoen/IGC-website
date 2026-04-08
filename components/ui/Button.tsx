@@ -58,9 +58,9 @@ const variants: Record<Variant, string> = {
 }
 
 const sizes: Record<Size, string> = {
-  sm: 'text-[0.75rem] px-5 py-2.5',
-  md: 'text-[0.8125rem] px-7 py-3.5',
-  lg: 'text-[0.875rem] px-10 py-[1.0625rem]',
+  sm: 'text-[0.75rem] px-5 py-2.5 min-h-[44px]',
+  md: 'text-[0.8125rem] px-7 py-3.5 min-h-[44px]',
+  lg: 'text-[0.875rem] px-10 py-[1.0625rem] min-h-[44px]',
 }
 
 // Inner content for primary buttons: text + animated arrow
