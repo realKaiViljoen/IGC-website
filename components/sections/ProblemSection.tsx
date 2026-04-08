@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { stagger, fadeUp } from '@/lib/motion'
 
@@ -32,6 +32,11 @@ export function ProblemSection() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [open, setOpen] = useState<string | null>(null)
+  const [canHover, setCanHover] = useState(false)
+
+  useEffect(() => {
+    setCanHover(window.matchMedia('(hover: hover) and (pointer: fine)').matches)
+  }, [])
 
   return (
     <SectionWrapper className="bg-[#111110]">
@@ -88,7 +93,9 @@ export function ProblemSection() {
               key={item.number}
               variants={fadeUp}
               className="relative group border-t border-b border-[#2D2A27] py-7 cursor-pointer -mb-px"
-              onClick={() => setOpen(open === item.number ? null : item.number)}
+              onHoverStart={canHover ? () => setOpen(item.number) : undefined}
+              onHoverEnd={canHover ? () => setOpen(null) : undefined}
+              onClick={!canHover ? () => setOpen(open === item.number ? null : item.number) : undefined}
             >
               <div className="flex items-start gap-8 md:gap-12">
                 {/* Gold ordinal */}
