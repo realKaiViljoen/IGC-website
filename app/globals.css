@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Dark theme base ─────────────────────────────────────────────── */
+  --color-background:     #080808;
+  --color-surface:        #111110;
+  --color-surface-soft:   #0D0D0C;
+  --color-surface-raised: #1A1918;
+  --color-border:         #2D2A27;
+
+  /* ── Text hierarchy ──────────────────────────────────────────────── */
+  --color-text-primary:   #F2EDE4;
+  --color-text-secondary: #A09890;
+  --color-text-tertiary:  #6E6762;
+
+  /* ── Accent (restricted — see Gold Rule in DESIGN.md) ────────────── */
+  --color-gold:           #C9922A;
+  --color-gold-dim:       #7A5A1A;
+  --color-signal:         #1F4D3A;
+
+  /* ── Legacy aliases (keep for backward compat during migration) ───── */
+  --color-ink:            #080808;
+  --color-paper:          #F2EDE4;
+  --color-paper-dark:     #111110;
+  --color-muted:          #A09890;
+
+  /* ── Fonts ───────────────────────────────────────────────────────── */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans:    var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono:    var(--font-dm-mono), monospace;
+  --font-poppins: var(--font-poppins), system-ui, sans-serif;
+
+  /* ── Type scale ──────────────────────────────────────────────────── */
+  --text-display-2xl: clamp(6rem, 16vw, 16rem);
+  --text-display-xl: clamp(4rem, 9vw, 8rem);
+  --text-display-lg: clamp(2.75rem, 5.5vw, 5rem);
+  --text-display-md: clamp(1.875rem, 3.5vw, 3.25rem);
+  --text-display-sm: clamp(1.375rem, 2.2vw, 1.875rem);
+  --text-body-lg: 1.5rem;
+  --text-body-md: 1.25rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #080808;
+  color: #F2EDE4;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #C9922A;
+  color: #080808;
+}
+
+/* ── Gold micro-line utility ────────────────────────────────────────── */
+.gold-line {
+  display: block;
+  width: 3.5rem;
+  height: 2px;
+  background-color: rgba(201, 146, 42, 0.8);
+}
+
+/* ── Section label utility ──────────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #A09890;
+}
+
+/* ── Grain texture overlay ──────────────────────────────────────────── */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.075;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Section divider ────────────────────────────────────────────────── */
+.section-divide {
+  border-top: 1px solid rgba(242, 237, 228, 0.05);
+}
