@@ -48,7 +48,7 @@ export function UpcomingSection({ upcoming }: Props) {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="px-6 py-4 flex items-start gap-6 border-b border-[#1A1918] last:border-b-0 hover:bg-[#15140F] transition-colors duration-200"
+                className="px-6 py-5 flex items-start gap-6 border-b border-[#1A1918] last:border-b-0 hover:bg-[#15140F] transition-colors duration-200"
               >
                 {/* Date badge */}
                 <div className="flex-shrink-0 w-20 pt-0.5">

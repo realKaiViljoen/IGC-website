@@ -13,7 +13,7 @@ const navItems = [
 export function Sidebar() {
   const pathname = usePathname()
 
-  const [time, setTime] = useState("")
+  const [time, setTime] = useState("--:--")
 
   useEffect(() => {
     function tick() {
@@ -37,12 +37,8 @@ export function Sidebar() {
         <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-wider uppercase">
           Client Portal
         </span>
-        {time && (
-          <>
-            <span className="block text-[#857F74] text-xs font-mono mt-0.5 tabular-nums">{time}</span>
-            <span className="block text-[11px] font-mono text-[#6E6762] tracking-wider">SAST · Johannesburg</span>
-          </>
-        )}
+        <span className="block text-[#857F74] text-xs font-mono mt-0.5 tabular-nums">{time}</span>
+        <span className="block text-[11px] font-mono text-[#6E6762] tracking-wider">SAST · Johannesburg</span>
       </div>
 
       <nav className="flex-1 px-2 py-4 space-y-1">
