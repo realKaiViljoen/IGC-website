@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react"
 import { signOut } from "next-auth/react"
 
 const navItems = [
@@ -12,6 +13,23 @@ const navItems = [
 export function Sidebar() {
   const pathname = usePathname()
 
+  const [time, setTime] = useState("")
+
+  useEffect(() => {
+    function tick() {
+      setTime(
+        new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      )
+    }
+    tick()
+    const interval = setInterval(tick, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <aside className="w-52 flex-shrink-0 border-r border-[#242220] flex flex-col">
       <div className="px-5 py-5 border-b border-[#242220]">
@@ -19,6 +37,9 @@ export function Sidebar() {
         <span className="block text-[#4A4640] text-xs font-mono mt-0.5 tracking-wider uppercase">
           Client Portal
         </span>
+        {time && (
+          <span className="block text-[#4A4640] text-xs font-mono mt-0.5">{time}</span>
+        )}
       </div>
 
       <nav className="flex-1 px-2 py-4 space-y-0.5">
