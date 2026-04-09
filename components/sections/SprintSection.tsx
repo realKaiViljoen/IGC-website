@@ -21,7 +21,7 @@ function CountUp({
 }) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, amount: 0.1 })
 
   useEffect(() => {
     if (!inView) return

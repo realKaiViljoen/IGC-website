@@ -95,24 +95,64 @@ export function ComparisonSection() {
             <motion.div
               key={col.id}
               variants={fadeUp}
-              className={`${col.borderClass} ${col.bgClass} p-6 ${col.id === 'igc' ? 'order-first md:order-none' : ''}`}
+              className={`${col.borderClass} ${col.bgClass} p-6 ${
+                col.id === 'igc'
+                  ? 'order-first md:order-none mx-auto w-full md:mx-0 md:max-w-none max-w-sm relative'
+                  : ''
+              }`}
             >
+              {/* IGC "recommended" badge */}
+              {col.id === 'igc' && (
+                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#C9922A]/60 to-transparent md:hidden" aria-hidden="true" />
+              )}
+
               {/* Column label */}
-              <p
-                className="font-mono text-[11px] tracking-[0.14em] uppercase font-medium mb-6"
-                style={{ color: col.labelColor }}
-              >
-                {col.label}
-              </p>
+              <div className="flex items-center justify-between mb-6">
+                <p
+                  className="font-mono text-[11px] tracking-[0.14em] uppercase font-medium"
+                  style={{ color: col.labelColor }}
+                >
+                  {col.label}
+                </p>
+                {col.id === 'igc' && (
+                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-[#C9922A] border border-[#C9922A]/30 px-2 py-0.5 rounded-full">
+                    Recommended
+                  </span>
+                )}
+              </div>
 
               {/* Points */}
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-4">
                 {col.points.map((point) => (
-                  <li key={point} className="flex items-start gap-2.5">
-                    <span className="font-mono text-[#C5C0BB] text-[10px] mt-0.5 shrink-0">
-                      ·
-                    </span>
-                    <span className={`font-sans text-base ${col.pointColor} leading-snug`}>
+                  <li key={point} className="flex items-start gap-3">
+                    {col.id === 'igc' ? (
+                      <svg
+                        className="w-[14px] h-[14px] text-[#C9922A] shrink-0 mt-[3px]"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M2 7l3.5 3.5L12 3.5" />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-[14px] h-[14px] text-[#3D3A37] shrink-0 mt-[3px]"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M3 3l8 8M11 3l-8 8" />
+                      </svg>
+                    )}
+                    <span className={`font-sans text-[0.9375rem] ${col.pointColor} leading-snug`}>
                       {point}
                     </span>
                   </li>
