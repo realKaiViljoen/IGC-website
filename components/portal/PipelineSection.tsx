@@ -22,26 +22,35 @@ const STAGE_LABELS: Record<PipelineStage, string> = {
   placed: "Placed",
 }
 
-function StageBar({ currentStage }: { currentStage: PipelineStage }) {
-  const currentIndex = STAGES.indexOf(currentStage)
+function StageBar({ stage }: { stage: PipelineStage }) {
+  const currentIndex = STAGES.indexOf(stage)
+  const progressPercent = ((currentIndex + 1) / STAGES.length) * 100
+
+  const isLate = stage === "offer-extended" || stage === "offer-accepted"
+  const isPlaced = stage === "placed"
+
+  const fillGradient = isPlaced
+    ? "linear-gradient(90deg, #2A5A3A, #3D8B5E)"
+    : isLate
+    ? "linear-gradient(90deg, #7D5E1C, #CF9B2E)"
+    : "linear-gradient(90deg, #2A2825, #6E6762)"
+
   return (
-    <div className="flex gap-1.5 items-center">
-      {STAGES.map((stage, i) => (
-        <div key={stage} className="relative flex items-center justify-center">
-          {i === currentIndex && (
-            <span className="absolute w-3.5 h-3.5 rounded-full bg-[#CF9B2E] animate-ping opacity-40" />
-          )}
-          <div
-            className={`relative w-3.5 h-3.5 rounded-full transition-colors ${
-              i < currentIndex
-                ? "bg-[#857F74]"
-                : i === currentIndex
-                ? "bg-[#CF9B2E] shadow-[0_0_6px_2px_rgba(207,155,46,0.5),0_0_12px_4px_rgba(207,155,46,0.2)]"
-                : "bg-[#242220]"
-            }`}
-          />
+    <div className="flex-1 h-1.5 bg-[#1A1918] rounded-full overflow-visible relative">
+      {/* Fill */}
+      <div
+        className="h-full rounded-full transition-all duration-700 ease-out"
+        style={{ width: `${progressPercent}%`, background: fillGradient }}
+      />
+      {/* Pulsing head */}
+      {!isPlaced && (
+        <div
+          className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#CF9B2E] shadow-[0_0_6px_2px_rgba(207,155,46,0.5)]"
+          style={{ left: `calc(${progressPercent}% - 5px)` }}
+        >
+          <div className="absolute inset-0 rounded-full bg-[#CF9B2E] animate-ping opacity-40" />
         </div>
-      ))}
+      )}
     </div>
   )
 }
@@ -56,7 +65,19 @@ export function PipelineSection({ pipeline }: Props) {
   return (
     <div className="mx-8 bg-[#111110] border border-[#242220] rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
       <div className="px-6 py-5 border-b border-[#242220]">
-        <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Pipeline</h2>
+        <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Your Candidates</h2>
+      </div>
+      {/* Stage coordinate markers */}
+      <div className="px-6 py-2 flex items-center border-b border-[#1A1918]">
+        <div className="w-48 flex-shrink-0" />
+        <div className="flex-1 flex justify-between">
+          {STAGES.map((s) => (
+            <span key={s} className="text-[9px] font-mono uppercase tracking-widest text-[#3A3530]">
+              {STAGE_LABELS[s].slice(0, 3)}
+            </span>
+          ))}
+        </div>
+        <div className="w-10 flex-shrink-0" />
       </div>
       <motion.div
         variants={stagger}
@@ -64,24 +85,39 @@ export function PipelineSection({ pipeline }: Props) {
         animate="visible"
         className="divide-y divide-[#242220]"
       >
-        {pipeline.map((candidate) => (
-          <motion.div
-            key={candidate.id}
-            variants={fadeUp}
-            className="px-6 py-5 flex items-center gap-4 hover:bg-[#15140F] transition-colors duration-200"
-          >
-            <div className="flex-1 min-w-0">
-              <p className="text-base font-medium text-[#F2EDE4]">{candidate.name}</p>
-              {candidate.note && (
-                <p className="text-sm text-[#857F74] mt-1">{candidate.note}</p>
-              )}
-            </div>
-            <StageBar currentStage={candidate.stage} />
-            <span className="text-[#857F74] text-xs w-28 text-right flex-shrink-0">
-              {STAGE_LABELS[candidate.stage]}
-            </span>
-          </motion.div>
-        ))}
+        {pipeline.map((candidate) => {
+          const daysSince = Math.floor((Date.now() - new Date(candidate.lastUpdate).getTime()) / 86400000)
+          const urgencyBorder =
+            daysSince >= 8
+              ? "border-l-2 border-[#B84233]"
+              : daysSince >= 4
+              ? "border-l-2 border-[#CF9B2E]/50"
+              : ""
+
+          return (
+            <motion.div
+              key={candidate.id}
+              variants={fadeUp}
+              className={`px-6 py-5 flex items-center gap-4 hover:bg-[#15140F] transition-colors duration-200 ${urgencyBorder}`}
+            >
+              <div className="w-48 flex-shrink-0 min-w-0">
+                <p className="text-base font-medium text-[#F2EDE4] truncate">{candidate.name}</p>
+                {candidate.note && (
+                  <p className="text-sm text-[#857F74] mt-1 truncate">{candidate.note}</p>
+                )}
+              </div>
+              <StageBar stage={candidate.stage} />
+              <span className={`text-xs font-mono w-8 text-right flex-shrink-0 ${
+                daysSince >= 8 ? "text-[#B84233]" : daysSince >= 4 ? "text-[#CF9B2E]" : "text-[#3A3530]"
+              }`}>
+                {daysSince}d
+              </span>
+              <span className="text-[#857F74] text-xs w-28 text-right flex-shrink-0">
+                {STAGE_LABELS[candidate.stage]}
+              </span>
+            </motion.div>
+          )
+        })}
       </motion.div>
     </div>
   )
