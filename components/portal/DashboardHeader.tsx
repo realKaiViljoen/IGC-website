@@ -36,7 +36,7 @@ export function DashboardHeader({ client, analytics, greeting }: Props) {
     <div className="border-b border-[#242220] px-8 py-8 flex items-start justify-between gap-6">
       <div>
         <p className="font-playfair italic text-4xl text-[#F2EDE4] mb-3">
-          {greeting}, {client.contactName}.
+          {greeting}, {client.contactName}
         </p>
         <h1 className="font-playfair text-xl text-[#F2EDE4] font-semibold">{client.company}</h1>
         <p className="text-[#857F74] text-base mt-1">{client.engagement.title}</p>
