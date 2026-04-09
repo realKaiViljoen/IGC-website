@@ -14,8 +14,8 @@
   --color-text-tertiary:  #6E6762;
 
   /* ── Accent (restricted — see Gold Rule in DESIGN.md) ────────────── */
-  --color-gold:           #C9922A;
-  --color-gold-dim:       #7A5A1A;
+  --color-gold:           #CF9B2E;
+  --color-gold-dim:       #7D5E1C;
   --color-signal:         #1F4D3A;
 
   /* ── Legacy aliases (keep for backward compat during migration) ───── */
@@ -58,7 +58,7 @@ body {
 }
 
 ::selection {
-  background-color: #C9922A;
+  background-color: #CF9B2E;
   color: #080808;
 }
 
@@ -67,7 +67,7 @@ body {
   display: block;
   width: 3.5rem;
   height: 2px;
-  background-color: rgba(201, 146, 42, 0.8);
+  background-color: rgba(207, 155, 46, 0.8);
 }
 
 /* ── Section label utility ──────────────────────────────────────────── */
@@ -95,4 +95,38 @@ body {
 /* ── Section divider ────────────────────────────────────────────────── */
 .section-divide {
   border-top: 1px solid rgba(242, 237, 228, 0.05);
+}
+
+/* ── Portal: glow-pulse keyframe ────────────────────────────────────── */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 6px 2px rgba(207, 155, 46, 0.5), 0 0 14px 4px rgba(207, 155, 46, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 3px 1px rgba(207, 155, 46, 0.3), 0 0 8px 2px rgba(207, 155, 46, 0.1);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* ── Portal surface system ──────────────────────────────────────────── */
+.portal-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 0 rgba(242, 237, 228, 0.03),
+    0 1px 3px 0 rgba(0, 0, 0, 0.5),
+    0 4px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.portal-glow-gold {
+  box-shadow:
+    0 0 6px 2px rgba(207, 155, 46, 0.5),
+    0 0 12px 4px rgba(207, 155, 46, 0.2);
+}
+
+.portal-glow-gold-subtle {
+  box-shadow: 0 0 4px 1px rgba(207, 155, 46, 0.4);
 }
