@@ -28,7 +28,7 @@ export function ActivityFeed({ activity }: Props) {
       >
         {sorted.map((item, i) => (
           <motion.div key={i} variants={fadeUp} className="px-6 py-5 flex items-start gap-6">
-            <span className="text-sm text-[#6E6762] font-mono flex-shrink-0 mt-0.5 w-24">
+            <span className="text-sm text-[#857F74] font-mono flex-shrink-0 mt-0.5 w-24">
               {item.date}
             </span>
             <p className={`text-base text-[#F2EDE4]${i === 0 ? " terminal-cursor" : ""}`}>{item.entry}</p>

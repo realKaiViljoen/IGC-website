@@ -33,7 +33,7 @@ export function CommitmentsSection({ commitments }: Props) {
 
           const circleClass = !c.met && daysUntilDue < 0
             ? "text-[#B84233] text-base"
-            : "text-[#4A4640] text-base"
+            : "text-[#6E6762] text-base"
 
           const dueDateEl = c.met ? null : daysUntilDue < 0 ? (
             <p className="text-[#B84233] font-mono text-sm mt-1">{Math.abs(daysUntilDue)}d overdue</p>

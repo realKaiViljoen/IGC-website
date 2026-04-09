@@ -53,8 +53,8 @@ export function DashboardHeader({ client, analytics, greeting }: Props) {
                 <span className="text-[#857F74]">Available</span>
               ) : (
                 <>
-                  <span className="text-[#4A4640]">Responds within 4h</span>
-                  <span className="text-[#3A3530]"> · within working hours</span>
+                  <span className="text-[#857F74]">Responds within 4h</span>
+                  <span className="text-[#6E6762]"> · within working hours</span>
                 </>
               )}
             </p>

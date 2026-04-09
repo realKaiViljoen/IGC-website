@@ -37,12 +37,7 @@ export function UpcomingSection({ upcoming }: Props) {
       <div className="bg-[#111110] border border-[#CF9B2E]/15 rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
         {/* Header */}
         <div className="px-6 py-5 border-b border-[#1E1C1A] bg-[rgba(207,155,46,0.02)]">
-          <div className="flex items-center justify-between">
-            <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Coming Up</h2>
-            <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#3A3530]">
-              Forward ops
-            </span>
-          </div>
+          <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Coming Up</h2>
         </div>
 
         {/* Items */}
@@ -57,14 +52,14 @@ export function UpcomingSection({ upcoming }: Props) {
               >
                 {/* Date badge */}
                 <div className="flex-shrink-0 w-20 pt-0.5">
-                  <span className={`text-sm font-mono font-medium ${urgent ? "text-[#CF9B2E]" : "text-[#6E6762]"}`}>
+                  <span className={`text-sm font-mono font-medium ${urgent ? "text-[#CF9B2E]" : "text-[#857F74]"}`}>
                     {label}
                   </span>
                 </div>
 
                 {/* Description */}
                 <div className="flex-1 flex items-center gap-2">
-                  <span className={`w-1 h-1 rounded-full flex-shrink-0 ${urgent ? "bg-[#CF9B2E] shadow-[0_0_4px_rgba(207,155,46,0.6)]" : "bg-[#3A3530]"}`} />
+                  <span className={`w-1 h-1 rounded-full flex-shrink-0 ${urgent ? "bg-[#CF9B2E] shadow-[0_0_4px_rgba(207,155,46,0.6)]" : "bg-[#4A4640]"}`} />
                   <p className="text-sm text-[#F2EDE4]">{item.description}</p>
                 </div>
               </motion.div>

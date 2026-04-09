@@ -72,7 +72,7 @@ export function PipelineSection({ pipeline }: Props) {
         <div className="w-48 flex-shrink-0" />
         <div className="flex-1 flex justify-between">
           {STAGES.map((s) => (
-            <span key={s} className="text-[9px] font-mono uppercase tracking-widest text-[#3A3530]">
+            <span key={s} className="text-[10px] font-mono uppercase tracking-widest text-[#4A4640]">
               {STAGE_LABELS[s].slice(0, 3)}
             </span>
           ))}
@@ -107,12 +107,12 @@ export function PipelineSection({ pipeline }: Props) {
                 )}
               </div>
               <StageBar stage={candidate.stage} />
-              <span className={`text-xs font-mono w-8 text-right flex-shrink-0 ${
-                daysSince >= 8 ? "text-[#B84233]" : daysSince >= 4 ? "text-[#CF9B2E]" : "text-[#3A3530]"
+              <span className={`text-sm font-mono w-10 text-right flex-shrink-0 ${
+                daysSince >= 8 ? "text-[#B84233]" : daysSince >= 4 ? "text-[#CF9B2E]" : "text-[#4A4640]"
               }`}>
                 {daysSince}d
               </span>
-              <span className="text-[#857F74] text-xs w-28 text-right flex-shrink-0">
+              <span className="text-[#857F74] text-sm w-32 text-right flex-shrink-0">
                 {STAGE_LABELS[candidate.stage]}
               </span>
             </motion.div>
