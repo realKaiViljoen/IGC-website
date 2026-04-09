@@ -26,7 +26,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-28 md:pt-20 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-32 overflow-hidden"
     >
       {/* ── Full-bleed precision grid ─────────────────────────── */}
       <motion.div
