@@ -18,6 +18,11 @@
   --color-gold-dim:       #7D5E1C;
   --color-signal:         #1F4D3A;
 
+  /* ── Signal level colors ─────────────────────────────────────────── */
+  --color-signal-nominal:  #3D8B5E;   /* muted sage -- all clear */
+  --color-signal-watch:    #CF9B2E;   /* gold -- attention needed */
+  --color-signal-critical: #B84233;   /* brick red -- action required */
+
   /* ── Legacy aliases (keep for backward compat during migration) ───── */
   --color-ink:            #080808;
   --color-paper:          #F2EDE4;
@@ -129,4 +134,66 @@ body {
 
 .portal-glow-gold-subtle {
   box-shadow: 0 0 4px 1px rgba(207, 155, 46, 0.4);
+}
+
+/* ── Portal: CRT scanline overlay ──────────────────────────────────── */
+.portal-scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(0, 0, 0, 0.025) 1px,
+    rgba(0, 0, 0, 0.025) 2px
+  );
+}
+
+/* ── Portal: ops grid (coordinate system feel) ──────────────────────── */
+.portal-grid {
+  background-image:
+    linear-gradient(rgba(207, 155, 46, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(207, 155, 46, 0.012) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Portal: terminal data cursor ──────────────────────────────────── */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 0.8em;
+  background: rgba(207, 155, 46, 0.5);
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: terminal-blink 1.2s step-end infinite;
+}
+
+/* ── Portal: signal number arrival ─────────────────────────────────── */
+@keyframes signal-arrive {
+  0%   { text-shadow: 0 0 24px rgba(207, 155, 46, 0.6), 0 0 48px rgba(207, 155, 46, 0.3); }
+  100% { text-shadow: 0 0 20px rgba(207, 155, 46, 0.08); }
+}
+
+.signal-arrived {
+  animation: signal-arrive 0.8s ease-out forwards;
+}
+
+/* ── Portal: breathing border ──────────────────────────────────────── */
+@keyframes border-breathe {
+  0%, 100% { border-color: rgba(207, 155, 46, 0.06); }
+  50%       { border-color: rgba(207, 155, 46, 0.14); }
+}
+
+.portal-breathe {
+  border: 1px solid rgba(207, 155, 46, 0.06);
+  animation: border-breathe 4s ease-in-out infinite;
 }
