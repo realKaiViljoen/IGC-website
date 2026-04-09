@@ -7,7 +7,7 @@ export const client: ClientData = {
   contactEmail: "sarah@aperture.com",
   role: "Practice Manager",
   engagement: {
-    title: "Senior Dentist — 2x Positions",
+    title: "Senior Dentist, 2 Positions",
     startDate: "2026-03-01",
     status: "active",
     consultant: "Viljoen",
@@ -59,7 +59,7 @@ export const client: ClientData = {
   activity: [
     {
       date: "2026-04-08",
-      entry: "Interview scheduled for Dr. Mensah — confirmed for 11 April.",
+      entry: "Interview scheduled: Dr. Mensah, 11 April.",
     },
     {
       date: "2026-04-07",
@@ -71,7 +71,7 @@ export const client: ClientData = {
     },
     {
       date: "2026-03-28",
-      entry: "Interview completed — Dr. Okafor. Positive feedback from clinic.",
+      entry: "Interview completed with Dr. Okafor. Strong feedback from the clinic.",
     },
     {
       date: "2026-03-14",
@@ -79,10 +79,10 @@ export const client: ClientData = {
     },
   ],
   upcoming: [
-    { date: "2026-04-11", description: "Dr. Mensah — second interview with department head" },
+    { date: "2026-04-11", description: "Dr. Mensah: second interview, department head" },
     { date: "2026-04-16", description: "Week 6 pipeline review & client briefing" },
-    { date: "2026-04-25", description: "Dr. Ferreira — offer finalisation call" },
-    { date: "2026-05-01", description: "Dr. Okafor — confirmed start date" },
+    { date: "2026-04-25", description: "Dr. Ferreira: offer finalisation call" },
+    { date: "2026-05-01", description: "Dr. Okafor: confirmed start date" },
   ],
   nextUpdate: {
     date: "2026-04-16",
