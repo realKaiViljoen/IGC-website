@@ -8,6 +8,10 @@ interface Props {
   commitments: ClientData["commitments"]
 }
 
+function formatDueDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+}
+
 export function CommitmentsSection({ commitments }: Props) {
   if (commitments.length === 0) return null
 
@@ -19,7 +23,8 @@ export function CommitmentsSection({ commitments }: Props) {
       <motion.div
         variants={stagger}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         className="divide-y divide-[#242220]"
       >
         {commitments.map((c, i) => {
@@ -29,7 +34,7 @@ export function CommitmentsSection({ commitments }: Props) {
             ? "border-l-2 border-[#B84233]"
             : !c.met && daysUntilDue <= 3
             ? "border-l-2 border-[#CF9B2E]/50"
-            : ""
+            : "border-l-2 border-transparent"
 
           const circleClass = !c.met && daysUntilDue < 0
             ? "text-[#B84233] text-base"
@@ -40,7 +45,7 @@ export function CommitmentsSection({ commitments }: Props) {
           ) : daysUntilDue <= 3 ? (
             <p className="text-[#CF9B2E] font-mono text-sm mt-1">due in {daysUntilDue}d</p>
           ) : (
-            <p className="text-sm text-[#857F74] mt-1">Due {c.due}</p>
+            <p className="text-sm text-[#857F74] font-mono mt-1">Due {formatDueDate(c.due)}</p>
           )
 
           return (
@@ -61,7 +66,7 @@ export function CommitmentsSection({ commitments }: Props) {
               <div className="flex-1 min-w-0">
                 <p className="text-base text-[#F2EDE4]">{c.promise}</p>
                 {c.met ? (
-                  <p className="text-sm text-[#857F74] mt-1">Due {c.due}</p>
+                  <p className="text-sm text-[#6E6762] font-mono mt-1">Delivered {formatDueDate(c.due)}</p>
                 ) : dueDateEl}
               </div>
             </motion.div>
