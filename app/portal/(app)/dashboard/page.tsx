@@ -8,6 +8,14 @@ import { PipelineSection } from "@/components/portal/PipelineSection"
 import { CommitmentsSection } from "@/components/portal/CommitmentsSection"
 import { ActivityFeed } from "@/components/portal/ActivityFeed"
 
+function getGreeting(): string {
+  const hour = new Date().getHours()
+  if (hour < 12) return "Good morning"
+  if (hour < 17) return "Good afternoon"
+  if (hour < 21) return "Good evening"
+  return "Good night"
+}
+
 export default async function DashboardPage() {
   const session = await auth()
   if (!session?.user?.id) redirect("/portal")
@@ -16,10 +24,11 @@ export default async function DashboardPage() {
   if (!client) redirect("/portal")
 
   const analytics = computeAnalytics(client)
+  const greeting = getGreeting()
 
   return (
     <div className="pb-12">
-      <DashboardHeader client={client} analytics={analytics} />
+      <DashboardHeader client={client} analytics={analytics} greeting={greeting} />
       <ConfidenceSignals analytics={analytics} />
       <div className="space-y-4">
         <PipelineSection pipeline={client.pipeline} />
