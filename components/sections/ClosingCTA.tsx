@@ -62,10 +62,10 @@ export function ClosingCTA() {
 
         <motion.div variants={fadeUp} className="flex flex-col items-start gap-5">
           <Button href="/diagnostic" variant="primary" size="lg">
-            Book Your BD Audit
+            Claim Your Q2 Slot
           </Button>
           <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#C5C0BB] font-medium">
-            20-minute call. We tell you honestly what we find.
+            20-minute BD audit. Free. We tell you honestly what we find.
           </p>
         </motion.div>
       </motion.div>

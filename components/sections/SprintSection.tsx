@@ -191,6 +191,22 @@ export function SprintSection() {
           ))}
         </motion.div>
 
+        {/* Guarantee block */}
+        <motion.div
+          variants={fadeUp}
+          className="mb-10 p-6 border border-[#C9922A]/20 bg-[#C9922A]/[0.04] rounded-sm"
+        >
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C9922A] font-medium mb-2">
+            The guarantee
+          </p>
+          <p className="font-sans text-body-lg text-[#F2EDE4] font-normal leading-snug mb-1">
+            5 qualified client conversations in your first 30 days.
+          </p>
+          <p className="font-sans text-body-md text-[#C5C0BB] font-normal">
+            If we miss that mark, we keep running the system at no charge until we deliver. Unconditional.
+          </p>
+        </motion.div>
+
         {/* CTA */}
         <motion.div variants={fadeUp}>
           <Button href="/diagnostic" variant="primary">

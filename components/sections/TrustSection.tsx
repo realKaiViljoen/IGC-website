@@ -102,9 +102,13 @@ export function TrustSection() {
           ))}
 
           <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#2D2A27]">
+            {/* Social proof anchor */}
+            <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#857F74] mb-8">
+              Working with recruitment agencies across Johannesburg, Cape Town, and Durban
+            </p>
             <div className="border-l-2 border-[#C9922A]/30 pl-6">
               <Button href="/diagnostic" variant="primary" size="md">
-                Book a Diagnostic
+                Book a BD Audit
               </Button>
             </div>
           </motion.div>

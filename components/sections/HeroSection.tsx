@@ -8,9 +8,9 @@ import { fadeUp, fadeIn, lineReveal } from '@/lib/motion'
 const ease = [0.16, 1, 0.3, 1] as const
 
 const metrics = [
-  { value: '5+', unit: 'Guaranteed', label: 'Client Conversations', note: 'In your first 30 days' },
-  { value: '30', unit: 'Days', label: 'Full System Live', note: null },
-  { value: 'R10k', unit: 'Per month', label: 'Retainer After Build', note: null },
+  { value: '5', unit: 'Guaranteed', label: 'Client conversations in 30 days', note: 'Or we work free until we do' },
+  { value: '30', unit: 'Days', label: 'Full system live', note: null },
+  { value: 'R10k', unit: '/month', label: 'Retainer after build', note: null },
 ]
 
 export function HeroSection() {
@@ -26,7 +26,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-28 md:pt-20 overflow-hidden"
     >
       {/* ── Full-bleed precision grid ─────────────────────────── */}
       <motion.div
@@ -171,8 +171,7 @@ export function HeroSection() {
                 {metric.label}
               </p>
               {metric.note && (
-                <p className="font-mono text-[10px] tracking-[0.08em] uppercase text-[#6E6762]/80">
-                  {/* ⚠️ PLACEHOLDER — replace with real clinic name */}
+                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#C9922A]/70">
                   {metric.note}
                 </p>
               )}
