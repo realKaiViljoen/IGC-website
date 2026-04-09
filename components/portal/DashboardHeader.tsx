@@ -1,4 +1,5 @@
 import type { ClientData, AnalyticsResult } from "@/types/client"
+import { UpdateLogBadge } from "./UpdateLogBadge"
 
 function getEngagementDay(startDate: string): number {
   const start = new Date(startDate)
@@ -61,13 +62,11 @@ export function DashboardHeader({ client, analytics, greeting }: Props) {
         })()}
       </div>
       <div className="text-right flex-shrink-0">
-        <div className="inline-flex items-center gap-2.5 border border-[#CF9B2E]/30 bg-[#111110] rounded-lg px-5 py-3 shadow-[0_0_0_1px_rgba(207,155,46,0.08),0_0_20px_-4px_rgba(207,155,46,0.2),0_4px_12px_0_rgba(0,0,0,0.4),inset_0_1px_0_0_rgba(207,155,46,0.06)]">
-          <span className="w-2 h-2 bg-[#CF9B2E] rounded-full animate-glow-pulse" />
-          <span className="text-[#F2EDE4] text-sm font-medium">
-            Next update in {updateLabel}
-          </span>
-        </div>
-        <p className="text-[#857F74] text-xs mt-1.5">{client.nextUpdate.description}</p>
+        <UpdateLogBadge
+          updateLabel={updateLabel}
+          nextUpdate={client.nextUpdate}
+          activity={client.activity}
+        />
       </div>
     </div>
   )
