@@ -18,7 +18,7 @@ function SignalCard({
       <p className="text-[#6E6762] text-xs font-mono uppercase tracking-wider mb-3">
         {label}
       </p>
-      <p className="text-4xl font-playfair font-bold tracking-tight text-[#F2EDE4] [text-shadow:0_0_20px_rgba(207,155,46,0.08)]">{value}</p>
+      <p className="text-4xl font-mono font-bold tracking-tight tabular-nums terminal-cursor text-[#F2EDE4] [text-shadow:0_0_20px_rgba(207,155,46,0.08)]">{value}</p>
       {sub && <p className="text-[#857F74] text-sm mt-2">{sub}</p>}
     </div>
   )
@@ -50,18 +50,18 @@ export function ConfidenceSignals({ analytics }: Props) {
 
   const checkedText =
     secondsAgo < 60
-      ? `Checked ${secondsAgo}s ago`
-      : `Checked ${Math.floor(secondsAgo / 60)}m ago`
+      ? `Live · ${secondsAgo}s ago`
+      : `Live · ${Math.floor(secondsAgo / 60)}m ago`
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-8">
       <SignalCard
-        label="Active this week"
+        label="In play this week"
         value={`${activeCount} candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`}
       />
       <SignalCard
-        label="Commitments"
-        value={`${metCount} of ${totalCount} met`}
+        label="Promises kept"
+        value={`${metCount} of ${totalCount} delivered`}
         sub={
           analytics.commitmentsMetCount === analytics.commitmentsTotalCount
             ? "All on track"
@@ -69,14 +69,14 @@ export function ConfidenceSignals({ analytics }: Props) {
         }
       />
       <SignalCard
-        label="Last activity"
+        label="Last movement"
         value={lastActivityText}
         sub={checkedText}
       />
       <SignalCard
-        label="Next update"
+        label="Next briefing"
         value={`${daysCount} day${analytics.daysToNextUpdate !== 1 ? "s" : ""}`}
-        sub={`${effortCount} touchpoints this month`}
+        sub={`${effortCount} actions this month`}
       />
     </div>
   )
