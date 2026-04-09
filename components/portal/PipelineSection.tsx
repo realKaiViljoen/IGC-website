@@ -82,7 +82,8 @@ export function PipelineSection({ pipeline }: Props) {
       <motion.div
         variants={stagger}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         className="divide-y divide-[#242220]"
       >
         {pipeline.map((candidate) => {
@@ -92,7 +93,7 @@ export function PipelineSection({ pipeline }: Props) {
               ? "border-l-2 border-[#B84233]"
               : daysSince >= 4
               ? "border-l-2 border-[#CF9B2E]/50"
-              : ""
+              : "border-l-2 border-transparent"
 
           return (
             <motion.div
