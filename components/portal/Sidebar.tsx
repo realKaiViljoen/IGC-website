@@ -34,11 +34,14 @@ export function Sidebar() {
     <aside className="w-56 flex-shrink-0 border-r border-[#242220] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
       <div className="px-5 py-6 border-b border-[#242220]">
         <span className="font-playfair text-2xl font-bold text-[#F2EDE4]">IGC</span>
-        <span className="block text-[#5A5550] text-xs font-mono mt-0.5 tracking-wider uppercase">
+        <span className="block text-[#6E6762] text-xs font-mono mt-0.5 tracking-wider uppercase">
           Client Portal
         </span>
         {time && (
-          <span className="block text-[#5A5550] text-xs font-mono mt-0.5">{time}</span>
+          <>
+            <span className="block text-[#857F74] text-xs font-mono mt-0.5 tabular-nums">{time}</span>
+            <span className="block text-[9px] font-mono text-[#4A4640] tracking-wider">SAST · Johannesburg</span>
+          </>
         )}
       </div>
 
@@ -67,7 +70,7 @@ export function Sidebar() {
 
       {/* Engagement health panel */}
       <div className="px-4 py-4 border-t border-[#1A1918]">
-        <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#3A3530] mb-3">
+        <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#6E6762] mb-3">
           Engagement Health
         </p>
         <div className="space-y-2.5">
@@ -77,7 +80,7 @@ export function Sidebar() {
             { label: "Activity", filled: 5, color: "#3D8B5E" },
           ].map(({ label, filled, color }) => (
             <div key={label} className="flex items-center justify-between gap-3">
-              <span className="text-[10px] font-mono text-[#4A4640] w-12 flex-shrink-0">{label}</span>
+              <span className="text-[10px] font-mono text-[#6E6762] w-12 flex-shrink-0">{label}</span>
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div

@@ -48,9 +48,14 @@ export function DashboardHeader({ client, analytics, greeting }: Props) {
             <p className="text-[#6E6762] text-sm mt-1 font-mono flex items-center gap-1.5">
               Consultant: {client.engagement.consultant}
               <span className={`w-1.5 h-1.5 rounded-full inline-block ${status.available ? "bg-[#CF9B2E] animate-glow-pulse" : "bg-[#4A4640]"}`} />
-              <span className={status.available ? "text-[#857F74]" : "text-[#4A4640]"}>
-                {status.label}
-              </span>
+              {status.available ? (
+                <span className="text-[#857F74]">Available</span>
+              ) : (
+                <>
+                  <span className="text-[#4A4640]">Responds within 4h</span>
+                  <span className="text-[#3A3530]"> · within working hours</span>
+                </>
+              )}
             </p>
           )
         })()}
