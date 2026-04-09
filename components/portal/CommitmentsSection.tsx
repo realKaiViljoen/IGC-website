@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { fadeUp, stagger } from "@/lib/motion"
 import type { ClientData } from "@/types/client"
 
 interface Props {
@@ -12,9 +16,14 @@ export function CommitmentsSection({ commitments }: Props) {
       <div className="px-5 py-4 border-b border-[#242220]">
         <h2 className="font-playfair text-[#F2EDE4]">Commitments</h2>
       </div>
-      <div className="divide-y divide-[#242220]">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="visible"
+        className="divide-y divide-[#242220]"
+      >
         {commitments.map((c, i) => (
-          <div key={i} className="px-5 py-4 flex items-start gap-4">
+          <motion.div key={i} variants={fadeUp} className="px-5 py-4 flex items-start gap-4">
             <span
               className={`text-sm flex-shrink-0 mt-0.5 ${
                 c.met ? "text-[#C9922A]" : "text-[#4A4640]"
@@ -26,9 +35,9 @@ export function CommitmentsSection({ commitments }: Props) {
               <p className="text-[#F2EDE4] text-sm">{c.promise}</p>
               <p className="text-[#857F74] text-xs mt-0.5">Due {c.due}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
