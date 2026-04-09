@@ -172,6 +172,35 @@ type ClientData = {
 
 CometChat integration adapted from existing TS architecture. "Message your consultant" in sidebar nav. Simple 1:1 chat between client and consultant. No group channels in v1.
 
+### Reference Feature
+
+Either party can reference a dashboard element directly in a message — similar to swipe-to-reply, but for data. This keeps conversations contextual and eliminates "which candidate were you asking about?" ambiguity.
+
+**How it works:**
+1. User clicks the "Reference" button in the message composer (or clicks any dashboard element directly from the dashboard view)
+2. Dashboard elements become selectable — cursor changes, elements highlight on hover
+3. User clicks a target: a pipeline candidate card, a commitment row, a confidence signal card, or an activity entry
+4. A reference preview card attaches to the composer showing the element type + summary (e.g. *"Dr. Okafor — Offer accepted"*)
+5. Message sends with the reference block prepended — renders in chat as a compact quoted card above the message text, identical to both parties
+
+**Reference types:**
+- `pipeline` — candidate name + current stage
+- `commitment` — promise text + met/unmet status
+- `activity` — date + entry text
+- `signal` — signal label + value (e.g. "Commitments met: 4 of 4")
+
+**Data structure attached to message:**
+```ts
+type MessageReference = {
+  type: "pipeline" | "commitment" | "activity" | "signal"
+  label: string    // display title in the quoted card
+  detail: string   // secondary line
+  id?: string      // element ID for future deep-linking
+}
+```
+
+This is stored as CometChat message metadata — no schema changes to client data files needed.
+
 ---
 
 ## What's NOT in v1
