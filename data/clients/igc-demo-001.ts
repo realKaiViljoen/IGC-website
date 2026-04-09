@@ -78,6 +78,12 @@ export const client: ClientData = {
       entry: "3 candidates submitted ahead of deadline.",
     },
   ],
+  upcoming: [
+    { date: "2026-04-11", description: "Dr. Mensah — second interview with department head" },
+    { date: "2026-04-16", description: "Week 6 pipeline review & client briefing" },
+    { date: "2026-04-25", description: "Dr. Ferreira — offer finalisation call" },
+    { date: "2026-05-01", description: "Dr. Okafor — confirmed start date" },
+  ],
   nextUpdate: {
     date: "2026-04-16",
     description: "Week 6 pipeline review",

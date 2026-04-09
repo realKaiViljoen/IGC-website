@@ -7,6 +7,7 @@ import { ConfidenceSignals } from "@/components/portal/ConfidenceSignals"
 import { PipelineSection } from "@/components/portal/PipelineSection"
 import { CommitmentsSection } from "@/components/portal/CommitmentsSection"
 import { ActivityFeed } from "@/components/portal/ActivityFeed"
+import { UpcomingSection } from "@/components/portal/UpcomingSection"
 
 function getGreeting(): string {
   const hour = new Date().getHours()
@@ -17,10 +18,10 @@ function getGreeting(): string {
 }
 
 export default async function DashboardPage() {
-  const session = await auth()
-  if (!session?.user?.id) redirect("/portal")
+  // const session = await auth()
+  // if (!session?.user?.id) redirect("/portal")
 
-  const client = await getClientData(session.user.id)
+  const client = await getClientData("igc-demo-001")
   if (!client) redirect("/portal")
 
   const analytics = computeAnalytics(client)
@@ -33,6 +34,7 @@ export default async function DashboardPage() {
       <div className="space-y-4">
         <PipelineSection pipeline={client.pipeline} />
         <CommitmentsSection commitments={client.commitments} />
+        <UpcomingSection upcoming={client.upcoming} />
         <ActivityFeed activity={client.activity} />
       </div>
     </div>

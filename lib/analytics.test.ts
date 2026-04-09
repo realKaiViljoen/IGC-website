@@ -29,6 +29,7 @@ const mockClient: ClientData = {
     { date: today, entry: "Offer accepted" },
     { date: "2026-04-03", entry: "Interview completed" },
   ],
+  upcoming: [],
   nextUpdate: { date: in7Days, description: "Week 6 review" },
 }
 

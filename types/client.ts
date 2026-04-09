@@ -40,6 +40,10 @@ export type ClientData = {
     date: string
     entry: string
   }>
+  upcoming: Array<{
+    date: string
+    description: string
+  }>
   nextUpdate: {
     date: string
     description: string
