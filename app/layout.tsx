@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Inter, DM_Mono, Poppins } from 'next/font/google'
 import './globals.css'
-import { Nav } from '@/components/ui/Nav'
-import { Footer } from '@/components/ui/Footer'
-import { Cursor } from '@/components/ui/Cursor'
 import { MotionProvider } from '@/components/ui/MotionProvider'
+import { PublicShell } from '@/components/ui/PublicShell'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -69,12 +67,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="bg-[#080808] text-[#F2EDE4] antialiased">
         <div className="grain" aria-hidden="true" />
-        <Cursor />
-        <Nav />
-        <MotionProvider>
-          <main>{children}</main>
-        </MotionProvider>
-        <Footer />
+        <PublicShell>
+          <MotionProvider>
+            <main>{children}</main>
+          </MotionProvider>
+        </PublicShell>
       </body>
     </html>
   )
