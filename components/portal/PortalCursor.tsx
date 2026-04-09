@@ -57,6 +57,7 @@ export function PortalCursor() {
         border: "1px solid rgba(201, 146, 42, 0.2)",
         willChange: "transform",
         opacity: 0,
+        transition: "opacity 150ms ease-in",
       }}
     />
   )
