@@ -31,34 +31,34 @@ export function Sidebar() {
   }, [])
 
   return (
-    <aside className="w-52 flex-shrink-0 border-r border-[#242220] flex flex-col">
-      <div className="px-5 py-5 border-b border-[#242220]">
-        <span className="font-playfair text-lg text-[#F2EDE4]">IGC</span>
-        <span className="block text-[#4A4640] text-xs font-mono mt-0.5 tracking-wider uppercase">
+    <aside className="w-56 flex-shrink-0 border-r border-[#242220] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
+      <div className="px-5 py-6 border-b border-[#242220]">
+        <span className="font-playfair text-2xl font-bold text-[#F2EDE4]">IGC</span>
+        <span className="block text-[#5A5550] text-xs font-mono mt-0.5 tracking-wider uppercase">
           Client Portal
         </span>
         {time && (
-          <span className="block text-[#4A4640] text-xs font-mono mt-0.5">{time}</span>
+          <span className="block text-[#5A5550] text-xs font-mono mt-0.5">{time}</span>
         )}
       </div>
 
-      <nav className="flex-1 px-2 py-4 space-y-0.5">
+      <nav className="flex-1 px-2 py-4 space-y-1">
         {navItems.map((item) => {
           const isActive = pathname === item.href
           return (
             <Link
               key={item.href}
               href={item.href}
-              className={`relative flex items-center gap-3 px-3 py-2.5 text-sm transition-colors ${
+              className={`relative flex items-center gap-3 px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
                 isActive
-                  ? "text-[#C9922A]"
-                  : "text-[#857F74] hover:text-[#F2EDE4]"
+                  ? "text-[#CF9B2E] bg-[rgba(207,155,46,0.06)] rounded-lg font-semibold"
+                  : "text-[#857F74] hover:text-[#F2EDE4] hover:bg-[rgba(242,237,228,0.04)] rounded-lg transition-all duration-200"
               }`}
             >
               {isActive && (
-                <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] bg-[#C9922A]" />
+                <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] bg-[#CF9B2E] shadow-[2px_0_8px_0_rgba(207,155,46,0.4),4px_0_20px_0_rgba(207,155,46,0.15)]" />
               )}
-              <span className="text-xs w-3">{item.icon}</span>
+              <span className="text-base w-5">{item.icon}</span>
               {item.label}
             </Link>
           )
@@ -68,7 +68,7 @@ export function Sidebar() {
       <div className="px-2 py-4 border-t border-[#242220]">
         <button
           onClick={() => signOut({ callbackUrl: "/portal" })}
-          className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#4A4640] hover:text-[#F2EDE4] transition-colors w-full"
+          className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#857F74] hover:text-[#F2EDE4] transition-colors w-full"
         >
           <span className="text-xs w-3">→</span>
           Sign out
