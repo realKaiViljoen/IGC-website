@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 
 export function PortalCursor() {
   const ringRef = useRef<HTMLDivElement>(null)
+  const hasMovedRef = useRef(false)
 
   useEffect(() => {
     let targetX = 0
@@ -13,6 +14,12 @@ export function PortalCursor() {
     let rafId: number
 
     function onMouseMove(e: MouseEvent) {
+      if (!hasMovedRef.current) {
+        hasMovedRef.current = true
+        if (ringRef.current) {
+          ringRef.current.style.opacity = "1"
+        }
+      }
       targetX = e.clientX
       targetY = e.clientY
     }
@@ -49,6 +56,7 @@ export function PortalCursor() {
         marginTop: -18,
         border: "1px solid rgba(201, 146, 42, 0.2)",
         willChange: "transform",
+        opacity: 0,
       }}
     />
   )
