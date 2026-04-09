@@ -50,19 +50,19 @@ export function ClosingCTA() {
           variants={fadeUp}
           className="font-display text-display-lg text-[#F2EDE4] mb-8 max-w-[18ch]"
         >
-          Your Q2 2026 slot<br />is open.
+          Your Q2 2026 build slot<br />is open.
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
           className="font-sans text-body-lg text-[#C5C0BB] font-normal max-w-[48ch] mb-12"
         >
-          Two of six Q2 slots are filled. Book a 20-minute diagnostic and find out whether your clinic is a fit for the Sprint. No commitment. No sales pitch.
+          Three of six Q2 slots are filled. Book a 20-minute BD audit and find out whether your agency is a fit for the build. No commitment. No pitch. An honest look at your current mandate pipeline.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col items-start gap-5">
           <Button href="/diagnostic" variant="primary" size="lg">
-            Book Your Diagnostic
+            Book Your BD Audit
           </Button>
           <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#C5C0BB] font-medium">
             20-minute call. We tell you honestly what we find.

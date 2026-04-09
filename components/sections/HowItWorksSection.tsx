@@ -9,8 +9,8 @@ import { Button } from '@/components/ui/Button'
 const steps = [
   {
     number: '01',
-    title: 'Diagnose',
-    body: 'You get a clear picture of exactly where your clinic is losing patients before they book. No guesswork.',
+    title: 'Audit',
+    body: 'We map your current BD setup: what you have, where it breaks, and which hiring managers you are not reaching. A clear diagnosis before a single sequence goes live.',
     icon: (
       <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="9" cy="9" r="6"/>
@@ -21,8 +21,8 @@ const steps = [
   },
   {
     number: '02',
-    title: 'Deploy',
-    body: 'Your full acquisition system goes live: paid ads, lead capture, WhatsApp automation, reputation engine. Built in 90 days.',
+    title: 'Build',
+    body: 'LinkedIn outreach sequences, conversion landing page, CRM, automated follow-up, booking system. Your complete mandate acquisition infrastructure, deployed and tested in 30 days.',
     icon: (
       <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M10 2l1.5 5h5l-4 3 1.5 5L10 12l-4 3 1.5-5-4-3h5z"/>
@@ -31,8 +31,8 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Operate',
-    body: 'Your system runs continuously. You track one number: new consultations booked per month.',
+    title: 'Run',
+    body: 'The system runs continuously. You track one number: new client conversations booked per month. We handle everything else.',
     icon: (
       <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="10" cy="10" r="3"/>
@@ -68,7 +68,7 @@ export function HowItWorksSection() {
           animate={inView ? 'visible' : 'hidden'}
           className="font-display text-display-md text-[#F2EDE4] mb-20 max-w-[18ch]"
         >
-          Three phases.<br />One outcome.
+          Three steps.<br />One outcome.
         </motion.h2>
 
         {/* Steps */}
@@ -118,10 +118,10 @@ export function HowItWorksSection() {
 
           <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#2D2A27]">
             <p className="font-sans font-normal text-body-md text-[#C5C0BB] mb-6 max-w-[44ch]">
-              Ready to see what your clinic's system looks like? The diagnostic takes 20 minutes.
+              Want to know exactly where your mandate pipeline is breaking? The audit takes 20 minutes.
             </p>
             <Button href="/diagnostic" variant="primary" size="md">
-              Book a Diagnostic
+              Book a BD Audit
             </Button>
           </motion.div>
         </motion.div>

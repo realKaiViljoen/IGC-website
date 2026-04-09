@@ -60,10 +60,10 @@ function CountUp({
 const stats = [
   {
     id: 'retainer',
-    label: 'Monthly retainer',
+    label: 'Monthly retainer after build',
     node: (
       <CountUp
-        to={15000}
+        to={10000}
         duration={2.2}
         format={(n) => 'R' + n.toLocaleString('en-ZA')}
       />
@@ -72,12 +72,12 @@ const stats = [
   {
     id: 'days',
     label: 'Full system live',
-    node: <CountUp to={90} suffix=" days" duration={2} />,
+    node: <CountUp to={30} suffix=" days" duration={2} />,
   },
   {
-    id: 'consultations',
-    label: 'New consultations per month',
-    node: <CountUp to={15} suffix="+" duration={1.8} />,
+    id: 'conversations',
+    label: 'Guaranteed client conversations',
+    node: <CountUp to={5} suffix="+" duration={1.8} />,
   },
 ]
 
@@ -111,7 +111,7 @@ export function SprintSection() {
             <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M9 1L4 9h5l-2 6 7-8h-5l2-6z"/>
             </svg>
-            <span className="section-label">The Entry Point</span>
+            <span className="section-label">The BD Build</span>
           </div>
         </motion.p>
 
@@ -120,7 +120,7 @@ export function SprintSection() {
           variants={fadeUp}
           className="font-display text-display-md text-[#F2EDE4] mb-6 max-w-[22ch]"
         >
-          The 90-Day Growth Sprint
+          The 30-Day BD Infrastructure Build
         </motion.h2>
 
         {/* Body */}
@@ -128,7 +128,7 @@ export function SprintSection() {
           variants={fadeUp}
           className="font-sans text-body-lg text-[#C5C0BB] font-normal max-w-prose mb-12"
         >
-          A fixed-scope, fixed-fee engagement. We build your full patient acquisition system in 90 days. At the end, you own the infrastructure. We operate it on retainer, or hand it over. No lock-in.
+          A fixed-scope, fixed-fee engagement. We build your complete mandate acquisition infrastructure in 30 days. At the end, you own every asset. We operate it on retainer, or hand it over to your team. No lock-in.
         </motion.p>
 
         {/* Stat blocks — monumental numbers with decorative watermark */}
@@ -161,19 +161,19 @@ export function SprintSection() {
         {/* Revenue callout — elevated */}
         <motion.div variants={fadeUp} className="border-l-2 border-[#C9922A]/40 pl-6 mb-10">
           <p className="font-display text-display-md text-[#F2EDE4] leading-tight mb-2">
-            R52,500
+            R40,000+
           </p>
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C5C0BB] font-medium">
-            New monthly revenue at target: 15 consults × R3,500
+            One new retained mandate. Average placement fee, Gauteng tech and engineering.
           </p>
         </motion.div>
 
         {/* Risk reversal — ownership statements */}
         <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
           {[
-            'You own every asset we build: ad accounts, automations, flows, reputation assets.',
-            'Fixed fee. No percentage of ad spend. No hidden costs.',
-            'No lock-in. After 90 days, you decide whether we continue.',
+            'You own every asset we build: LinkedIn sequences, landing pages, CRM setup, automation workflows.',
+            'Fixed fee. No percentage of placement revenue. No performance billing.',
+            'No lock-in. After 30 days, you decide whether we continue on retainer.',
           ].map((item, index) => (
             <div
               key={item}
@@ -194,7 +194,7 @@ export function SprintSection() {
         {/* CTA */}
         <motion.div variants={fadeUp}>
           <Button href="/diagnostic" variant="primary">
-            Book a Discovery Call
+            Book a BD Audit
           </Button>
         </motion.div>
       </motion.div>

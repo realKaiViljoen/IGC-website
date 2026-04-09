@@ -8,23 +8,23 @@ import { stagger, fadeUp } from '@/lib/motion'
 const painPoints = [
   {
     number: '01',
-    statement: 'You ran ads. Enquiries came in. Most never booked.',
-    consequence: 'Every unbooked enquiry costs R500–R1,200 in ad spend. You paid to find them. You lost them at the follow-up.',
+    statement: 'You ran LinkedIn ads. Impressions climbed. Nobody called.',
+    consequence: 'LinkedIn spend without conversion infrastructure is a brand exercise. Mandates come from conversations, not impressions. You paid to be visible. Nobody responded.',
   },
   {
     number: '02',
-    statement: 'You hired an agency. They sent monthly reports measuring reach, not consultations.',
-    consequence: 'Agencies optimise for metrics they can defend. Consultation bookings are not in their brief.',
+    statement: 'You hired a marketing agency. They delivered a content calendar. Not a mandate.',
+    consequence: 'Agencies optimise for what they can report: followers, sessions, engagement. None of those pay a placement fee. The brief was mandate pipeline. They delivered posts.',
   },
   {
     number: '03',
-    statement: 'You have a strong clinical reputation. Your appointment book does not reflect it.',
-    consequence: 'Reputation is your strongest asset. An empty pipeline is a systems failure, not a market failure.',
+    statement: 'Your billers are excellent at filling roles. They will not do cold BD.',
+    consequence: 'You hired recruiters, not salespeople. Asking your team to also run client development is asking pilots to build the plane. The BD responsibility falls on you, and you are running out of hours.',
   },
   {
     number: '04',
-    statement: 'You are not sure what is leaking, or where to start.',
-    consequence: 'Without a diagnosed leak, every fix is a guess. Most clinics are losing patients at the same two points.',
+    statement: 'You are not sure which part of your BD process is actually leaking.',
+    consequence: 'Is it the top of funnel? The follow-up? The booking rate? Without knowing where it breaks, every fix is a guess. Most agencies are losing mandates at the same two points.',
   },
 ]
 
@@ -74,7 +74,7 @@ export function ProblemSection() {
             >
               <path d="M1 8h2l2-5 3 10 2-7 2 4h1" />
             </svg>
-            <p className="section-label">The situation</p>
+            <p className="section-label">The pipeline problem</p>
           </div>
         </motion.div>
 
@@ -83,7 +83,7 @@ export function ProblemSection() {
           variants={fadeUp}
           className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[26ch]"
         >
-          Your clinic is good.<br />Your pipeline is not.
+          Your agency is good.<br />Your mandate pipeline is not.
         </motion.h2>
 
         {/* Expansion rows */}
@@ -158,7 +158,7 @@ export function ProblemSection() {
           variants={fadeUp}
           className="font-sans text-body-lg text-[#C5C0BB] max-w-[52ch]"
         >
-          This is not a branding problem. It is not a content problem. It is a systems problem, and it has a specific fix.
+          This is not a content problem. It is not a LinkedIn presence problem. It is a BD infrastructure problem, and it has a specific fix.
         </motion.p>
       </motion.div>
     </SectionWrapper>

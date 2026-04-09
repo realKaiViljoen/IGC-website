@@ -8,9 +8,9 @@ import { fadeUp, fadeIn, lineReveal } from '@/lib/motion'
 const ease = [0.16, 1, 0.3, 1] as const
 
 const metrics = [
-  { value: '26', unit: 'Month 3', label: 'New Consultations', note: 'Pretoria Aesthetics Clinic' },
-  { value: '< 3 min', unit: 'WhatsApp', label: 'Avg Response Time', note: null },
-  { value: '4.9', unit: '47 reviews', label: 'Review Score', note: null },
+  { value: '5+', unit: 'Guaranteed', label: 'Client Conversations', note: 'In your first 30 days' },
+  { value: '30', unit: 'Days', label: 'Full System Live', note: null },
+  { value: 'R10k', unit: 'Per month', label: 'Retainer After Build', note: null },
 ]
 
 export function HeroSection() {
@@ -92,7 +92,7 @@ export function HeroSection() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF7A]" aria-hidden="true" />
           <span className="font-mono font-medium text-[11px] tracking-[0.12em] uppercase text-[#A09890]">
-            2 of 6 Q2 slots remaining
+            3 of 6 Q2 build slots remaining
           </span>
         </motion.div>
 
@@ -104,7 +104,7 @@ export function HeroSection() {
           transition={{ delay: 0.45, duration: 0.9, ease: [...ease] }}
           className="font-display text-display-xl text-[#F2EDE4] mb-8"
         >
-          We build<br />acquisition engines.
+          We build the BD pipeline<br />your billers will not.
         </motion.h1>
 
         {/* Sub-headline — plain language what we do */}
@@ -115,7 +115,7 @@ export function HeroSection() {
           transition={{ delay: 0.6, duration: 0.7, ease: [...ease] }}
           className="font-sans text-body-lg text-[#A09890] max-w-[52ch] mb-3"
         >
-          We run paid ads, build WhatsApp follow-up systems, and generate Google reviews. Then we manage everything on retainer.
+          LinkedIn sequences, conversion landing pages, automated follow-up, booking infrastructure. Built for recruitment agencies. Running in the background while your team fills roles.
         </motion.p>
 
         <motion.p
@@ -125,7 +125,7 @@ export function HeroSection() {
           transition={{ delay: 0.68, duration: 0.7, ease: [...ease] }}
           className="font-sans text-body-md text-[#857F74] max-w-[44ch] mb-12"
         >
-          Not campaigns. A complete patient acquisition system, built in 90 days and owned by you.
+          Not campaigns. Not content. A mandate acquisition system built in 30 days and owned by you.
         </motion.p>
 
         {/* CTAs */}
@@ -138,14 +138,14 @@ export function HeroSection() {
         >
           <div className="flex flex-wrap justify-center gap-3">
             <Button href="/diagnostic" variant="primary" size="lg">
-              Book a Call
+              Book a BD Audit
             </Button>
             <Button href="/services" variant="ghost" size="lg">
               How it works
             </Button>
           </div>
           <p className="font-mono font-medium text-[12px] tracking-[0.12em] uppercase text-[#A09890]">
-            20-minute diagnostic. Not a sales pitch.
+            20-minute audit. Free. No pitch.
           </p>
         </motion.div>
 

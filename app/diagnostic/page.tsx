@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { CalEmbed } from '@/components/ui/CalEmbed'
 
 export const metadata: Metadata = {
-  title: 'Book a Diagnostic with K.C. Viljoen, IGC',
+  title: 'Book a BD Audit with K.C. Viljoen, IGC',
   description:
-    'Book a 20-minute acquisition diagnostic with K.C. Viljoen. We look at your current setup and tell you honestly where the leakage is.',
+    'Book a 20-minute BD audit with K.C. Viljoen. We look at your current mandate acquisition setup and tell you honestly where the pipeline is breaking.',
 }
 
 export default function DiagnosticPage() {
@@ -15,9 +15,9 @@ export default function DiagnosticPage() {
       <div className="w-full px-6 md:px-10 lg:px-16 pt-32 pb-12">
         <div className="max-w-site mx-auto">
           <span className="gold-line mb-6 block" aria-hidden="true" />
-          <p className="section-label mb-3">20-Minute Diagnostic</p>
+          <p className="section-label mb-3">20-Minute BD Audit</p>
           <h1 className="font-display text-display-lg text-[#F2EDE4] max-w-[22ch]">
-            Book your acquisition audit.
+            Book your mandate pipeline audit.
           </h1>
         </div>
       </div>
@@ -59,8 +59,8 @@ export default function DiagnosticPage() {
                 <ul className="flex flex-col gap-3">
                   {[
                     'Managing Director, IGC',
-                    'Private venture growth systems across 5 industries and 12 ventures',
-                    'Active deployments across Q1/Q2 2026 cohort',
+                    'BD infrastructure deployments across B2B services, professional services, and recruitment',
+                    'Active builds running across Q1/Q2 2026 cohort',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <span className="w-1 h-1 rounded-full bg-[#4CAF7A] mt-2 shrink-0" aria-hidden="true" />
@@ -78,9 +78,9 @@ export default function DiagnosticPage() {
                 </p>
                 <ul className="flex flex-col gap-2.5">
                   {[
-                    'We review your current acquisition setup',
-                    'Identify the highest-leakage point in your funnel',
-                    'Tell you honestly whether the Sprint is the right fix',
+                    'We review your current BD and mandate pipeline setup',
+                    'Identify exactly where client conversations are being lost',
+                    'Tell you honestly whether the build is the right fix',
                     'No commitment. No pitch.',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">

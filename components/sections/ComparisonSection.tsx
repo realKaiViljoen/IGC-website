@@ -9,17 +9,17 @@ import { Button } from '@/components/ui/Button'
 const columns = [
   {
     id: 'agency',
-    label: 'Digital Agency',
+    label: 'Marketing Agency',
     labelColor: '#857F74',
     borderClass: 'border border-[#2D2A27]',
     bgClass: 'bg-[#080808]',
     pointColor: 'text-[#C5C0BB]',
     points: [
-      'Rents you their service. Accounts stay with them.',
-      'Optimises for their metrics, not your consultations',
-      'No system left when the contract ends',
-      'Account managers, not operators',
-      'New team member every few months',
+      'Optimises for impressions. You bill on placements.',
+      'Monthly report shows reach. Not mandates won.',
+      'No BD infrastructure left when the contract ends.',
+      'Account manager who has never worked a recruitment desk.',
+      'New contact every three months.',
     ],
   },
   {
@@ -30,26 +30,26 @@ const columns = [
     bgClass: 'bg-[#0D0D0C]',
     pointColor: 'text-[#F2EDE4]',
     points: [
-      'You own every asset we build',
-      'One named operator accountable for your results',
-      'Full system operational in 90 days',
-      'AI-augmented: senior attention, scaled output',
+      'You own every sequence, page, and workflow we build.',
+      'One metric tracked: new client conversations booked.',
+      'Full BD system operational in 30 days.',
+      'One named operator. Direct line. No account managers.',
       'Fixed fee. No lock-in.',
     ],
   },
   {
     id: 'hire',
-    label: 'In-House Hire',
+    label: 'In-House BD Person',
     labelColor: '#857F74',
     borderClass: 'border border-[#2D2A27]',
     bgClass: 'bg-[#080808]',
     pointColor: 'text-[#C5C0BB]',
     points: [
-      'R30,000+ salary before benefits',
-      '3-month ramp before meaningful output',
-      'Generalist, not a specialist system-builder',
-      'No infrastructure compounds when they leave',
-      'You manage a person, not a system',
+      'R35,000+ salary before commission.',
+      '3-month ramp before meaningful BD output.',
+      'Generalist, not a BD infrastructure builder.',
+      'When they leave, the pipeline goes with them.',
+      'You manage a person, not a system.',
     ],
   },
 ]
@@ -83,7 +83,7 @@ export function ComparisonSection() {
           variants={fadeUp}
           className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[28ch]"
         >
-          Why not hire an agency or a marketing manager?
+          Why not hire a marketing agency or a dedicated BD person?
         </motion.h2>
 
         {/* Comparison grid */}
@@ -124,10 +124,10 @@ export function ComparisonSection() {
 
         <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#2D2A27] flex flex-col items-start gap-4">
           <p className="font-sans font-normal text-body-md text-[#C5C0BB] max-w-[44ch]">
-            The diagnostic is free. In 20 minutes you will know exactly where your clinic is leaking patients, and whether the Sprint is the right fix.
+            The BD audit is free. Twenty minutes and you will know exactly where your mandate pipeline is breaking, and whether the build is the right fix.
           </p>
           <Button href="/diagnostic" variant="primary" size="md">
-            Book a Diagnostic
+            Book a BD Audit
           </Button>
         </motion.div>
       </motion.div>

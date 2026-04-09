@@ -8,21 +8,21 @@ import { Button } from '@/components/ui/Button'
 
 const points = [
   {
-    title: 'Built in SA, for SA',
-    body: 'We understand the local market, the platforms, and how South African patients make booking decisions. Not an offshore template. Not a playbook built for a different country.',
+    title: 'Built for recruiters. Not retailers.',
+    body: 'We know what a mandate is. We know what a PSL is. We know why MPC calls feel desperate. This system was built for the way recruitment actually works, not for how a generic marketing playbook assumes it does.',
     link: null,
   },
   {
-    title: 'A named operator, not an agency',
-    body: 'K.C. Viljoen runs the system personally. You know who is accountable. You have a direct line. No account managers, no handoffs, no vanishing acts.',
+    title: 'A named operator. Not an account manager.',
+    body: 'K.C. Viljoen runs the system personally. You have a direct line. No junior handoff, no contact rotation, no monthly standup with someone who started last week. One person. Full accountability.',
     link: {
       href: 'https://linkedin.com/in/kai-viljoen',
       label: 'View LinkedIn Profile →',
     },
   },
   {
-    title: 'Small team. Full accountability.',
-    body: 'AI-augmented delivery means we operate at the output of a team five times our size. You get senior operator attention on your account. Every month.',
+    title: 'Small team. Serious output.',
+    body: 'AI-augmented delivery means we operate at the output of a team five times our size. Senior operator attention on your mandate pipeline. Every week, not just at the monthly report.',
     link: null,
   },
 ]
@@ -51,7 +51,7 @@ export function TrustSection() {
           animate={inView ? 'visible' : 'hidden'}
           className="font-display text-display-md text-[#F2EDE4] mb-16 max-w-[20ch]"
         >
-          Built differently.<br />Accountable differently.
+          Built for recruitment.<br />Accountable for results.
         </motion.h2>
 
         {/* Proof points */}

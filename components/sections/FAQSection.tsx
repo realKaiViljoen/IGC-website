@@ -7,28 +7,28 @@ import { stagger, fadeUp } from '@/lib/motion'
 
 const faqs = [
   {
-    q: "What does R15,000 per month actually cover?",
-    a: "The retainer covers ongoing system operation after the Sprint: ad management, WhatsApp automation monitoring, reputation engine, and monthly reporting. The 90-Day Sprint itself is a separate fixed-fee engagement. We quote the Sprint fee on the diagnostic call once we understand your clinic's setup.",
+    q: "What does R10,000 per month actually cover?",
+    a: "The retainer covers ongoing system operation after the build: sequence monitoring, landing page optimisation, CRM maintenance, and monthly pipeline reporting. The initial 30-day build is a separate fixed-fee engagement quoted on the audit call once we understand your agency's setup and sector focus.",
   },
   {
-    q: "We've worked with agencies before and it didn't work. What's different?",
-    a: "Agencies sell campaigns. We build infrastructure. At the end of 90 days, every asset we build (your ad accounts, automations, lead capture flows, reputation assets) is yours. You're not renting access to our platform. If you leave, you leave with a system, not a void.",
+    q: "We have worked with marketing agencies before. It did not work. What is different?",
+    a: "Marketing agencies sell content and impressions. We build mandate acquisition infrastructure. LinkedIn outreach sequences, a landing page built to convert hiring manager traffic, automated follow-up, booking integration. At the end of 30 days, every asset is yours. If you leave, you leave with a working system. Not a void.",
   },
   {
-    q: "How hands-on do we need to be?",
-    a: "Minimal. You review a monthly report, approve ad creative, and track one number: new consultations booked. We handle the rest.",
+    q: "How hands-on does our team need to be?",
+    a: "Minimal. You approve the outreach messaging before it goes live, review a monthly pipeline report, and track one number: new client conversations booked per month. Your billers focus on filling roles. We run the BD system.",
   },
   {
-    q: "What if we don't hit 15 new consultations per month?",
-    a: "We tell you upfront on the diagnostic whether your clinic is positioned to hit that target. If the fit isn't right, we say so and don't proceed. We'd rather turn down the engagement than overpromise.",
+    q: "What if we do not get 5 client conversations in the first 30 days?",
+    a: "We tell you on the audit call whether your agency is positioned to hit that target. If the fit is wrong, we say so and do not proceed. If we proceed and miss the guarantee, we keep running the system at no charge until we deliver. Unconditional.",
   },
   {
-    q: "What happens after 90 days?",
-    a: "You own the full system. Choose to keep us on retainer to operate it, or take it in-house. No lock-in, no penalty, no accounts held hostage.",
+    q: "What happens after 30 days?",
+    a: "You own the full system. Keep us on retainer to operate it, take it in-house, or pause it. No lock-in. No accounts held back. No penalty for leaving.",
   },
   {
-    q: "How quickly do results appear?",
-    a: "First leads typically appear within weeks of paid acquisition going live. The 90-day timeline builds, tests, and stabilises the full system. By month three you have a predictable, compounding acquisition engine, not a one-time spike.",
+    q: "How quickly will we see new conversations coming in?",
+    a: "LinkedIn sequences typically generate the first replies within the first two weeks of going live. The 30-day build tests and optimises the full system so that by month two you have a predictable flow of new client conversations running without manual BD from your team.",
   },
 ]
 
@@ -63,7 +63,7 @@ export function FAQSection() {
           variants={fadeUp}
           className="font-display text-display-md text-[#F2EDE4] mb-16 max-w-[24ch]"
         >
-          Questions worth asking<br />before you commit.
+          Questions worth asking<br />before you sign anything.
         </motion.h2>
 
         {/* FAQ list */}
