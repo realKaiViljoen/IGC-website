@@ -65,6 +65,33 @@ export function Sidebar() {
         })}
       </nav>
 
+      {/* Engagement health panel */}
+      <div className="px-4 py-4 border-t border-[#1A1918]">
+        <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#3A3530] mb-3">
+          Engagement Health
+        </p>
+        <div className="space-y-2.5">
+          {[
+            { label: "Pipeline", filled: 3, color: "#CF9B2E" },
+            { label: "Commits", filled: 4, color: "#3D8B5E" },
+            { label: "Activity", filled: 5, color: "#3D8B5E" },
+          ].map(({ label, filled, color }) => (
+            <div key={label} className="flex items-center justify-between gap-3">
+              <span className="text-[10px] font-mono text-[#4A4640] w-12 flex-shrink-0">{label}</span>
+              <div className="flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div
+                    key={i}
+                    className="w-1.5 h-3 rounded-sm transition-colors duration-300"
+                    style={{ background: i <= filled ? color : "#1A1918" }}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="px-2 py-4 border-t border-[#242220]">
         <button
           onClick={() => signOut({ callbackUrl: "/portal" })}
