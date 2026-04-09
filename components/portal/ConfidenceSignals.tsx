@@ -14,12 +14,12 @@ function SignalCard({
   sub?: string
 }) {
   return (
-    <div className="bg-[#111110] border border-[#242220] px-5 py-4">
-      <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
+    <div className="bg-[#111110] border border-[#242220] rounded-xl px-6 py-6 shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)] hover:bg-[#151413] hover:border-[#2E2B27] transition-all duration-200">
+      <p className="text-[#6E6762] text-xs font-mono uppercase tracking-wider mb-3">
         {label}
       </p>
-      <p className="font-playfair text-xl text-[#F2EDE4]">{value}</p>
-      {sub && <p className="text-[#857F74] text-xs mt-1">{sub}</p>}
+      <p className="text-4xl font-playfair font-bold tracking-tight text-[#F2EDE4] [text-shadow:0_0_20px_rgba(207,155,46,0.08)]">{value}</p>
+      {sub && <p className="text-[#857F74] text-sm mt-2">{sub}</p>}
     </div>
   )
 }
@@ -54,7 +54,7 @@ export function ConfidenceSignals({ analytics }: Props) {
       : `Checked ${Math.floor(secondsAgo / 60)}m ago`
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 px-8 py-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-8">
       <SignalCard
         label="Active this week"
         value={`${activeCount} candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`}
