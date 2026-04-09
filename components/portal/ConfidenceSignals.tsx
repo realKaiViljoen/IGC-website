@@ -8,17 +8,28 @@ function SignalCard({
   label,
   value,
   sub,
+  showCursor,
 }: {
   label: string
-  value: string
+  value: { number: string; unit?: string }
   sub?: string
+  showCursor?: boolean
 }) {
   return (
     <div className="bg-[#111110] border border-[#242220] rounded-xl px-6 py-6 shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)] hover:bg-[#151413] hover:border-[#2E2B27] transition-all duration-200">
       <p className="text-[#857F74] text-sm font-mono uppercase tracking-wider mb-3">
         {label}
       </p>
-      <p className="text-4xl font-mono font-bold tracking-tight tabular-nums terminal-cursor text-[#F2EDE4] [text-shadow:0_0_20px_rgba(207,155,46,0.08)]">{value}</p>
+      <div className={`flex items-baseline gap-1.5${showCursor ? " terminal-cursor" : ""}`}>
+        <span className="text-4xl font-mono font-bold tabular-nums text-[#CF9B2E] [text-shadow:0_0_20px_rgba(207,155,46,0.15)]">
+          {value.number}
+        </span>
+        {value.unit && (
+          <span className="text-lg font-mono font-normal text-[#857F74]">
+            {value.unit}
+          </span>
+        )}
+      </div>
       {sub && <p className="text-[#857F74] text-sm mt-2">{sub}</p>}
     </div>
   )
@@ -57,25 +68,37 @@ export function ConfidenceSignals({ analytics }: Props) {
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-8">
       <SignalCard
         label="In play this week"
-        value={`${activeCount} candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`}
+        value={{
+          number: String(activeCount),
+          unit: `candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`,
+        }}
+        sub={analytics.closestToPlacement ? `${analytics.closestToPlacement.name} — nearest to placement` : undefined}
       />
       <SignalCard
         label="Promises kept"
-        value={`${metCount} of ${totalCount} delivered`}
+        value={{
+          number: `${metCount} of ${totalCount}`,
+          unit: "delivered",
+        }}
         sub={
           analytics.commitmentsMetCount === analytics.commitmentsTotalCount
-            ? "All on track"
+            ? "Every promise kept"
             : undefined
         }
       />
       <SignalCard
         label="Last movement"
-        value={lastActivityText}
+        value={{ number: lastActivityText }}
         sub={checkedText}
+        showCursor
       />
       <SignalCard
         label="Next briefing"
-        value={`${daysCount} day${analytics.daysToNextUpdate !== 1 ? "s" : ""}`}
+        value={
+          analytics.daysToNextUpdate === 0
+            ? { number: "Today" }
+            : { number: String(daysCount), unit: `day${analytics.daysToNextUpdate !== 1 ? "s" : ""}` }
+        }
         sub={`${effortCount} actions this month`}
       />
     </div>
