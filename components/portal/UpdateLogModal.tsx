@@ -23,9 +23,13 @@ interface Props {
 export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
   useEffect(() => {
     if (!open) return
+    document.body.style.overflow = "hidden"
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose() }
     window.addEventListener("keydown", handler)
-    return () => window.removeEventListener("keydown", handler)
+    return () => {
+      window.removeEventListener("keydown", handler)
+      document.body.style.overflow = ""
+    }
   }, [open, onClose])
 
   const recent = [...activity]
@@ -69,8 +73,9 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
                     Upcoming Briefing
                   </span>
                   <button
+                    autoFocus
                     onClick={onClose}
-                    className="text-[#857F74] hover:text-[#F2EDE4] transition-colors duration-200 flex-shrink-0 -mt-0.5"
+                    className="text-[#857F74] hover:text-[#F2EDE4] transition-colors duration-200 flex-shrink-0 -mt-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50 rounded"
                     aria-label="Close"
                   >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
