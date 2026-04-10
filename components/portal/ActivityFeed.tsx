@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 import { fadeUp, staggerFast } from "@/lib/motion"
 import type { ClientData } from "@/types/client"
 
@@ -22,6 +23,9 @@ function formatActivityDate(dateStr: string): string {
 export function ActivityFeed({ activity }: Props) {
   if (activity.length === 0) return null
 
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+
   const sorted = [...activity].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
@@ -29,13 +33,13 @@ export function ActivityFeed({ activity }: Props) {
   return (
     <div className="mx-8 bg-[#111110] border border-[#2D2A27] rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
       <div className="px-6 py-5 border-b border-[#2D2A27]">
-        <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Operations Log</h2>
+        <h2 className="font-display text-display-sm font-semibold text-[#F2EDE4]">Operations Log</h2>
       </div>
       <motion.div
+        ref={ref}
         variants={staggerFast}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate={inView ? 'visible' : 'hidden'}
         className="divide-y divide-[#2D2A27]"
       >
         {sorted.map((item, i) => (

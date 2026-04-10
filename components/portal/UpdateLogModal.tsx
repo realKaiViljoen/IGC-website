@@ -83,7 +83,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
                     </svg>
                   </button>
                 </div>
-                <h2 className="font-playfair text-2xl font-semibold text-[#F2EDE4] mb-3">
+                <h2 className="font-display text-display-sm font-semibold text-[#F2EDE4] mb-3">
                   {updateDate}
                 </h2>
                 <p className="text-sm text-[#A09890] leading-relaxed">

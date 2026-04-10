@@ -33,7 +33,7 @@ export function Sidebar() {
   return (
     <aside className="w-56 flex-shrink-0 border-r border-[#2D2A27] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
       <div className="px-5 py-6 border-b border-[#2D2A27]">
-        <span className="font-playfair text-2xl font-bold text-[#F2EDE4]">IGC</span>
+        <span className="font-display text-display-sm font-bold text-[#F2EDE4]">IGC</span>
         <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-[0.14em] uppercase">
           Client Portal
         </span>
