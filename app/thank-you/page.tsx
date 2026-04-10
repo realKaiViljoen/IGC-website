@@ -31,13 +31,16 @@ export default function ThankYouPage() {
       </div>
 
       <h1 className="font-display text-display-md text-[#F2EDE4] mb-4">
-        Request received.
+        You&rsquo;re in.
       </h1>
       <p className="font-sans text-body-lg text-[#C5C0BB] max-w-[40ch] mb-3">
-        We will review your details and confirm your diagnostic time within one business day.
+        K.C. will personally review your submission and be in touch within one business day to confirm your audit time.
       </p>
-      <p className="font-sans text-body-md text-[#857F74] max-w-[36ch] mb-10">
-        Check your inbox — and your spam folder if you do not hear from us.
+      <p className="font-sans text-body-md text-[#C5C0BB] max-w-[44ch] mb-3">
+        In the meantime: think about the last three months of your BD effort — what ran, what stalled, and what you never got to. That&rsquo;s the starting point for the audit.
+      </p>
+      <p className="font-sans text-body-md text-[#857F74] max-w-[40ch] mb-10">
+        Most agencies we audit know exactly where their pipeline breaks. They just haven&rsquo;t had time to fix it. That&rsquo;s what the next 30 days are for.
       </p>
 
       <Link

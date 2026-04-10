@@ -12,7 +12,7 @@ export default function DiagnosticPage() {
   return (
     <div className="min-h-screen bg-[#080808]">
       {/* ── Page header ───────────────────────────────────────────── */}
-      <div className="w-full px-6 md:px-10 lg:px-16 pt-32 pb-12">
+      <div className="w-full px-6 md:px-10 lg:px-16 pt-32 pb-16 md:pb-20">
         <div className="max-w-site mx-auto">
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <p className="section-label mb-3">20-Minute BD Audit</p>
@@ -45,7 +45,7 @@ export default function DiagnosticPage() {
                 </div>
 
                 {/* Name + title */}
-                <h2 className="font-display text-[1.5rem] text-[#F2EDE4] leading-tight mb-1">
+                <h2 className="font-display text-display-sm text-[#F2EDE4] leading-tight mb-1">
                   K.C. Viljoen
                 </h2>
                 <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890] mb-4">
@@ -59,7 +59,7 @@ export default function DiagnosticPage() {
                 <ul className="flex flex-col gap-3">
                   {[
                     'Managing Director, IGC',
-                    'BD infrastructure deployments across B2B services, professional services, and recruitment',
+                    'BD infrastructure deployments for independent recruitment agencies across Gauteng, Western Cape, and KZN',
                     'Active builds running across Q1/Q2 2026 cohort',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
