@@ -26,6 +26,13 @@ const LinkedInIcon = () => (
   </svg>
 )
 
+const LockIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="7" width="10" height="8" rx="1.5" />
+    <path d="M5 7V5a3 3 0 016 0v2" />
+  </svg>
+)
+
 const ease = [0.16, 1, 0.3, 1] as const
 
 interface NavLinkProps {
@@ -119,8 +126,17 @@ export function Nav() {
             ))}
           </nav>
 
-          {/* Desktop right — LinkedIn + CTA */}
+          {/* Desktop right — Client Portal + LinkedIn + CTA */}
           <div className="hidden md:flex items-center gap-4">
+            <Link
+              href="/portal"
+              className="flex items-center gap-1.5 text-[#6E6762] hover:text-[#A09890] transition-colors duration-200"
+            >
+              <LockIcon />
+              <span className="font-mono text-[11px] tracking-[0.12em] uppercase">Client Portal</span>
+              <span className="font-mono text-[9px] tracking-[0.10em] uppercase text-[#CF9B2E]/70 border border-[#CF9B2E]/20 rounded-full px-1.5 py-0.5">Soon</span>
+            </Link>
+            <div className="w-px h-3.5 bg-[rgba(242,237,228,0.10)]" aria-hidden="true" />
             <a
               href="https://linkedin.com/in/kai-viljoen"
               target="_blank"
@@ -178,6 +194,16 @@ export function Nav() {
                   mobile
                 />
               ))}
+
+              <Link
+                href="/portal"
+                className="flex items-center text-[#6E6762] hover:text-[#A09890] transition-colors duration-200"
+                onClick={() => setOpen(false)}
+              >
+                <LockIcon />
+                <span className="font-sans text-base text-[#6E6762] ml-2">Client Portal</span>
+                <span className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/60 ml-2">Soon</span>
+              </Link>
 
               {/* Divider */}
               <div className="border-t border-[rgba(242,237,228,0.06)] pt-4 flex items-center gap-4">
