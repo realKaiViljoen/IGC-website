@@ -20,8 +20,7 @@ const LinkedInIcon = () => (
     height="16"
     viewBox="0 0 24 24"
     fill="currentColor"
-    aria-label="LinkedIn"
-    role="img"
+    aria-hidden="true"
   >
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
@@ -42,7 +41,7 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
     return (
       <Link
         href={href}
-        className={`font-sans text-[1.0625rem] transition-colors duration-200 ${
+        className={`font-sans text-base transition-colors duration-200 ${
           isActive ? 'text-[#F2EDE4]' : 'text-[#C5C0BB] hover:text-[#F2EDE4]'
         }`}
         onClick={onClick}
@@ -96,8 +95,8 @@ export function Nav() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: [...ease], delay: 0.08 }}
-        className={`w-full max-w-[940px] rounded-full transition-all duration-500 ${
+        transition={{ duration: 0.7, ease: ease, delay: 0.08 }}
+        className={`w-full max-w-[1080px] rounded-full transition-all duration-500 ${
           scrolled
             ? 'bg-[rgba(8,8,8,0.94)] backdrop-blur-xl border border-[rgba(242,237,228,0.14)] shadow-[0_8px_48px_rgba(0,0,0,0.65)]'
             : 'bg-[rgba(8,8,8,0.72)] backdrop-blur-lg border border-[rgba(242,237,228,0.09)] shadow-[0_4px_24px_rgba(0,0,0,0.35)]'
@@ -165,7 +164,7 @@ export function Nav() {
             initial={{ opacity: 0, y: -8, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.97 }}
-            transition={{ duration: 0.35, ease: [...ease] }}
+            transition={{ duration: 0.35, ease: ease }}
             className="absolute top-[68px] left-4 right-4 max-w-[940px] mx-auto rounded-2xl bg-[rgba(10,10,9,0.97)] backdrop-blur-xl border border-[rgba(242,237,228,0.10)] shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden md:hidden"
           >
             <nav className="flex flex-col px-6 py-6 gap-5" aria-label="Mobile navigation">

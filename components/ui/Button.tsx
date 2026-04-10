@@ -29,7 +29,7 @@ const variants: Record<Variant, string> = {
     'bg-[#F2EDE4] border border-[#F2EDE4]/80 ' +
     'shadow-[0_0_28px_rgba(242,237,228,0.18),0_4px_14px_rgba(0,0,0,0.45)] ' +
     'hover:bg-white hover:border-white ' +
-    'hover:shadow-[0_0_44px_rgba(242,237,228,0.34),0_6px_22px_rgba(0,0,0,0.55)] ' +
+    'hover:shadow-[0_0_44px_rgba(207,155,46,0.20),0_6px_22px_rgba(0,0,0,0.55)] ' +
     'hover:scale-[1.02] active:scale-[0.99]',
 
   // Ghost — stronger border, brighter text, border-2
