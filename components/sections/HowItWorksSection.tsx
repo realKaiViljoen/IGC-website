@@ -10,6 +10,7 @@ const steps = [
   {
     number: '01',
     title: 'Audit',
+    subtitle: 'Map your pipeline leaks',
     body: 'We map your current BD setup: what you have, where it breaks, and which hiring managers you are not reaching. A clear diagnosis before a single sequence goes live.',
     icon: (
       <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -22,6 +23,7 @@ const steps = [
   {
     number: '02',
     title: 'Build',
+    subtitle: 'Deploy your BD infrastructure',
     body: 'LinkedIn outreach sequences, conversion landing page, CRM, automated follow-up, booking system. Your complete mandate acquisition infrastructure, deployed and tested in 30 days.',
     icon: (
       <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -32,6 +34,7 @@ const steps = [
   {
     number: '03',
     title: 'Run',
+    subtitle: 'Operate and optimise monthly',
     body: 'The system runs continuously. You track one number: new client conversations booked per month. We handle everything else.',
     icon: (
       <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -68,7 +71,7 @@ export function HowItWorksSection() {
           animate={inView ? 'visible' : 'hidden'}
           className="font-display text-display-md text-[#F2EDE4] mb-20 max-w-[18ch]"
         >
-          Three steps.<br />One outcome.
+          Three steps.<br className="hidden md:inline" />One outcome.
         </motion.h2>
 
         {/* Steps */}
@@ -86,11 +89,11 @@ export function HowItWorksSection() {
             <motion.div
               key={step.number}
               variants={fadeUp}
-              className="relative border-t border-[#302D2A] pt-8 cursor-pointer group"
+              className="relative border-t border-[#302D2A] pt-8 group"
             >
               {/* Enormous background number — texture */}
               <span
-                className="absolute -top-8 left-0 font-display text-[12rem] leading-none text-[#F2EDE4]/[0.025] select-none pointer-events-none transition-opacity duration-500 group-hover:opacity-60"
+                className="absolute -top-8 left-0 font-display text-[12rem] leading-none text-[#F2EDE4]/[0.025] select-none pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.06]"
                 aria-hidden="true"
               >
                 {step.number}
@@ -106,9 +109,15 @@ export function HowItWorksSection() {
                 Step {step.number}
               </p>
 
-              <h3 className="relative font-sans font-medium text-display-sm text-[#F2EDE4] mb-4 z-10">
+              <h3 className="relative font-sans font-medium text-display-sm text-[#F2EDE4] mb-1 z-10">
                 {step.title}
               </h3>
+
+              {step.subtitle && (
+                <p className="relative font-mono text-[11px] tracking-[0.12em] uppercase text-[#CF9B2E]/70 mb-4 z-10">
+                  {step.subtitle}
+                </p>
+              )}
 
               <p className="relative font-sans font-normal text-body-md text-[#C5C0BB] max-w-[30ch] z-10">
                 {step.body}

@@ -51,7 +51,7 @@ export function TrustSection() {
           animate={inView ? 'visible' : 'hidden'}
           className="font-display text-display-md text-[#F2EDE4] mb-16 max-w-[20ch]"
         >
-          Built for recruitment.<br />Accountable for results.
+          Built for recruitment.<br className="hidden md:inline" />Accountable for results.
         </motion.h2>
 
         {/* Proof points */}
@@ -69,7 +69,7 @@ export function TrustSection() {
             >
               {/* Large background ordinal — texture */}
               <span
-                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#CF9B2E]/[0.08] select-none pointer-events-none"
+                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#F2EDE4]/[0.03] select-none pointer-events-none"
                 aria-hidden="true"
               >
                 {String(index + 1).padStart(2, '0')}

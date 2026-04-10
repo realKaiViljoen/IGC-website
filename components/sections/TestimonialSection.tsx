@@ -27,7 +27,7 @@ export function TestimonialSection() {
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 60% 50% at 10% 60%, rgba(201,146,42,0.04) 0%, transparent 65%)' }}
+          style={{ background: 'radial-gradient(ellipse 60% 50% at 10% 60%, rgba(207,155,46,0.04) 0%, transparent 65%)' }}
         />
 
         <motion.div
@@ -36,10 +36,10 @@ export function TestimonialSection() {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          <motion.p variants={fadeUp}>
+          <motion.div variants={fadeUp}>
             <span className="gold-line mb-6 block" aria-hidden="true" />
-            <span className="section-label mb-12 block">From the field</span>
-          </motion.p>
+            <span className="section-label mb-4 block">From the field</span>
+          </motion.div>
 
           <motion.div
             variants={fadeUp}
