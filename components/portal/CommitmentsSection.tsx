@@ -41,9 +41,9 @@ export function CommitmentsSection({ commitments }: Props) {
             : "text-[#6E6762] text-base"
 
           const dueDateEl = c.met ? null : daysUntilDue < 0 ? (
-            <p className="text-[#B84233] font-mono text-sm mt-1">{Math.abs(daysUntilDue)}d overdue</p>
+            <p className="text-[#B84233] font-mono tabular-nums text-sm mt-1">{Math.abs(daysUntilDue)}d overdue</p>
           ) : daysUntilDue <= 3 ? (
-            <p className="text-[#CF9B2E] font-mono text-sm mt-1">due in {daysUntilDue}d</p>
+            <p className="text-[#CF9B2E] font-mono tabular-nums text-sm mt-1">due in {daysUntilDue}d</p>
           ) : (
             <p className="text-sm text-[#857F74] font-mono mt-1">Due {formatDueDate(c.due)}</p>
           )

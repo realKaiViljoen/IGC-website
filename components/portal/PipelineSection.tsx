@@ -48,7 +48,7 @@ function StageBar({ stage }: { stage: PipelineStage }) {
           className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#CF9B2E] shadow-[0_0_6px_2px_rgba(207,155,46,0.5)]"
           style={{ left: `calc(${progressPercent}% - 5px)` }}
         >
-          <div className="absolute inset-0 rounded-full bg-[#CF9B2E] animate-ping opacity-40" />
+          <div className="absolute inset-0 rounded-full bg-[#CF9B2E] animate-pulse opacity-30" />
         </div>
       )}
     </div>
@@ -102,13 +102,13 @@ export function PipelineSection({ pipeline }: Props) {
               className={`px-6 py-5 flex items-center gap-4 hover:bg-[#15140F] transition-colors duration-200 ${urgencyBorder}`}
             >
               <div className="w-48 flex-shrink-0 min-w-0">
-                <p className="text-base font-medium text-[#F2EDE4] truncate">{candidate.name}</p>
+                <p title={candidate.name} className="text-base font-medium text-[#F2EDE4] truncate">{candidate.name}</p>
                 {candidate.note && (
                   <p className="text-sm text-[#857F74] mt-1 truncate">{candidate.note}</p>
                 )}
               </div>
               <StageBar stage={candidate.stage} />
-              <span className={`text-sm font-mono w-10 text-right flex-shrink-0 ${
+              <span className={`text-sm font-mono tabular-nums w-10 text-right flex-shrink-0 ${
                 daysSince >= 8 ? "text-[#B84233]" : daysSince >= 4 ? "text-[#CF9B2E]" : "text-[#4A4640]"
               }`}>
                 {daysSince}d
