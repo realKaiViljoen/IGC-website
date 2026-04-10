@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-dm-sans',
   display: 'swap',
 })
@@ -34,29 +34,34 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://integratedgrowthconsultants.com'),
   title: {
-    default: 'Integrated Growth Consultants: Growth Infrastructure Operators',
-    template: '%s | Integrated Growth Consultants',
+    default: 'IGC | BD Infrastructure for Recruitment Agencies',
+    template: '%s | IGC',
   },
   description:
-    'We build patient acquisition systems for med-aesthetic clinics. Infrastructure, not campaigns. The 90-Day Growth Sprint.',
-  keywords: ['growth infrastructure', 'med-aesthetic marketing', 'patient acquisition', 'South Africa'],
+    'We build mandate acquisition systems for recruitment agencies. LinkedIn sequences, landing pages, automated follow-up. 5 client conversations in 30 days or we work free.',
+  keywords: [
+    'recruitment agency BD',
+    'mandate acquisition',
+    'recruitment business development',
+    'South Africa',
+    'LinkedIn outreach',
+  ],
+  metadataBase: new URL('https://integratedgrowthconsultants.com'),
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
     siteName: 'Integrated Growth Consultants',
-    title: 'Integrated Growth Consultants: Growth Infrastructure Operators',
+    title: 'IGC | BD Infrastructure for Recruitment Agencies',
     description:
-      'We build patient acquisition systems for med-aesthetic clinics. Infrastructure, not campaigns.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+      'We build mandate acquisition systems for recruitment agencies. 5 client conversations in 30 days.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Integrated Growth Consultants',
-    description: 'Growth infrastructure operators. Patient acquisition systems for med-aesthetic clinics.',
+    title: 'IGC | BD Infrastructure for Recruitment Agencies',
+    description:
+      'We build mandate acquisition systems for recruitment agencies. 5 client conversations in 30 days or we work free.',
   },
-  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -66,10 +71,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${playfair.variable} ${inter.variable} ${dmMono.variable} ${poppins.variable}`}
     >
       <body className="bg-[#080808] text-[#F2EDE4] antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-[#F2EDE4] focus:text-[#080808] focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <div className="grain" aria-hidden="true" />
         <PublicShell>
           <MotionProvider>
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
           </MotionProvider>
         </PublicShell>
       </body>
