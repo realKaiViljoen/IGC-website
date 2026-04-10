@@ -100,7 +100,7 @@ export function ProblemSection() {
               <div className="flex items-start gap-8 md:gap-12">
                 {/* Gold ordinal */}
                 <span
-                  className="font-display text-[#C9922A] leading-none shrink-0 mt-1 select-none"
+                  className="font-display text-[#CF9B2E] leading-none shrink-0 mt-1 select-none"
                   style={{ fontSize: 'clamp(1.375rem,2.2vw,1.875rem)' }}
                 >
                   {item.number}
@@ -130,7 +130,7 @@ export function ProblemSection() {
 
                 {/* Right indicator — arrow that brightens on hover */}
                 <svg
-                  className={`w-4 h-4 shrink-0 mt-2 transition-all duration-300 ${open === item.number ? 'text-[#C9922A] translate-x-1' : 'text-[#2D2A27]'}`}
+                  className={`w-4 h-4 shrink-0 mt-2 transition-all duration-300 ${open === item.number ? 'text-[#CF9B2E] translate-x-1' : 'text-[#2D2A27]'}`}
                   viewBox="0 0 16 16"
                   fill="none"
                   stroke="currentColor"

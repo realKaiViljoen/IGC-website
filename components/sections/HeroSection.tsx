@@ -52,8 +52,8 @@ export function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: [
-            'radial-gradient(ellipse 90% 55% at 50% -8%, rgba(201,146,42,0.24) 0%, transparent 60%)',
-            'radial-gradient(ellipse 60% 35% at 50% 80%, rgba(201,146,42,0.04) 0%, transparent 65%)',
+            'radial-gradient(ellipse 90% 55% at 50% -8%, rgba(207,155,46,0.30) 0%, transparent 60%)',
+            'radial-gradient(ellipse 60% 35% at 50% 80%, rgba(207,155,46,0.06) 0%, transparent 65%)',
           ].join(', '),
         }}
         aria-hidden="true"
@@ -171,7 +171,7 @@ export function HeroSection() {
                 {metric.label}
               </p>
               {metric.note && (
-                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#C9922A]/70">
+                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/70">
                   {metric.note}
                 </p>
               )}

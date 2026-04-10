@@ -69,7 +69,7 @@ export function TrustSection() {
             >
               {/* Large background ordinal — texture */}
               <span
-                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#C9922A]/[0.08] select-none pointer-events-none"
+                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#CF9B2E]/[0.08] select-none pointer-events-none"
                 aria-hidden="true"
               >
                 {String(index + 1).padStart(2, '0')}
@@ -106,7 +106,7 @@ export function TrustSection() {
             <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#857F74] mb-8">
               Working with recruitment agencies across Johannesburg, Cape Town, and Durban
             </p>
-            <div className="border-l-2 border-[#C9922A]/30 pl-6">
+            <div className="border-l-2 border-[#CF9B2E]/30 pl-6">
               <Button href="/diagnostic" variant="primary" size="md">
                 Book a BD Audit
               </Button>

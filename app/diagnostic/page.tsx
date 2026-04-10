@@ -84,7 +84,7 @@ export default function DiagnosticPage() {
                     'No commitment. No pitch.',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
-                      <span className="font-mono text-[#C9922A] text-[10px] mt-0.5 shrink-0">→</span>
+                      <span className="font-mono text-[#CF9B2E] text-[10px] mt-0.5 shrink-0">→</span>
                       <span className="font-sans text-base text-[#C5C0BB] leading-relaxed">{item}</span>
                     </li>
                   ))}

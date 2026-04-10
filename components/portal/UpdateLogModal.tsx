@@ -69,7 +69,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
               {/* Header */}
               <div className="px-6 pt-6 pb-5 border-b border-[#1E1C1A]">
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#857F74]">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#857F74]">
                     Upcoming Briefing
                   </span>
                   <button
@@ -93,7 +93,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
 
               {/* Operations history */}
               <div className="px-6 pt-5 pb-5">
-                <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#857F74] mb-4">
+                <p className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] mb-4">
                   Operations History
                 </p>
                 <div>

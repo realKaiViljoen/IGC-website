@@ -159,7 +159,7 @@ export function SprintSection() {
         </div>
 
         {/* Revenue callout — elevated */}
-        <motion.div variants={fadeUp} className="border-l-2 border-[#C9922A]/40 pl-6 mb-10">
+        <motion.div variants={fadeUp} className="border-l-2 border-[#CF9B2E]/40 pl-6 mb-10">
           <p className="font-display text-display-md text-[#F2EDE4] leading-tight mb-2">
             R40,000+
           </p>
@@ -180,7 +180,7 @@ export function SprintSection() {
               className={`flex items-start gap-4 py-3 px-4 rounded-sm ${index % 2 === 0 ? 'bg-[#F2EDE4]/[0.02]' : 'bg-transparent'}`}
             >
               <span
-                className="font-display text-[#C9922A] shrink-0 leading-none"
+                className="font-display text-[#CF9B2E] shrink-0 leading-none"
                 style={{ fontSize: 'clamp(1.375rem,2.2vw,1.875rem)' }}
                 aria-hidden="true"
               >
@@ -194,9 +194,9 @@ export function SprintSection() {
         {/* Guarantee block */}
         <motion.div
           variants={fadeUp}
-          className="mb-10 p-6 border border-[#C9922A]/20 bg-[#C9922A]/[0.04] rounded-sm"
+          className="mb-10 p-6 border border-[#CF9B2E]/20 bg-[#CF9B2E]/[0.04] rounded-sm"
         >
-          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C9922A] font-medium mb-2">
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#CF9B2E] font-medium mb-2">
             The guarantee
           </p>
           <p className="font-sans text-body-lg text-[#F2EDE4] font-normal leading-snug mb-1">

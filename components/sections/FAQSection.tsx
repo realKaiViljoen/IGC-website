@@ -76,7 +76,7 @@ export function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-1 focus-visible:ring-offset-[#111110]"
+                className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-1 focus-visible:ring-offset-[#111110]"
                 aria-expanded={openIndex === index}
               >
                 <span className={`font-sans font-medium text-xl leading-snug transition-colors duration-300 ${openIndex === index ? 'text-[#F2EDE4]' : 'text-[#C5C0BB]'}`}>
@@ -88,7 +88,7 @@ export function FAQSection() {
                   viewBox="0 0 16 16"
                   fill="none"
                   aria-hidden="true"
-                  className={`shrink-0 text-[#C9922A] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
+                  className={`shrink-0 text-[#CF9B2E] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
                 >
                   <path d="M3 6l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -104,7 +104,7 @@ export function FAQSection() {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="border-l-2 border-[#C9922A]/40 pl-4">
+                    <div className="border-l-2 border-[#CF9B2E]/40 pl-4">
                       <p className="font-sans text-body-md text-[#C5C0BB] font-normal max-w-[60ch] pb-6 pr-10">
                         {faq.a}
                       </p>

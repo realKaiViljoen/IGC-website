@@ -12,7 +12,7 @@ const steps = [
     title: 'Audit',
     body: 'We map your current BD setup: what you have, where it breaks, and which hiring managers you are not reaching. A clear diagnosis before a single sequence goes live.',
     icon: (
-      <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="9" cy="9" r="6"/>
         <path d="M15 15l3 3"/>
         <path d="M9 6v3l2 2"/>
@@ -24,7 +24,7 @@ const steps = [
     title: 'Build',
     body: 'LinkedIn outreach sequences, conversion landing page, CRM, automated follow-up, booking system. Your complete mandate acquisition infrastructure, deployed and tested in 30 days.',
     icon: (
-      <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M10 2l1.5 5h5l-4 3 1.5 5L10 12l-4 3 1.5-5-4-3h5z"/>
       </svg>
     ),
@@ -34,7 +34,7 @@ const steps = [
     title: 'Run',
     body: 'The system runs continuously. You track one number: new client conversations booked per month. We handle everything else.',
     icon: (
-      <svg className="w-5 h-5 text-[#C9922A]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg className="w-5 h-5 text-[#CF9B2E]/60" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="10" cy="10" r="3"/>
         <path d="M10 1v2M10 17v2M1 10h2M17 10h2M3.5 3.5l1.4 1.4M15.1 15.1l1.4 1.4M3.5 16.5l1.4-1.4M15.1 4.9l1.4-1.4"/>
       </svg>
@@ -79,7 +79,7 @@ export function HowItWorksSection() {
           className="grid grid-cols-1 md:grid-cols-3 gap-16 relative"
         >
           <div
-            className="hidden md:block absolute top-[1.5rem] left-[2rem] right-[2rem] h-px bg-gradient-to-r from-[#C9922A]/0 via-[#C9922A]/20 to-[#C9922A]/0"
+            className="hidden md:block absolute top-[1.5rem] left-[2rem] right-[2rem] h-px bg-gradient-to-r from-[#CF9B2E]/0 via-[#CF9B2E]/20 to-[#CF9B2E]/0"
             aria-hidden="true"
           />
           {steps.map((step) => (

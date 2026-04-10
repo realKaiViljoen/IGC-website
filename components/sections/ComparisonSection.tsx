@@ -25,8 +25,8 @@ const columns = [
   {
     id: 'igc',
     label: 'IGC',
-    labelColor: '#C9922A',
-    borderClass: 'border border-[#C9922A]/30 border-l-2 border-l-[#C9922A]/50',
+    labelColor: '#CF9B2E',
+    borderClass: 'border border-[#CF9B2E]/30 border-l-2 border-l-[#CF9B2E]/50',
     bgClass: 'bg-[#0D0D0C]',
     pointColor: 'text-[#F2EDE4]',
     points: [
@@ -103,7 +103,7 @@ export function ComparisonSection() {
             >
               {/* IGC "recommended" badge */}
               {col.id === 'igc' && (
-                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#C9922A]/60 to-transparent md:hidden" aria-hidden="true" />
+                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#CF9B2E]/60 to-transparent md:hidden" aria-hidden="true" />
               )}
 
               {/* Column label */}
@@ -115,7 +115,7 @@ export function ComparisonSection() {
                   {col.label}
                 </p>
                 {col.id === 'igc' && (
-                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-[#C9922A] border border-[#C9922A]/30 px-2 py-0.5 rounded-full">
+                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-[#CF9B2E] border border-[#CF9B2E]/30 px-2 py-0.5 rounded-full">
                     Recommended
                   </span>
                 )}
@@ -127,7 +127,7 @@ export function ComparisonSection() {
                   <li key={point} className="flex items-start gap-3">
                     {col.id === 'igc' ? (
                       <svg
-                        className="w-[14px] h-[14px] text-[#C9922A] shrink-0 mt-[3px]"
+                        className="w-[14px] h-[14px] text-[#CF9B2E] shrink-0 mt-[3px]"
                         viewBox="0 0 14 14"
                         fill="none"
                         stroke="currentColor"

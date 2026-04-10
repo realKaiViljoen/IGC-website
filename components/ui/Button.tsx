@@ -27,9 +27,9 @@ const variants: Record<Variant, string> = {
   primary:
     'font-semibold tracking-[0.08em] uppercase text-[#080808] ' +
     'bg-[#F2EDE4] border border-[#F2EDE4]/80 ' +
-    'shadow-[0_0_24px_rgba(242,237,228,0.14),0_2px_8px_rgba(0,0,0,0.30)] ' +
+    'shadow-[0_0_28px_rgba(242,237,228,0.18),0_4px_14px_rgba(0,0,0,0.45)] ' +
     'hover:bg-white hover:border-white ' +
-    'hover:shadow-[0_0_36px_rgba(242,237,228,0.28),0_4px_16px_rgba(0,0,0,0.40)] ' +
+    'hover:shadow-[0_0_44px_rgba(242,237,228,0.34),0_6px_22px_rgba(0,0,0,0.55)] ' +
     'hover:scale-[1.02] active:scale-[0.99]',
 
   // Ghost — stronger border, brighter text, border-2
@@ -121,7 +121,7 @@ export function Button({
       <button
         type={type}
         onClick={onClick}
-        className={`${classes} cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
+        className={`${classes} cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
       >
         {content}
       </button>
@@ -143,7 +143,7 @@ export function Button({
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className={`${classes} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
+      className={`${classes} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
     >
       {content}
     </Link>

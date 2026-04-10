@@ -66,7 +66,7 @@ export function Sidebar() {
 
       {/* Engagement health panel */}
       <div className="px-4 py-4 border-t border-[#1A1918]">
-        <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#857F74] mb-3">
+        <p className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] mb-3">
           Engagement Health
         </p>
         <div className="space-y-2.5">
@@ -76,7 +76,7 @@ export function Sidebar() {
             { label: "Activity", filled: 5, color: "#3D8B5E" },
           ].map(({ label, filled, color }) => (
             <div key={label} className="flex items-center justify-between gap-3">
-              <span className="text-[11px] font-mono text-[#857F74] w-12 flex-shrink-0">{label}</span>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] w-12 flex-shrink-0">{label}</span>
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div

@@ -54,14 +54,14 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
   return (
     <a
       href={href}
-      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9922A] focus-visible:ring-offset-1 focus-visible:ring-offset-[#080808] rounded-sm ${
+      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-1 focus-visible:ring-offset-[#080808] rounded-sm ${
         isActive ? 'text-[#F2EDE4]' : 'text-[#C5C0BB] hover:text-[#F2EDE4]'
       }`}
       onClick={onClick}
     >
       {label}
       <span
-        className={`absolute left-0 bottom-[-2px] h-px w-full bg-[#C9922A] origin-left transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`absolute left-0 bottom-[-2px] h-px w-full bg-[#CF9B2E] origin-left transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
         }`}
         aria-hidden="true"
