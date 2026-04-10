@@ -21,7 +21,7 @@ export default {
         'text-tertiary':  '#6E6762',
 
         /* ── Accents ─────────────────────────────────────────────── */
-        gold:    '#C9922A',
+        gold:    '#CF9B2E',
         'gold-dim': '#7A5A1A',
         signal:  '#1F4D3A',
 

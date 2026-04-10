@@ -15,6 +15,9 @@ export function Cursor() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
+    // Don't run cursor on touch-only devices
+    if (!window.matchMedia('(pointer: fine)').matches) return
+
     // Hide native cursor on desktop
     document.body.style.cursor = 'none'
 
