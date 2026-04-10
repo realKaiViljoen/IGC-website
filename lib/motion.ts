@@ -34,3 +34,13 @@ export const stagger: Variants = {
     },
   },
 }
+
+export const staggerFast: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0,
+    },
+  },
+}

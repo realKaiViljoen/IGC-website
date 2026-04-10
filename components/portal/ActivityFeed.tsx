@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { fadeUp, stagger } from "@/lib/motion"
+import { fadeUp, staggerFast } from "@/lib/motion"
 import type { ClientData } from "@/types/client"
 
 interface Props {
@@ -32,7 +32,7 @@ export function ActivityFeed({ activity }: Props) {
         <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Operations Log</h2>
       </div>
       <motion.div
-        variants={stagger}
+        variants={staggerFast}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
