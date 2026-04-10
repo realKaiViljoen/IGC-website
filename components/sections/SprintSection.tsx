@@ -104,7 +104,7 @@ export function SprintSection() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 55% 65% at 95% 45%, rgba(201,146,42,0.10) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse 55% 65% at 95% 45%, rgba(207,155,46,0.10) 0%, transparent 60%)',
           }}
           aria-hidden="true"
         />
@@ -169,7 +169,7 @@ export function SprintSection() {
             R40,000+
           </p>
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C5C0BB] font-medium">
-            One new retained mandate. Average placement fee, Gauteng tech and engineering.
+            One retained mandate covers four months of retainer. Average placement fee, Gauteng tech and engineering.
           </p>
         </motion.div>
 

@@ -8,7 +8,7 @@ import { fadeUp, fadeIn, lineReveal } from '@/lib/motion'
 const ease = [0.16, 1, 0.3, 1] as const
 
 const metrics = [
-  { value: '5', unit: 'Guaranteed', label: 'Client conversations in 30 days', note: 'Or we work free until we do' },
+  { value: '5+', unit: '', label: 'Client conversations guaranteed', note: 'In 30 days, or we work free' },
   { value: '30', unit: 'Days', label: 'Full system live', note: null },
   { value: 'R10k', unit: '/month', label: 'Retainer after build', note: null },
 ]
@@ -77,7 +77,7 @@ export function HeroSection() {
           variants={lineReveal}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.15, duration: 0.9, ease: [...ease] }}
+          transition={{ delay: 0.15, duration: 0.9, ease: ease }}
           className="gold-line mb-6"
           aria-hidden="true"
         />
@@ -87,12 +87,12 @@ export function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.3, duration: 0.7, ease: [...ease] }}
+          transition={{ delay: 0.3, duration: 0.7, ease: ease }}
           className="inline-flex items-center gap-2 border-2 border-[rgba(242,237,228,0.22)] rounded-full px-4 py-1.5 mb-10"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF7A]" aria-hidden="true" />
           <span className="font-mono font-medium text-[11px] tracking-[0.12em] uppercase text-[#A09890]">
-            3 of 6 Q2 build slots remaining
+            6 agencies per quarter. Limited build capacity.
           </span>
         </motion.div>
 
@@ -101,10 +101,10 @@ export function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.45, duration: 0.9, ease: [...ease] }}
+          transition={{ delay: 0.45, duration: 0.9, ease: ease }}
           className="font-display text-display-xl text-[#F2EDE4] mb-8"
         >
-          We build the BD pipeline<br />your billers will not.
+          We build the BD pipeline<br className="hidden md:inline" />your billers will not.
         </motion.h1>
 
         {/* Sub-headline — plain language what we do */}
@@ -112,20 +112,20 @@ export function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.6, duration: 0.7, ease: [...ease] }}
+          transition={{ delay: 0.6, duration: 0.7, ease: ease }}
           className="font-sans text-body-lg text-[#A09890] max-w-[52ch] mb-3"
         >
-          LinkedIn sequences, conversion landing pages, automated follow-up, booking infrastructure. Built for recruitment agencies. Running in the background while your team fills roles.
+          A done-for-you mandate acquisition system that books client conversations while your team fills roles. Built in 30 days. Owned by you.
         </motion.p>
 
         <motion.p
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.68, duration: 0.7, ease: [...ease] }}
+          transition={{ delay: 0.68, duration: 0.7, ease: ease }}
           className="font-sans text-body-md text-[#857F74] max-w-[44ch] mb-12"
         >
-          Not campaigns. Not content. A mandate acquisition system built in 30 days and owned by you.
+          Not campaigns. Not content. Not another marketing agency. Infrastructure that converts.
         </motion.p>
 
         {/* CTAs */}
@@ -133,7 +133,7 @@ export function HeroSection() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.78, duration: 0.6, ease: [...ease] }}
+          transition={{ delay: 0.78, duration: 0.6, ease: ease }}
           className="flex flex-col items-center gap-4"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -145,7 +145,7 @@ export function HeroSection() {
             </Button>
           </div>
           <p className="font-mono font-medium text-[12px] tracking-[0.12em] uppercase text-[#A09890]">
-            20-minute audit. Free. No pitch.
+            20-minute audit. Free. You'll know exactly where your pipeline breaks.
           </p>
         </motion.div>
 
@@ -153,8 +153,8 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.7, ease: [...ease] }}
-          className="w-full mt-20 pt-8 border-t border-[rgba(242,237,228,0.08)] grid grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-6 divide-y divide-[rgba(242,237,228,0.06)] sm:divide-y-0"
+          transition={{ delay: 1.0, duration: 0.7, ease: ease }}
+          className="w-full mt-20 pt-8 border-t border-[rgba(242,237,228,0.08)] grid grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-6 divide-y divide-[rgba(242,237,228,0.12)] sm:divide-y-0"
         >
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col items-center gap-1 py-5 sm:py-0">
@@ -170,7 +170,7 @@ export function HeroSection() {
                 {metric.label}
               </p>
               {metric.note && (
-                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/70">
+                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/90">
                   {metric.note}
                 </p>
               )}
@@ -184,7 +184,7 @@ export function HeroSection() {
         style={{ opacity: scrollCueOpacity }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.3, duration: 0.5, ease: [...ease] }}
+        transition={{ delay: 1.3, duration: 0.5, ease: ease }}
         className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1 pointer-events-none"
         aria-hidden="true"
       >

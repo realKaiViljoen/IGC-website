@@ -26,9 +26,9 @@ export function ClosingCTA() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: [
-            'radial-gradient(ellipse 70% 55% at 100% -5%, rgba(201,146,42,0.28) 0%, transparent 55%)',
-            'radial-gradient(ellipse 50% 40% at 0% 100%, rgba(201,146,42,0.10) 0%, transparent 55%)',
-            'radial-gradient(ellipse 40% 30% at 50% 50%, rgba(201,146,42,0.03) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 55% at 100% -5%, rgba(207,155,46,0.28) 0%, transparent 55%)',
+            'radial-gradient(ellipse 50% 40% at 0% 100%, rgba(207,155,46,0.10) 0%, transparent 55%)',
+            'radial-gradient(ellipse 40% 30% at 50% 50%, rgba(207,155,46,0.03) 0%, transparent 70%)',
           ].join(', '),
         }}
         aria-hidden="true"
@@ -41,9 +41,9 @@ export function ClosingCTA() {
         animate={inView ? 'visible' : 'hidden'}
         className="w-full relative z-10"
       >
-        <motion.span variants={fadeUp} className="gold-line mb-8 block" aria-hidden="true" />
+        <motion.span variants={fadeUp} className="gold-line mb-6 block" aria-hidden="true" />
 
-        <motion.p variants={fadeUp} className="section-label mb-6">
+        <motion.p variants={fadeUp} className="section-label mb-4">
           Limited availability
         </motion.p>
 
@@ -51,19 +51,19 @@ export function ClosingCTA() {
           variants={fadeUp}
           className="font-display text-display-lg text-[#F2EDE4] mb-8 max-w-[18ch]"
         >
-          Your Q2 2026 build slot<br />is open.
+          Your next build slot<br />is open.
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
           className="font-sans text-body-lg text-[#C5C0BB] font-normal max-w-[48ch] mb-12"
         >
-          Three of six Q2 slots are filled. Book a 20-minute BD audit and find out whether your agency is a fit for the build. No commitment. No pitch. An honest look at your current mandate pipeline.
+          Build capacity is limited to 6 agencies per quarter. Book a 20-minute BD audit and find out whether your agency is a fit for the build. No commitment. No pitch. An honest look at your current mandate pipeline.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col items-start gap-5">
           <Button href="/diagnostic" variant="primary" size="lg">
-            Claim Your Q2 Slot
+            Claim Your Build Slot
           </Button>
           <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#C5C0BB] font-medium">
             20-minute BD audit. Free. We tell you honestly what we find.

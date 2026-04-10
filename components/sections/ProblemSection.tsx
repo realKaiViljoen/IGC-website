@@ -23,8 +23,8 @@ const painPoints = [
   },
   {
     number: '04',
-    statement: 'You are not sure which part of your BD process is actually leaking.',
-    consequence: 'Is it the top of funnel? The follow-up? The booking rate? Without knowing where it breaks, every fix is a guess. Most agencies are losing mandates at the same two points.',
+    statement: 'You have tried to do BD yourself. It works when you have time. You never have time.',
+    consequence: 'Owner-led BD is the most common pipeline in independent recruitment. It is also the most fragile. One busy quarter and the pipeline goes cold. The feast-famine cycle is not a motivation problem — it is a systems problem.',
   },
 ]
 
@@ -47,7 +47,7 @@ export function ProblemSection() {
           position: 'absolute',
           inset: 0,
           pointerEvents: 'none',
-          background: 'radial-gradient(ellipse 70% 50% at 15% 0%, rgba(201,146,42,0.05) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 70% 50% at 15% 0%, rgba(207,155,46,0.05) 0%, transparent 60%)',
         }}
       />
 
@@ -83,7 +83,7 @@ export function ProblemSection() {
           variants={fadeUp}
           className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[26ch]"
         >
-          Your agency is good.<br />Your mandate pipeline is not.
+          Your agency is good.<br className="hidden md:inline" />Your mandate pipeline is not.
         </motion.h2>
 
         {/* Expansion rows */}
