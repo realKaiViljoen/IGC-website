@@ -60,7 +60,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
           {/* Modal positioner */}
           <div className="fixed inset-0 z-[101] flex items-center justify-center p-6 pointer-events-none">
             <motion.div
-              className="bg-[#111110] border border-[#CF9B2E]/25 rounded-2xl w-full max-w-md pointer-events-auto overflow-hidden shadow-[0_0_0_1px_rgba(207,155,46,0.08),0_32px_80px_rgba(0,0,0,0.8),0_0_60px_rgba(207,155,46,0.04)]"
+              className="bg-[#111110] border border-[#CF9B2E]/20 rounded-2xl w-full max-w-md pointer-events-auto overflow-hidden shadow-[0_0_0_1px_rgba(207,155,46,0.08),0_32px_80px_rgba(0,0,0,0.8),0_0_60px_rgba(207,155,46,0.04)]"
               initial={{ opacity: 0, y: 20, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.98 }}

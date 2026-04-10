@@ -28,7 +28,7 @@ export function MessagesClient({ client, consultantId, clientUserId }: Props) {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="border-b border-[#242220] px-6 py-4 flex-shrink-0">
+      <div className="border-b border-[#2D2A27] px-6 py-4 flex-shrink-0">
         <h1 className="font-playfair text-[#F2EDE4]">Messages</h1>
         <p className="text-[#857F74] text-xs mt-0.5">
           Direct line to your consultant

@@ -25,9 +25,9 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 8 }}
       transition={{ duration: 0.15 }}
-      className="absolute bottom-full left-0 right-0 mb-1 bg-[#111110] border border-[#242220] max-h-72 overflow-y-auto z-10"
+      className="absolute bottom-full left-0 right-0 mb-1 bg-[#111110] border border-[#2D2A27] max-h-72 overflow-y-auto z-10"
     >
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#242220] sticky top-0 bg-[#111110]">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-[#2D2A27] sticky top-0 bg-[#111110]">
         <span className="text-[#4A4640] text-xs font-mono uppercase tracking-wider">
           Reference a dashboard item
         </span>
@@ -65,7 +65,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
       )}
 
       {client.commitments.length > 0 && (
-        <div className="px-4 py-3 border-t border-[#242220]">
+        <div className="px-4 py-3 border-t border-[#2D2A27]">
           <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
             Commitments
           </p>
@@ -85,7 +85,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
               <span className="text-[#F2EDE4] text-sm truncate">{c.promise}</span>
               <span
                 className={`text-xs flex-shrink-0 ${
-                  c.met ? "text-[#C9922A]" : "text-[#857F74]"
+                  c.met ? "text-[#CF9B2E]" : "text-[#857F74]"
                 }`}
               >
                 {c.met ? "Met" : "Pending"}
@@ -96,7 +96,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
       )}
 
       {client.activity.length > 0 && (
-        <div className="px-4 py-3 border-t border-[#242220]">
+        <div className="px-4 py-3 border-t border-[#2D2A27]">
           <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
             Recent Activity
           </p>

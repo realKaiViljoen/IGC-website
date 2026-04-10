@@ -14,8 +14,8 @@ interface Props {
 
 export function ReferenceCard({ reference, onRemove }: Props) {
   return (
-    <div className="flex items-start gap-3 bg-[#0D0D0C] border-l-2 border-[#C9922A] px-3 py-2">
-      <span className="text-[#C9922A] text-xs mt-0.5 flex-shrink-0">
+    <div className="flex items-start gap-3 bg-[#0D0D0C] border-l-2 border-[#CF9B2E] px-3 py-2">
+      <span className="text-[#CF9B2E] text-xs mt-0.5 flex-shrink-0">
         {TYPE_ICONS[reference.type]}
       </span>
       <div className="flex-1 min-w-0">

@@ -31,8 +31,8 @@ export function Sidebar() {
   }, [])
 
   return (
-    <aside className="w-56 flex-shrink-0 border-r border-[#242220] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
-      <div className="px-5 py-6 border-b border-[#242220]">
+    <aside className="w-56 flex-shrink-0 border-r border-[#2D2A27] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
+      <div className="px-5 py-6 border-b border-[#2D2A27]">
         <span className="font-playfair text-2xl font-bold text-[#F2EDE4]">IGC</span>
         <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-wider uppercase">
           Client Portal
@@ -91,7 +91,7 @@ export function Sidebar() {
         </div>
       </div>
 
-      <div className="px-2 py-4 border-t border-[#242220]">
+      <div className="px-2 py-4 border-t border-[#2D2A27]">
         <button
           onClick={() => signOut({ callbackUrl: "/portal" })}
           className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#857F74] hover:text-[#F2EDE4] hover:bg-[rgba(242,237,228,0.04)] rounded-lg transition-colors duration-200 w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50"

@@ -37,7 +37,7 @@ export function MessageComposer({ client, onSend }: Props) {
   const hasActiveReference = !!reference
 
   return (
-    <div className="relative border-t border-[#242220] bg-[#080808]">
+    <div className="relative border-t border-[#2D2A27] bg-[#080808]">
       {reference && (
         <div className="px-4 pt-3">
           <ReferenceCard reference={reference} onRemove={() => setReference(null)} />
@@ -62,8 +62,8 @@ export function MessageComposer({ client, onSend }: Props) {
           onClick={() => setPickerOpen((v) => !v)}
           className={`text-xs px-2.5 py-1 border transition-colors flex-shrink-0 ${
             pickerOpen || hasActiveReference
-              ? "border-[#C9922A] text-[#C9922A]"
-              : "border-[#242220] text-[#4A4640] hover:text-[#857F74] hover:border-[#4A4640]"
+              ? "border-[#CF9B2E] text-[#CF9B2E]"
+              : "border-[#2D2A27] text-[#4A4640] hover:text-[#857F74] hover:border-[#4A4640]"
           }`}
         >
           Reference
@@ -78,7 +78,7 @@ export function MessageComposer({ client, onSend }: Props) {
         <button
           onClick={handleSend}
           disabled={!text.trim()}
-          className="text-xs px-3 py-1 border border-[#C9922A] text-[#C9922A] hover:bg-[#1F4D3A] hover:text-[#F2EDE4] hover:border-[#1F4D3A] transition-colors disabled:opacity-30 flex-shrink-0"
+          className="text-xs px-3 py-1 border border-[#CF9B2E] text-[#CF9B2E] hover:bg-[#1F4D3A] hover:text-[#F2EDE4] hover:border-[#1F4D3A] transition-colors disabled:opacity-30 flex-shrink-0"
         >
           Send
         </button>

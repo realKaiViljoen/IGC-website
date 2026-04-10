@@ -16,8 +16,8 @@ export function CommitmentsSection({ commitments }: Props) {
   if (commitments.length === 0) return null
 
   return (
-    <div className="mx-8 bg-[#111110] border border-[#242220] rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
-      <div className="px-6 py-5 border-b border-[#242220]">
+    <div className="mx-8 bg-[#111110] border border-[#2D2A27] rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
+      <div className="px-6 py-5 border-b border-[#2D2A27]">
         <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Our Commitments to You</h2>
       </div>
       <motion.div
@@ -25,7 +25,7 @@ export function CommitmentsSection({ commitments }: Props) {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="divide-y divide-[#242220]"
+        className="divide-y divide-[#2D2A27]"
       >
         {commitments.map((c, i) => {
           const daysUntilDue = Math.floor((new Date(c.due).getTime() - Date.now()) / 86400000)

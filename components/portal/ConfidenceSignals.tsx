@@ -16,7 +16,7 @@ function SignalCard({
   showCursor?: boolean
 }) {
   return (
-    <div className="bg-[#111110] border border-[#242220] rounded-xl px-6 py-6 shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)] hover:bg-[#151413] hover:border-[#2E2B27] transition-all duration-200">
+    <div className="bg-[#111110] border border-[#2D2A27] rounded-xl px-6 py-6 shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)] hover:bg-[#151413] hover:border-[#2E2B27] transition-all duration-200">
       <p className="text-[#857F74] text-sm font-mono uppercase tracking-wider mb-3">
         {label}
       </p>

@@ -33,7 +33,7 @@ export function DashboardHeader({ client, analytics, greeting }: Props) {
       : `${analytics.daysToNextUpdate} day${analytics.daysToNextUpdate !== 1 ? "s" : ""}`
 
   return (
-    <div className="border-b border-[#242220] px-8 py-8 flex items-start justify-between gap-6">
+    <div className="border-b border-[#2D2A27] px-8 py-8 flex items-start justify-between gap-6">
       <div>
         <p className="font-playfair italic text-4xl text-[#F2EDE4] mb-3">
           {greeting}, {client.contactName}
