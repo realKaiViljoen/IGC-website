@@ -53,7 +53,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             onClick={onClose}
           />
 
@@ -69,13 +69,13 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
               {/* Header */}
               <div className="px-6 pt-6 pb-5 border-b border-[#1E1C1A]">
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#857F74]">
+                  <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-[#857F74]">
                     Upcoming Briefing
                   </span>
                   <button
                     autoFocus
                     onClick={onClose}
-                    className="text-[#857F74] hover:text-[#F2EDE4] transition-colors duration-200 flex-shrink-0 -mt-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50 rounded"
+                    className="text-[#857F74] hover:text-[#F2EDE4] transition-colors duration-200 flex-shrink-0 -mt-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] rounded"
                     aria-label="Close"
                   >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -93,7 +93,7 @@ export function UpdateLogModal({ open, onClose, nextUpdate, activity }: Props) {
 
               {/* Operations history */}
               <div className="px-6 pt-5 pb-5">
-                <p className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] mb-4">
+                <p className="text-[11px] font-mono uppercase tracking-[0.14em] text-[#857F74] mb-4">
                   Operations History
                 </p>
                 <div>

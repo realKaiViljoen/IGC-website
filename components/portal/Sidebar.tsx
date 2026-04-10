@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { signOut } from "next-auth/react"
+import { Button } from "@/components/ui/Button"
 
 const navItems = [
   { label: "Dashboard", href: "/portal/dashboard", icon: "◈" },
@@ -31,7 +32,7 @@ export function Sidebar() {
   }, [])
 
   return (
-    <aside className="w-56 flex-shrink-0 border-r border-[#2D2A27] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
+    <aside className="w-56 flex-shrink-0 border-r border-[#2D2A27] flex flex-col bg-[#0D0D0C] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
       <div className="px-5 py-6 border-b border-[#2D2A27]">
         <span className="font-display text-display-sm font-bold text-[#F2EDE4]">IGC</span>
         <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-[0.14em] uppercase">
@@ -48,10 +49,10 @@ export function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative flex items-center gap-3 px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
+              className={`relative flex items-center gap-3 px-3 py-2.5 text-sm font-medium transition-all duration-300 ${
                 isActive
-                  ? "text-[#CF9B2E] bg-[rgba(207,155,46,0.06)] rounded-lg font-semibold focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50"
-                  : "text-[#857F74] hover:text-[#F2EDE4] hover:bg-[rgba(242,237,228,0.04)] rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50"
+                  ? "text-[#CF9B2E] bg-[rgba(207,155,46,0.06)] rounded-lg font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+                  : "text-[#857F74] hover:text-[#F2EDE4] hover:bg-[rgba(242,237,228,0.04)] rounded-lg transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
               }`}
             >
               {isActive && (
@@ -92,13 +93,15 @@ export function Sidebar() {
       </div>
 
       <div className="px-2 py-4 border-t border-[#2D2A27]">
-        <button
+        <Button
+          variant="ghost"
+          size="sm"
           onClick={() => signOut({ callbackUrl: "/portal" })}
-          className="flex items-center gap-3 px-3 py-2.5 text-sm text-[#857F74] hover:text-[#F2EDE4] hover:bg-[rgba(242,237,228,0.04)] rounded-lg transition-colors duration-200 w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#CF9B2E]/50"
+          className="w-full justify-start gap-3 px-3 py-2.5 min-h-0 text-[#857F74] hover:text-[#F2EDE4]"
         >
           <span className="text-xs w-3">→</span>
           Sign out
-        </button>
+        </Button>
       </div>
     </aside>
   )

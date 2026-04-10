@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion"
 import type { ClientData, MessageReference } from "@/types/client"
 import { ReferencePicker } from "./ReferencePicker"
 import { ReferenceCard } from "./ReferenceCard"
+import { Button } from "@/components/ui/Button"
 
 interface Props {
   client: ClientData
@@ -58,16 +59,18 @@ export function MessageComposer({ client, onSend }: Props) {
       </AnimatePresence>
 
       <div className="flex items-center gap-2 px-4 py-3">
-        <button
+        <Button
+          variant="ghost"
+          size="sm"
           onClick={() => setPickerOpen((v) => !v)}
-          className={`text-xs px-2.5 py-1 border transition-colors flex-shrink-0 ${
+          className={`flex-shrink-0 min-h-0 py-1 px-2.5 ${
             pickerOpen || hasActiveReference
               ? "border-[#CF9B2E] text-[#CF9B2E]"
-              : "border-[#2D2A27] text-[#4A4640] hover:text-[#857F74] hover:border-[#4A4640]"
+              : ""
           }`}
         >
           Reference
-        </button>
+        </Button>
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -75,13 +78,14 @@ export function MessageComposer({ client, onSend }: Props) {
           placeholder="Type a message…"
           className="flex-1 bg-transparent text-[#F2EDE4] text-sm placeholder:text-[#4A4640] focus:outline-none"
         />
-        <button
+        <Button
+          variant="primary"
+          size="sm"
           onClick={handleSend}
-          disabled={!text.trim()}
-          className="text-xs px-3 py-1 border border-[#CF9B2E] text-[#CF9B2E] hover:bg-[#1F4D3A] hover:text-[#F2EDE4] hover:border-[#1F4D3A] transition-colors disabled:opacity-30 flex-shrink-0"
+          className="flex-shrink-0 min-h-0 py-1 px-3 disabled:opacity-30"
         >
           Send
-        </button>
+        </Button>
       </div>
     </div>
   )

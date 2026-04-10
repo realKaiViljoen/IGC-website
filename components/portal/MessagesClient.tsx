@@ -45,7 +45,7 @@ export function MessagesClient({ client, consultantId, clientUserId }: Props) {
             {ref && <ReferenceCard reference={ref} />}
       ──────────────────────────────────────────────────────────────── */}
       <div className="flex-1 overflow-auto px-6 py-4">
-        <p className="text-[#4A4640] text-sm text-center mt-8 font-mono text-xs uppercase tracking-wider">
+        <p className="text-[#4A4640] text-sm text-center mt-8 font-mono text-xs uppercase tracking-[0.14em]">
           CometChat integration point
         </p>
       </div>

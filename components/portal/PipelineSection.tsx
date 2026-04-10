@@ -40,7 +40,7 @@ function StageBar({ stage }: { stage: PipelineStage }) {
     <div className="flex-1 h-1.5 bg-[#1A1918] rounded-full overflow-visible relative">
       {/* Fill */}
       <div
-        className="h-full rounded-full transition-all duration-700 ease-out"
+        className="h-full rounded-full transition-all duration-[600ms]"
         style={{ width: `${progressPercent}%`, background: fillGradient }}
       />
       {/* Pulsing head */}
