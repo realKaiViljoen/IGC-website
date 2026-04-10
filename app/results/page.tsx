@@ -10,20 +10,20 @@ export const metadata: Metadata = {
 
 const metrics = [
   {
-    metric: 'New consultations booked',
+    metric: 'New client conversations booked',
     why: 'The only output that matters. Tracked per month, attributed to channel.',
   },
   {
-    metric: 'Cost per consultation',
-    why: 'Ad spend divided by consultations booked. Not leads. Confirmed bookings.',
+    metric: 'Cost per client conversation',
+    why: 'Spend divided by client conversations booked. Not leads. Confirmed meetings.',
   },
   {
-    metric: 'WhatsApp response time',
-    why: 'Average time from lead message to first reply. Target: under 3 minutes.',
+    metric: 'Connection-to-conversation rate',
+    why: 'Percentage of new connections that convert to a booked BD conversation.',
   },
   {
-    metric: 'Review score delta',
-    why: 'Google review score before and after reputation engine deployment.',
+    metric: 'Pipeline-to-mandate conversion',
+    why: 'Ratio of active BD pipeline to signed mandates across the deployment period.',
   },
 ]
 
@@ -77,7 +77,7 @@ export default function ResultsPage() {
           <div className="border border-[#2D2A27] p-6 flex-1">
             <p className="font-mono text-[12px] tracking-[0.12em] uppercase text-[#A09890] mb-3">Current Status</p>
             <p className="font-display text-display-md text-[#F2EDE4] leading-tight mb-2">In Progress</p>
-            <p className="font-sans text-body-md text-[#C5C0BB]">4 clinics actively running the system. Deployment began Q1 2026.</p>
+            <p className="font-sans text-body-md text-[#C5C0BB]">4 agencies actively running the system. Deployment began Q1 2026.</p>
           </div>
 
           <div className="border border-[#2D2A27] p-6 flex-1">
@@ -95,10 +95,10 @@ export default function ResultsPage() {
             Want to be part of Cohort 2?
           </p>
           <p className="font-sans text-body-md text-[#C5C0BB] max-w-prose mb-4">
-            Q2 2026 slots are being filled now. Book a diagnostic. We tell you honestly whether your clinic is a fit for the Sprint.
+            Q2 2026 slots are being filled now. Book a BD Audit. We tell you honestly whether your agency is a fit for the Build.
           </p>
           <Button href="/diagnostic" variant="primary" size="md">
-            Book a Diagnostic
+            Book a BD Audit
           </Button>
         </div>
       </SectionWrapper>

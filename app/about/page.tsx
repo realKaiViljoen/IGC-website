@@ -61,7 +61,7 @@ export default function AboutPage() {
           </p>
 
           <p className="font-sans text-body-md text-[#C5C0BB] mb-8">
-            IGC is that capability, applied specifically to med-aesthetic clinics. If your clinic is booking fewer consultations than it should be, this is where to start.
+            IGC is that capability, applied specifically to independent recruitment agencies. If your agency is winning fewer mandates than it should be, this is where to start.
           </p>
 
           <a
@@ -84,7 +84,7 @@ export default function AboutPage() {
           {[
             {
               title: 'Systems over campaigns',
-              body: 'Campaigns are events. Systems are infrastructure. Build the latter and acquisition becomes repeatable, measurable, owned by your clinic.',
+              body: 'Campaigns are events. Systems are infrastructure. Build the latter and acquisition becomes repeatable, measurable, owned by your agency.',
             },
             {
               title: 'Operators, not consultants',
@@ -111,10 +111,10 @@ export default function AboutPage() {
       <SectionWrapper className="bg-[#111110]">
         <div className="flex flex-col items-start gap-4">
           <p className="font-sans text-body-lg text-[#F2EDE4]">
-            Next step: see the full Sprint.
+            Next step: see the full BD Build.
           </p>
           <Button href="/services" variant="primary" size="md">
-            See the Sprint
+            See the Build →
           </Button>
         </div>
       </SectionWrapper>

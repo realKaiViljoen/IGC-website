@@ -3,9 +3,9 @@ import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { Button } from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Book a Call: 20-Minute Diagnostic',
+  title: 'Contact IGC: Book Your BD Audit',
   description:
-    'Book a 20-minute diagnostic call with IGC. We look at your current acquisition setup and tell you honestly whether we can move the needle.',
+    'Book a 20-minute BD Audit call with IGC. We look at your current BD setup and tell you honestly whether we can move the needle for your agency.',
 }
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
         <p className="section-label mb-4">Contact</p>
 
         <h1 className="font-display text-display-lg text-[#F2EDE4] max-w-[14ch] mb-4">
-          Book Your Diagnostic
+          Book Your BD Audit
         </h1>
         <p className="font-sans text-body-lg text-[#C5C0BB] max-w-prose mb-12">
           Not a sales call. 20 minutes. We look at your current acquisition setup and tell you exactly where the leakage is. Then we tell you honestly whether we are the right fix.
@@ -45,14 +45,14 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="clinic" className="section-label">Clinic Name</label>
+            <label htmlFor="clinic" className="section-label">Agency Name</label>
             <input
               id="clinic"
               name="clinic"
               type="text"
               required
               className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
-              placeholder="Clinic or practice name"
+              placeholder="Your recruitment agency name"
             />
           </div>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
               type="email"
               required
               className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
-              placeholder="you@clinic.co.za"
+              placeholder="you@youragency.co.za"
             />
           </div>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-3">
             <Button type="submit" variant="primary" size="md">
-              Request Your Diagnostic
+              Request Your BD Audit
             </Button>
             <p className="font-mono text-[11px] tracking-[0.10em] text-[#857F74]">
               By submitting you agree to our{' '}
@@ -106,7 +106,7 @@ export default function ContactPage() {
           </div>
         </form>
         <p className="font-mono font-medium text-[12px] tracking-[0.10em] uppercase text-[#857F74] mt-6">
-          We reply within one business day to confirm your diagnostic time.
+          We reply within one business day to confirm your audit time.
         </p>
       </SectionWrapper>
     </>
