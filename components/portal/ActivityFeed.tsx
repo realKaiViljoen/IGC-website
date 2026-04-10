@@ -39,7 +39,7 @@ export function ActivityFeed({ activity }: Props) {
         className="divide-y divide-[#242220]"
       >
         {sorted.map((item, i) => (
-          <motion.div key={i} variants={fadeUp} className="px-6 py-5 flex items-start gap-6">
+          <motion.div key={i} variants={fadeUp} className="px-6 py-5 flex items-start gap-6 hover:bg-[#15140F] transition-colors duration-200">
             <span className="text-sm text-[#857F74] font-mono flex-shrink-0 mt-0.5 w-24">
               {formatActivityDate(item.date)}
             </span>

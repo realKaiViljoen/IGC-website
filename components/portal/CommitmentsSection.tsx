@@ -52,7 +52,7 @@ export function CommitmentsSection({ commitments }: Props) {
             <motion.div
               key={i}
               variants={fadeUp}
-              className={`px-6 py-5 flex items-start gap-5 transition-colors duration-200 ${c.met ? "bg-[#13120F]" : ""} ${rowUrgency}`}
+              className={`px-6 py-5 flex items-start gap-5 hover:bg-[#15140F] transition-colors duration-200 ${c.met ? "bg-[#13120F]" : ""} ${rowUrgency}`}
             >
               <span
                 className={`flex-shrink-0 mt-0.5 ${
