@@ -10,6 +10,8 @@ export function useMagnetic(
     const el = ref.current
     if (!el) return
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const TRIGGER_ZONE = 60
     const MAX_DRIFT = 10
 

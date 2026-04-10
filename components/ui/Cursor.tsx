@@ -18,9 +18,6 @@ export function Cursor() {
     // Don't run cursor on touch-only devices
     if (!window.matchMedia('(pointer: fine)').matches) return
 
-    // Hide native cursor on desktop
-    document.body.style.cursor = 'none'
-
     const onMouseMove = (e: MouseEvent) => {
       cursorPos.current = { x: e.clientX, y: e.clientY }
 
@@ -73,7 +70,6 @@ export function Cursor() {
     rafId.current = requestAnimationFrame(tick)
 
     return () => {
-      document.body.style.cursor = ''
       document.removeEventListener('mousemove', onMouseMove)
       document.removeEventListener('mouseenter', onMouseEnter)
       document.removeEventListener('mouseleave', onMouseLeave)
@@ -81,7 +77,7 @@ export function Cursor() {
       document.removeEventListener('pointerout', onPointerOut)
       if (rafId.current !== null) cancelAnimationFrame(rafId.current)
     }
-  }, [visible])
+  }, [])
 
   return (
     <>
