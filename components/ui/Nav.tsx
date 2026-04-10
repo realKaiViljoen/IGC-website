@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Logo } from './Logo'
@@ -39,7 +40,7 @@ interface NavLinkProps {
 function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProps) {
   if (mobile) {
     return (
-      <a
+      <Link
         href={href}
         className={`font-sans text-[1.0625rem] transition-colors duration-200 ${
           isActive ? 'text-[#F2EDE4]' : 'text-[#C5C0BB] hover:text-[#F2EDE4]'
@@ -47,7 +48,7 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
         onClick={onClick}
       >
         {label}
-      </a>
+      </Link>
     )
   }
 
@@ -131,7 +132,7 @@ export function Nav() {
               <LinkedInIcon />
             </a>
             <Button href="/diagnostic" variant="primary" size="sm">
-              Book a Call
+              Book a BD Audit
             </Button>
           </div>
 
@@ -191,7 +192,7 @@ export function Nav() {
                   <LinkedInIcon />
                 </a>
                 <Button href="/diagnostic" variant="primary" size="sm" onClick={() => setOpen(false)}>
-                  Book a Call
+                  Book a BD Audit
                 </Button>
               </div>
             </nav>
