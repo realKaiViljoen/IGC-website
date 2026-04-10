@@ -7,6 +7,9 @@ export function PortalCursor() {
   const hasMovedRef = useRef(false)
 
   useEffect(() => {
+    // Don't run on touch/coarse pointer devices
+    if (window.matchMedia("(pointer: coarse)").matches) return
+
     let targetX = 0
     let targetY = 0
     let currentX = 0
@@ -25,8 +28,8 @@ export function PortalCursor() {
     }
 
     function loop() {
-      currentX += (targetX - currentX) * 0.08
-      currentY += (targetY - currentY) * 0.08
+      currentX += (targetX - currentX) * 0.12
+      currentY += (targetY - currentY) * 0.12
 
       if (ringRef.current) {
         ringRef.current.style.transform = `translate(${currentX}px, ${currentY}px)`
@@ -48,7 +51,7 @@ export function PortalCursor() {
     <div
       ref={ringRef}
       aria-hidden="true"
-      className="fixed top-0 left-0 pointer-events-none z-50 rounded-full"
+      className="fixed top-0 left-0 pointer-events-none z-50 rounded-full [@media_(pointer:coarse)]:hidden"
       style={{
         width: 36,
         height: 36,
