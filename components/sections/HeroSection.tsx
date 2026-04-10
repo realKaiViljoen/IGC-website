@@ -26,7 +26,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-32 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-32 pb-16 md:pb-20 overflow-hidden"
     >
       {/* ── Full-bleed precision grid ─────────────────────────── */}
       <motion.div
@@ -155,7 +155,6 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.7, ease: [...ease] }}
           className="w-full mt-20 pt-8 border-t border-[rgba(242,237,228,0.08)] grid grid-cols-1 gap-0 sm:grid-cols-3 sm:gap-6 divide-y divide-[rgba(242,237,228,0.06)] sm:divide-y-0"
-          aria-hidden="true"
         >
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col items-center gap-1 py-5 sm:py-0">

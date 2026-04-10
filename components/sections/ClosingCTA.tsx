@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Button } from '@/components/ui/Button'
+import { SectionWrapper } from '@/components/ui/SectionWrapper'
 import { stagger, fadeUp } from '@/lib/motion'
 
 export function ClosingCTA() {
@@ -10,7 +11,7 @@ export function ClosingCTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="relative w-full min-h-screen flex items-center bg-[#080808] px-6 md:px-10 lg:px-16 py-20 md:py-32 overflow-hidden">
+    <SectionWrapper className="bg-[#080808] min-h-screen flex items-center overflow-hidden relative">
       {/* Large decorative background text */}
       <span
         className="absolute bottom-0 left-0 right-0 font-display text-[#F2EDE4]/[0.04] select-none pointer-events-none text-center leading-none"
@@ -38,7 +39,7 @@ export function ClosingCTA() {
         variants={stagger}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-site mx-auto w-full relative z-10"
+        className="w-full relative z-10"
       >
         <motion.span variants={fadeUp} className="gold-line mb-8 block" aria-hidden="true" />
 
@@ -69,6 +70,6 @@ export function ClosingCTA() {
           </p>
         </motion.div>
       </motion.div>
-    </section>
+    </SectionWrapper>
   )
 }

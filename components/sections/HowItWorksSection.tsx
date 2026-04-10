@@ -116,7 +116,7 @@ export function HowItWorksSection() {
             </motion.div>
           ))}
 
-          <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#2D2A27]">
+          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#2D2A27]">
             <p className="font-sans font-normal text-body-md text-[#C5C0BB] mb-6 max-w-[44ch]">
               Want to know exactly where your mandate pipeline is breaking? The audit takes 20 minutes.
             </p>

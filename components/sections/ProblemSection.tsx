@@ -93,9 +93,13 @@ export function ProblemSection() {
               key={item.number}
               variants={fadeUp}
               className="relative group border-t border-b border-[#2D2A27] py-7 cursor-pointer -mb-px"
+              role="button"
+              tabIndex={0}
+              aria-expanded={open === item.number}
               onHoverStart={canHover ? () => setOpen(item.number) : undefined}
               onHoverEnd={canHover ? () => setOpen(null) : undefined}
               onClick={!canHover ? () => setOpen(open === item.number ? null : item.number) : undefined}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(open === item.number ? null : item.number) } }}
             >
               <div className="flex items-start gap-8 md:gap-12">
                 {/* Gold ordinal */}
