@@ -47,7 +47,7 @@ export function FAQSection() {
       >
         {/* Section label */}
         <motion.span variants={fadeUp} className="gold-line mb-6 block" aria-hidden="true" />
-        <motion.p variants={fadeUp}>
+        <motion.div variants={fadeUp}>
           <div className="flex items-center gap-2 mb-4">
             <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="8" cy="8" r="6.5"/>
@@ -56,7 +56,7 @@ export function FAQSection() {
             </svg>
             <p className="section-label">Common Questions</p>
           </div>
-        </motion.p>
+        </motion.div>
 
         {/* Headline */}
         <motion.h2

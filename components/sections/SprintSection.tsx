@@ -26,6 +26,11 @@ function CountUp({
   useEffect(() => {
     if (!inView) return
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCount(to)
+      return
+    }
+
     let start: number | null = null
     let raf: number
 
@@ -105,7 +110,7 @@ export function SprintSection() {
         />
 
         {/* Section label */}
-        <motion.p variants={fadeUp}>
+        <motion.div variants={fadeUp}>
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <div className="flex items-center gap-2 mb-4">
             <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -113,12 +118,12 @@ export function SprintSection() {
             </svg>
             <span className="section-label">The BD Build</span>
           </div>
-        </motion.p>
+        </motion.div>
 
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#F2EDE4] mb-6 max-w-[22ch]"
+          className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[22ch]"
         >
           The 30-Day BD Infrastructure Build
         </motion.h2>
@@ -138,7 +143,7 @@ export function SprintSection() {
             aria-hidden="true"
             style={{ fontSize: 'clamp(6rem, 18vw, 18rem)', lineHeight: 1 }}
           >
-            90
+            30
           </span>
 
           <motion.div

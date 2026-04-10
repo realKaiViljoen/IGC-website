@@ -67,7 +67,7 @@ export function ComparisonSection() {
         animate={inView ? 'visible' : 'hidden'}
       >
         {/* Section label */}
-        <motion.p variants={fadeUp}>
+        <motion.div variants={fadeUp}>
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <div className="flex items-center gap-2 mb-4">
             <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -76,7 +76,7 @@ export function ComparisonSection() {
             </svg>
             <p className="section-label">The honest comparison</p>
           </div>
-        </motion.p>
+        </motion.div>
 
         {/* Headline */}
         <motion.h2
@@ -140,7 +140,7 @@ export function ComparisonSection() {
                       </svg>
                     ) : (
                       <svg
-                        className="w-[14px] h-[14px] text-[#3D3A37] shrink-0 mt-[3px]"
+                        className="w-[14px] h-[14px] text-[#5A5550] shrink-0 mt-[3px]"
                         viewBox="0 0 14 14"
                         fill="none"
                         stroke="currentColor"
