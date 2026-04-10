@@ -26,8 +26,8 @@ const columns = [
     id: 'igc',
     label: 'IGC',
     labelColor: '#CF9B2E',
-    borderClass: 'border border-[#CF9B2E]/30 border-l-2 border-l-[#CF9B2E]/50',
-    bgClass: 'bg-[#0D0D0C]',
+    borderClass: 'border border-[#CF9B2E]/40 border-l-2 border-l-[#CF9B2E]/70',
+    bgClass: 'bg-[#111110]',
     pointColor: 'text-[#F2EDE4]',
     points: [
       'You own every sequence, page, and workflow we build.',
@@ -45,7 +45,7 @@ const columns = [
     bgClass: 'bg-[#080808]',
     pointColor: 'text-[#C5C0BB]',
     points: [
-      'R35,000+ salary before commission.',
+      'R40,000–55,000+ salary before commission.',
       '3-month ramp before meaningful BD output.',
       'Generalist, not a BD infrastructure builder.',
       'When they leave, the pipeline goes with them.',
@@ -97,13 +97,13 @@ export function ComparisonSection() {
               variants={fadeUp}
               className={`${col.borderClass} ${col.bgClass} p-6 ${
                 col.id === 'igc'
-                  ? 'order-first md:order-none mx-auto w-full md:mx-0 md:max-w-none max-w-sm relative'
+                  ? 'order-first md:order-none mx-auto w-full md:mx-0 md:max-w-none max-w-sm relative shadow-[0_0_30px_rgba(207,155,46,0.06)]'
                   : ''
               }`}
             >
               {/* IGC "recommended" badge */}
               {col.id === 'igc' && (
-                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#CF9B2E]/60 to-transparent md:hidden" aria-hidden="true" />
+                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#CF9B2E]/80 to-transparent md:hidden" aria-hidden="true" />
               )}
 
               {/* Column label */}

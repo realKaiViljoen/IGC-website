@@ -8,7 +8,7 @@ import { stagger, fadeUp } from '@/lib/motion'
 const faqs = [
   {
     q: "What does R10,000 per month actually cover?",
-    a: "The retainer covers ongoing system operation after the build: sequence monitoring, landing page optimisation, CRM maintenance, and monthly pipeline reporting. The initial 30-day build is a separate fixed-fee engagement quoted on the audit call once we understand your agency's setup and sector focus.",
+    a: "The retainer covers ongoing system operation after the build: sequence monitoring, landing page optimisation, CRM maintenance, and monthly pipeline reporting. The 30-day build is a separate, fixed-fee engagement. Investment ranges from R25,000–R40,000 depending on your agency's sector focus and the complexity of your outreach targeting. Exact fee is quoted on the audit call after we understand your specific situation.",
   },
   {
     q: "We have worked with marketing agencies before. It did not work. What is different?",
@@ -29,6 +29,14 @@ const faqs = [
   {
     q: "How quickly will we see new conversations coming in?",
     a: "LinkedIn sequences typically generate the first replies within the first two weeks of going live. The 30-day build tests and optimises the full system so that by month two you have a predictable flow of new client conversations running without manual BD from your team.",
+  },
+  {
+    q: "Do you work with agencies outside Gauteng?",
+    a: "Yes. The system is built for LinkedIn outreach, which is geography-agnostic. We have active builds across Gauteng, Western Cape, and KZN. The audit call is remote. The build is remote. Your target hiring managers are wherever they are.",
+  },
+  {
+    q: "Can we see an example of what you build?",
+    a: "On the audit call, we walk through the system architecture and show you examples from active deployments — anonymised where client agreements require it. We do not publish a public portfolio because every build is customised to the agency's sector, geography, and buyer persona. The audit itself is the demo.",
   },
 ]
 
