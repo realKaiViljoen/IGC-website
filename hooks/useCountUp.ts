@@ -6,6 +6,11 @@ export function useCountUp(target: number, duration = 700): number {
   const rafRef = useRef<number | null>(null)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCount(target)
+      return
+    }
+
     const startTime = performance.now()
 
     function tick(now: number) {
