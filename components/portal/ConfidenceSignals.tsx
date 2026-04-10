@@ -17,11 +17,11 @@ function SignalCard({
 }) {
   return (
     <div className="bg-[#111110] border border-[#2D2A27] rounded-xl px-6 py-6 shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)] hover:bg-[#151413] hover:border-[#2E2B27] transition-all duration-200">
-      <p className="text-[#857F74] text-sm font-mono uppercase tracking-wider mb-3">
+      <p className="text-[#857F74] text-sm font-mono uppercase tracking-[0.14em] mb-3">
         {label}
       </p>
       <div className={`flex items-baseline gap-1.5${showCursor ? " terminal-cursor" : ""}`}>
-        <span className="text-4xl font-mono font-bold tabular-nums text-[#CF9B2E] [text-shadow:0_0_20px_rgba(207,155,46,0.15)]">
+        <span className="text-4xl font-mono font-bold tabular-nums text-[#CF9B2E]">
           {value.number}
         </span>
         {value.unit && (

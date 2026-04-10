@@ -34,11 +34,11 @@ export function Sidebar() {
     <aside className="w-56 flex-shrink-0 border-r border-[#2D2A27] flex flex-col bg-[#0A0A09] shadow-[1px_0_12px_0_rgba(0,0,0,0.5)]">
       <div className="px-5 py-6 border-b border-[#2D2A27]">
         <span className="font-playfair text-2xl font-bold text-[#F2EDE4]">IGC</span>
-        <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-wider uppercase">
+        <span className="block text-[#A09890] text-xs font-mono mt-0.5 tracking-[0.14em] uppercase">
           Client Portal
         </span>
         <span className="block text-[#857F74] text-xs font-mono mt-0.5 tabular-nums">{time}</span>
-        <span className="block text-[11px] font-mono text-[#6E6762] tracking-wider">SAST · Johannesburg</span>
+        <span className="block text-[11px] font-mono text-[#6E6762] tracking-[0.14em]">SAST · Johannesburg</span>
       </div>
 
       <nav className="flex-1 px-2 py-4 space-y-1">
@@ -55,7 +55,7 @@ export function Sidebar() {
               }`}
             >
               {isActive && (
-                <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] bg-[#CF9B2E] shadow-[2px_0_8px_0_rgba(207,155,46,0.4),4px_0_20px_0_rgba(207,155,46,0.15)]" />
+                <span className="absolute left-0 top-1.5 bottom-1.5 w-[2px] bg-[#CF9B2E]" />
               )}
               <span className="text-base w-5">{item.icon}</span>
               {item.label}
@@ -66,7 +66,7 @@ export function Sidebar() {
 
       {/* Engagement health panel */}
       <div className="px-4 py-4 border-t border-[#1A1918]">
-        <p className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] mb-3">
+        <p className="section-label mb-3">
           Engagement Health
         </p>
         <div className="space-y-2.5">
@@ -76,7 +76,7 @@ export function Sidebar() {
             { label: "Activity", filled: 5, color: "#3D8B5E" },
           ].map(({ label, filled, color }) => (
             <div key={label} className="flex items-center justify-between gap-3">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#857F74] w-12 flex-shrink-0">{label}</span>
+              <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890] w-12 flex-shrink-0">{label}</span>
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div

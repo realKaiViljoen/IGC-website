@@ -28,7 +28,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
       className="absolute bottom-full left-0 right-0 mb-1 bg-[#111110] border border-[#2D2A27] max-h-72 overflow-y-auto z-10"
     >
       <div className="flex items-center justify-between px-4 py-3 border-b border-[#2D2A27] sticky top-0 bg-[#111110]">
-        <span className="text-[#4A4640] text-xs font-mono uppercase tracking-wider">
+        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890]">
           Reference a dashboard item
         </span>
         <button
@@ -41,7 +41,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
 
       {client.pipeline.length > 0 && (
         <div className="px-4 py-3">
-          <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890] mb-2">
             Pipeline
           </p>
           {client.pipeline.map((c) => (
@@ -66,7 +66,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
 
       {client.commitments.length > 0 && (
         <div className="px-4 py-3 border-t border-[#2D2A27]">
-          <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890] mb-2">
             Commitments
           </p>
           {client.commitments.map((c, i) => (
@@ -97,7 +97,7 @@ export function ReferencePicker({ client, onSelect, onClose }: Props) {
 
       {client.activity.length > 0 && (
         <div className="px-4 py-3 border-t border-[#2D2A27]">
-          <p className="text-[#4A4640] text-xs font-mono uppercase tracking-wider mb-2">
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890] mb-2">
             Recent Activity
           </p>
           {client.activity.slice(0, 5).map((a, i) => (

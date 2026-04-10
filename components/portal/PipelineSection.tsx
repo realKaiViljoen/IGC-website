@@ -72,7 +72,7 @@ export function PipelineSection({ pipeline }: Props) {
         <div className="w-48 flex-shrink-0" />
         <div className="flex-1 flex justify-between">
           {STAGES.map((s) => (
-            <span key={s} className="text-[10px] font-mono uppercase tracking-widest text-[#4A4640]">
+            <span key={s} className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#A09890]">
               {STAGE_LABELS[s].slice(0, 3)}
             </span>
           ))}

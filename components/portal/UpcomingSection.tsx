@@ -36,7 +36,7 @@ export function UpcomingSection({ upcoming }: Props) {
     <div className="mx-8">
       <div className="bg-[#111110] border border-[#CF9B2E]/15 rounded-2xl overflow-hidden shadow-[inset_0_1px_0_0_rgba(242,237,228,0.03),0_1px_3px_0_rgba(0,0,0,0.5),0_4px_12px_0_rgba(0,0,0,0.3)]">
         {/* Header */}
-        <div className="px-6 py-5 border-b border-[#1E1C1A] bg-[rgba(207,155,46,0.02)]">
+        <div className="px-6 py-5 border-b border-[#1E1C1A] bg-[rgba(242,237,228,0.02)]">
           <h2 className="font-playfair text-xl font-semibold text-[#F2EDE4]">Coming Up</h2>
         </div>
 
