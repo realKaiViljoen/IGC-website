@@ -30,7 +30,7 @@ function SignalCard({
           </span>
         )}
       </div>
-      {sub && <p className="text-[#857F74] text-sm mt-2">{sub}</p>}
+      {sub && <p className="text-[#6E6762] text-xs mt-2">{sub}</p>}
     </div>
   )
 }
@@ -52,12 +52,15 @@ export function ConfidenceSignals({ analytics }: Props) {
     return () => clearInterval(interval)
   }, [])
 
-  const lastActivityText =
-    analytics.lastActivityDaysAgo === 0
-      ? "Today"
-      : analytics.lastActivityDaysAgo === 1
-      ? "Yesterday"
-      : `${analytics.lastActivityDaysAgo} days ago`
+  const lastActivityText = (() => {
+    const d = analytics.lastActivityDaysAgo
+    if (d === 0) return "Today"
+    if (d === 1) return "Yesterday"
+    if (d <= 7) return `${d} days ago`
+    const date = new Date()
+    date.setDate(date.getDate() - d)
+    return date.toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+  })()
 
   const checkedText =
     secondsAgo < 60
@@ -68,10 +71,14 @@ export function ConfidenceSignals({ analytics }: Props) {
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-8 py-8">
       <SignalCard
         label="In play this week"
-        value={{
-          number: String(activeCount),
-          unit: `candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`,
-        }}
+        value={
+          analytics.activeCandidatesThisWeek === 0
+            ? { number: "None", unit: "in play" }
+            : {
+                number: String(activeCount),
+                unit: `candidate${analytics.activeCandidatesThisWeek !== 1 ? "s" : ""}`,
+              }
+        }
         sub={analytics.closestToPlacement ? `${analytics.closestToPlacement.name} — nearest to placement` : undefined}
       />
       <SignalCard
