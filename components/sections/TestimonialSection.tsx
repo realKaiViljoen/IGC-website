@@ -27,7 +27,7 @@ export function TestimonialSection() {
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse 60% 50% at 10% 60%, rgba(207,155,46,0.04) 0%, transparent 65%)' }}
+          style={{ background: 'radial-gradient(ellipse 60% 50% at 10% 60%, rgba(242,237,228,0.03) 0%, transparent 65%)' }}
         />
 
         <motion.div

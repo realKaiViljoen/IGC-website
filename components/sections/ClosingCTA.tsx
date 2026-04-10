@@ -21,15 +21,11 @@ export function ClosingCTA() {
         IGC
       </span>
 
-      {/* Radial bloom — maximum gold warmth top right + counter-bloom bottom left + subtle centre */}
+      {/* Atmospheric depth — warm neutral ceiling. Gold is reserved for design elements only. */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: [
-            'radial-gradient(ellipse 70% 55% at 100% -5%, rgba(207,155,46,0.28) 0%, transparent 55%)',
-            'radial-gradient(ellipse 50% 40% at 0% 100%, rgba(207,155,46,0.10) 0%, transparent 55%)',
-            'radial-gradient(ellipse 40% 30% at 50% 50%, rgba(207,155,46,0.03) 0%, transparent 70%)',
-          ].join(', '),
+          background: 'radial-gradient(ellipse 80% 50% at 50% -5%, rgba(242,237,228,0.04) 0%, transparent 60%)',
         }}
         aria-hidden="true"
       />

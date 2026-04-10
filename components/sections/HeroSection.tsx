@@ -47,14 +47,11 @@ export function HeroSection() {
         </svg>
       </motion.div>
 
-      {/* ── Radial bloom — center top + horizon warmth ───────── */}
+      {/* ── Atmospheric depth — warm neutral ceiling. Gold is reserved for design elements only. */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: [
-            'radial-gradient(ellipse 90% 55% at 50% -8%, rgba(207,155,46,0.30) 0%, transparent 60%)',
-            'radial-gradient(ellipse 60% 35% at 50% 80%, rgba(207,155,46,0.06) 0%, transparent 65%)',
-          ].join(', '),
+          background: 'radial-gradient(ellipse 85% 55% at 50% -5%, rgba(242,237,228,0.05) 0%, transparent 65%)',
         }}
         aria-hidden="true"
       />

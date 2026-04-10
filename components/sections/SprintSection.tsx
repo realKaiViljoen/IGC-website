@@ -100,11 +100,11 @@ export function SprintSection() {
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
       >
-        {/* Depth — gold atmospheric glow from right */}
+        {/* Atmospheric depth — warm neutral. Gold is reserved for design elements only. */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 55% 65% at 95% 45%, rgba(207,155,46,0.10) 0%, transparent 60%)',
+            background: 'radial-gradient(ellipse 55% 65% at 95% 45%, rgba(242,237,228,0.03) 0%, transparent 60%)',
           }}
           aria-hidden="true"
         />
