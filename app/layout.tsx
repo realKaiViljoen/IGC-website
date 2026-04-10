@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter, DM_Mono, Poppins } from 'next/font/google'
+import { Playfair_Display, Inter, DM_Mono } from 'next/font/google'
 import './globals.css'
 import { MotionProvider } from '@/components/ui/MotionProvider'
 import { PublicShell } from '@/components/ui/PublicShell'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
   style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
@@ -23,13 +23,6 @@ const dmMono = DM_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
   variable: '--font-dm-mono',
-  display: 'swap',
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-poppins',
   display: 'swap',
 })
 
@@ -68,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} ${dmMono.variable} ${poppins.variable}`}
+      className={`${playfair.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <body className="bg-[#080808] text-[#F2EDE4] antialiased">
         <a

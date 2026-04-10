@@ -18,7 +18,8 @@ export default {
         /* ── Text hierarchy ──────────────────────────────────────── */
         'text-primary':   '#F2EDE4',
         'text-secondary': '#A09890',
-        'text-tertiary':  '#6E6762',
+        'text-mid':       '#C5C0BB',
+        'text-tertiary':  '#857F74',
 
         /* ── Accents ─────────────────────────────────────────────── */
         gold:    '#CF9B2E',
