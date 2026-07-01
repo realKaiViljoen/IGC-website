@@ -1,28 +1,17 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter, DM_Mono } from 'next/font/google'
+import { Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { MotionProvider } from '@/components/ui/MotionProvider'
 import { PublicShell } from '@/components/ui/PublicShell'
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['normal', 'italic'],
-  variable: '--font-playfair',
-  display: 'swap',
-})
+// Satoshi is the single brand family (loaded via Fontshare @import in
+// globals.css, matching the marketing site igc-growth.com). It carries
+// display + body; weight and size do the hierarchy, no serif.
 
-const inter = Inter({
+// Geist Mono — telemetry / tabular-nums / Bloomberg-ledger moments only.
+const geistMono = Geist_Mono({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
-
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-dm-mono',
+  variable: '--font-geist-mono',
   display: 'swap',
 })
 
@@ -40,7 +29,7 @@ export const metadata: Metadata = {
     'South Africa',
     'LinkedIn outreach',
   ],
-  metadataBase: new URL('https://integratedgrowthconsultants.com'),
+  metadataBase: new URL('https://portal.igc-growth.com'),
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
@@ -61,12 +50,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${inter.variable} ${dmMono.variable}`}
+      className={`${geistMono.variable}`}
     >
-      <body className="bg-[#080808] text-[#F2EDE4] antialiased">
+      <body className="bg-[#0A0B0E] text-[#FAF9F7] antialiased">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-[#F2EDE4] focus:text-[#080808] focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-[#FAF9F7] focus:text-[#0A0B0E] focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
         >
           Skip to main content
         </a>

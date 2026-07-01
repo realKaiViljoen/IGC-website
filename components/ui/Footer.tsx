@@ -25,7 +25,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="w-full border-t border-[rgba(242,237,228,0.06)] bg-[#080808]">
+    <footer className="w-full border-t border-[rgba(242,237,228,0.06)] bg-[#0A0B0E]">
       <div className="max-w-site mx-auto px-6 md:px-10 lg:px-16 py-14">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           {/* Logo */}
@@ -37,7 +37,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-sans text-sm text-[#C5C0BB] hover:text-[#F2EDE4] transition-colors duration-200"
+                className="font-sans text-sm text-[#E7E5E2] hover:text-[#FAF9F7] transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -50,7 +50,7 @@ export function Footer() {
               href="https://linkedin.com/in/kai-viljoen"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#A09890] hover:text-[#F2EDE4] transition-colors duration-200"
+              className="text-[#A8A6A3] hover:text-[#FAF9F7] transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <LinkedInIcon />

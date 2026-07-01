@@ -49,7 +49,7 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
       <Link
         href={href}
         className={`font-sans text-base transition-colors duration-200 ${
-          isActive ? 'text-[#F2EDE4]' : 'text-[#C5C0BB] hover:text-[#F2EDE4]'
+          isActive ? 'text-[#FAF9F7]' : 'text-[#E7E5E2] hover:text-[#FAF9F7]'
         }`}
         onClick={onClick}
       >
@@ -61,14 +61,14 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
   return (
     <a
       href={href}
-      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-1 focus-visible:ring-offset-[#080808] rounded-sm ${
-        isActive ? 'text-[#F2EDE4]' : 'text-[#C5C0BB] hover:text-[#F2EDE4]'
+      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0A0B0E] rounded-sm ${
+        isActive ? 'text-[#FAF9F7]' : 'text-[#E7E5E2] hover:text-[#FAF9F7]'
       }`}
       onClick={onClick}
     >
       {label}
       <span
-        className={`absolute left-0 bottom-[-2px] h-px w-full bg-[#CF9B2E] origin-left transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`absolute left-0 bottom-[-2px] h-px w-full bg-[#C78B28] origin-left transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
         }`}
         aria-hidden="true"
@@ -130,18 +130,18 @@ export function Nav() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/portal"
-              className="flex items-center gap-1.5 text-[#6E6762] hover:text-[#A09890] transition-colors duration-200"
+              className="flex items-center gap-1.5 text-[#6E6762] hover:text-[#A8A6A3] transition-colors duration-200"
             >
               <LockIcon />
               <span className="font-mono text-[11px] tracking-[0.12em] uppercase">Client Portal</span>
-              <span className="font-mono text-[9px] tracking-[0.10em] uppercase text-[#CF9B2E]/70 border border-[#CF9B2E]/20 rounded-full px-1.5 py-0.5">Soon</span>
+              <span className="font-mono text-[9px] tracking-[0.10em] uppercase text-[#C78B28]/70 border border-[#C78B28]/20 rounded-full px-1.5 py-0.5">Soon</span>
             </Link>
             <div className="w-px h-3.5 bg-[rgba(242,237,228,0.10)]" aria-hidden="true" />
             <a
               href="https://linkedin.com/in/kai-viljoen"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#857F74] hover:text-[#C5C0BB] transition-colors duration-200"
+              className="text-[#857F74] hover:text-[#E7E5E2] transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <LinkedInIcon />
@@ -159,13 +159,13 @@ export function Nav() {
             aria-expanded={open}
           >
             <span
-              className={`block w-[18px] h-px bg-[#F2EDE4] transition-all duration-300 origin-center ${open ? 'rotate-45 translate-y-[6px]' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 origin-center ${open ? 'rotate-45 translate-y-[6px]' : ''}`}
             />
             <span
-              className={`block w-[18px] h-px bg-[#F2EDE4] transition-all duration-300 ${open ? 'opacity-0 scale-x-0' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 ${open ? 'opacity-0 scale-x-0' : ''}`}
             />
             <span
-              className={`block w-[18px] h-px bg-[#F2EDE4] transition-all duration-300 origin-center ${open ? '-rotate-45 -translate-y-[6px]' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 origin-center ${open ? '-rotate-45 -translate-y-[6px]' : ''}`}
             />
           </button>
 
@@ -197,12 +197,12 @@ export function Nav() {
 
               <Link
                 href="/portal"
-                className="flex items-center text-[#6E6762] hover:text-[#A09890] transition-colors duration-200"
+                className="flex items-center text-[#6E6762] hover:text-[#A8A6A3] transition-colors duration-200"
                 onClick={() => setOpen(false)}
               >
                 <LockIcon />
                 <span className="font-sans text-base text-[#6E6762] ml-2">Client Portal</span>
-                <span className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/60 ml-2">Soon</span>
+                <span className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#C78B28]/60 ml-2">Soon</span>
               </Link>
 
               {/* Divider */}
@@ -211,7 +211,7 @@ export function Nav() {
                   href="https://linkedin.com/in/kai-viljoen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#857F74] hover:text-[#C5C0BB] transition-colors duration-200"
+                  className="text-[#857F74] hover:text-[#E7E5E2] transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />

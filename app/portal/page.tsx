@@ -24,7 +24,7 @@ export default function PortalLoginPage() {
       setError("Invalid email or password.")
       setLoading(false)
     } else {
-      router.push("/portal/dashboard")
+      router.push("/portal/system/overview")
     }
   }
 
@@ -32,8 +32,8 @@ export default function PortalLoginPage() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-10 text-center">
-          <span className="font-playfair text-2xl text-[#F2EDE4] tracking-tight">IGC</span>
-          <p className="text-[#4A4640] text-xs font-mono mt-1 tracking-wider uppercase">
+          <span className="font-display text-2xl text-[#FAF9F7] tracking-tight">IGC</span>
+          <p className="text-[#93918E] text-xs font-mono mt-1 tracking-wider uppercase">
             Client Portal
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function PortalLoginPage() {
             placeholder="Email"
             autoComplete="email"
             required
-            className="w-full bg-[#111110] border border-[#242220] text-[#F2EDE4] placeholder:text-[#4A4640] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
+            className="w-full bg-[#101215] border border-[#262A30] text-[#FAF9F7] placeholder:text-[#93918E] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
           />
           <input
             type="password"
@@ -55,7 +55,7 @@ export default function PortalLoginPage() {
             placeholder="Password"
             autoComplete="current-password"
             required
-            className="w-full bg-[#111110] border border-[#242220] text-[#F2EDE4] placeholder:text-[#4A4640] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
+            className="w-full bg-[#101215] border border-[#262A30] text-[#FAF9F7] placeholder:text-[#93918E] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
           />
 
           {error && (
@@ -65,7 +65,7 @@ export default function PortalLoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full border border-[#C9922A] text-[#C9922A] px-4 py-3 text-sm hover:bg-[#1F4D3A] hover:text-[#F2EDE4] hover:border-[#1F4D3A] transition-colors disabled:opacity-40"
+            className="w-full border border-[#C9922A] text-[#C9922A] px-4 py-3 text-sm hover:bg-[#1F4D3A] hover:text-[#FAF9F7] hover:border-[#1F4D3A] transition-colors disabled:opacity-40"
           >
             {loading ? "Signing in…" : "Sign in"}
           </button>

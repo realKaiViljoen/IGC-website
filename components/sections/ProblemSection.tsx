@@ -39,7 +39,7 @@ export function ProblemSection() {
   }, [])
 
   return (
-    <SectionWrapper className="bg-[#111110]">
+    <SectionWrapper className="bg-[#101215]">
       {/* Whisper depth gradient */}
       <div
         aria-hidden="true"
@@ -81,7 +81,7 @@ export function ProblemSection() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[26ch]"
+          className="font-display text-display-md text-[#FAF9F7] mb-12 max-w-[26ch]"
         >
           Your agency is good.<br className="hidden md:inline" />Your mandate pipeline is not.
         </motion.h2>
@@ -92,7 +92,7 @@ export function ProblemSection() {
             <motion.div
               key={item.number}
               variants={fadeUp}
-              className="relative group border-t border-b border-[#2D2A27] py-7 cursor-pointer -mb-px"
+              className="relative group border-t border-b border-[#262A30] py-7 cursor-pointer -mb-px"
               role="button"
               tabIndex={0}
               aria-expanded={open === item.number}
@@ -104,7 +104,7 @@ export function ProblemSection() {
               <div className="flex items-start gap-8 md:gap-12">
                 {/* Gold ordinal */}
                 <span
-                  className="font-display text-[#CF9B2E] leading-none shrink-0 mt-1 select-none"
+                  className="font-display text-[#C78B28] leading-none shrink-0 mt-1 select-none"
                   style={{ fontSize: 'clamp(1.375rem,2.2vw,1.875rem)' }}
                 >
                   {item.number}
@@ -112,7 +112,7 @@ export function ProblemSection() {
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <p className="font-sans text-body-lg text-[#F2EDE4] leading-snug">
+                  <p className="font-sans text-body-lg text-[#FAF9F7] leading-snug">
                     {item.statement}
                   </p>
 
@@ -124,7 +124,7 @@ export function ProblemSection() {
                         animate={{ opacity: 1, height: 'auto', marginTop: '0.75rem' }}
                         exit={{ opacity: 0, height: 0, marginTop: 0 }}
                         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                        className="font-sans text-body-md text-[#A09890] leading-relaxed overflow-hidden"
+                        className="font-sans text-body-md text-[#A8A6A3] leading-relaxed overflow-hidden"
                       >
                         {item.consequence}
                       </motion.p>
@@ -134,7 +134,7 @@ export function ProblemSection() {
 
                 {/* Right indicator — arrow that brightens on hover */}
                 <svg
-                  className={`w-4 h-4 shrink-0 mt-2 transition-all duration-300 ${open === item.number ? 'text-[#CF9B2E] translate-x-1' : 'text-[#2D2A27]'}`}
+                  className={`w-4 h-4 shrink-0 mt-2 transition-all duration-300 ${open === item.number ? 'text-[#C78B28] translate-x-1' : 'text-[#262A30]'}`}
                   viewBox="0 0 16 16"
                   fill="none"
                   stroke="currentColor"
@@ -160,7 +160,7 @@ export function ProblemSection() {
         {/* Closing paragraph */}
         <motion.p
           variants={fadeUp}
-          className="font-sans text-body-lg text-[#C5C0BB] max-w-[52ch]"
+          className="font-sans text-body-lg text-[#E7E5E2] max-w-[52ch]"
         >
           This is not a content problem. It is not a LinkedIn presence problem. It is a BD infrastructure problem, and it has a specific fix.
         </motion.p>

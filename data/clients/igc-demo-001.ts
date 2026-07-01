@@ -1,163 +1,365 @@
+// AUTO-GENERATED FROM data/schemas/igc-demo-001.yaml
+// DO NOT EDIT BY HAND. Run `npm run compile-schema igc-demo-001` to regenerate.
+
 import type { ClientData } from "@/types/client"
 
 export const client: ClientData = {
-  uid: "igc-demo-001",
-  company: "Vantage Technology",
-  contactName: "Thandi Nkosi",
-  contactEmail: "thandi@vantech.co.za",
-  role: "Chief People Officer",
-  engagement: {
-    title: "Lead Data Engineer + 2 Senior DevOps Engineers",
-    startDate: "2026-02-24",
-    status: "active",
-    consultant: "Viljoen",
+  "uid": "igc-demo-001",
+  "company": "Vantage Technology Pty Ltd",
+  "contactName": "Thandi Nkosi",
+  "contactEmail": "thandi@vantagetech.co.za",
+  "role": "Chief People Officer",
+  "engagement": {
+    "title": "Mandate Acquisition Build — LinkedIn + CRM + Landing Page",
+    "startDate": "2026-03-10",
+    "day": 1,
+    "totalDays": 30,
+    "phase": "operate",
+    "status": "active",
+    "consultant": "K.C. Viljoen",
+    "timezone": "Africa/Johannesburg",
+    "stage_config": {
+      "niche": "recruitment",
+      "stages": [
+        "Contacted",
+        "Replied",
+        "Qualified Intro",
+        "Discovery Brief Held",
+        "Mandate Brief Sent",
+        "Mandate Signed",
+        "Placement Sourced",
+        "Closed"
+      ],
+      "guarantee_qualifier_label": "qualified mandate briefs",
+      "qualified_stage_index": 3
+    },
+    "guarantee_target": 5,
+    "data_source": "manual"
   },
-  metrics: {
-    placementsMade: 1,
-    candidatesSubmitted: 7,
-    interviewsBooked: 4,
-    offersExtended: 2,
-  },
-  pipeline: [
+  "prospects": [
     {
-      id: "c-001",
-      name: "Sipho Dlamini",
-      stage: "offer-accepted",
-      lastUpdate: "2026-04-05",
-      note: "Signed. Starting 1 May.",
+      "id": "p-001",
+      "company": "Aurum Financial Services",
+      "name": "Lerato Mahlangu",
+      "role": "Head of Engineering",
+      "stage": "Mandate Signed",
+      "last_touch": "2026-04-20",
+      "estimated_contract_value_cents": 1800000,
+      "currency": "ZAR",
+      "tier": 1
     },
     {
-      id: "c-002",
-      name: "Ayanda Mokoena",
-      stage: "offer-extended",
-      lastUpdate: "2026-04-09",
-      note: "Response due 11 April.",
+      "id": "p-002",
+      "company": "Northbound Logistics",
+      "name": "Pieter van der Merwe",
+      "role": "COO",
+      "stage": "Mandate Brief Sent",
+      "last_touch": "2026-04-19",
+      "estimated_contract_value_cents": 1250000,
+      "currency": "ZAR",
+      "tier": 2
     },
     {
-      id: "c-003",
-      name: "Fatima Al-Hassan",
-      stage: "interviewing",
-      lastUpdate: "2026-04-08",
-      note: "CEO final round — 14 April, 10:00.",
+      "id": "p-003",
+      "company": "Meraki Digital Labs",
+      "name": "Zinhle Dlamini",
+      "role": "Engineering Director",
+      "stage": "Discovery Brief Held",
+      "last_touch": "2026-04-17",
+      "estimated_contract_value_cents": 2200000,
+      "currency": "ZAR",
+      "tier": 1
     },
     {
-      id: "c-004",
-      name: "Brendan Swart",
-      stage: "interviewing",
-      lastUpdate: "2026-04-06",
-      note: "Architecture panel — 15 April, 14:00.",
+      "id": "p-004",
+      "company": "Harbourline Mining Services",
+      "name": "Sipho Khumalo",
+      "role": "People Director",
+      "stage": "Discovery Brief Held",
+      "last_touch": "2026-04-16",
+      "estimated_contract_value_cents": 1500000,
+      "currency": "ZAR",
+      "tier": 2
     },
     {
-      id: "c-005",
-      name: "Nomsa Vilakazi",
-      stage: "submitted",
-      lastUpdate: "2026-04-04",
+      "id": "p-005",
+      "company": "Crown Print & Design",
+      "name": "Mpho Sibanda",
+      "role": "Talent Lead",
+      "stage": "Replied",
+      "last_touch": "2026-04-14",
+      "estimated_contract_value_cents": 800000,
+      "currency": "ZAR",
+      "tier": 3
     },
     {
-      id: "c-006",
-      name: "James Steyn",
-      stage: "submitted",
-      lastUpdate: "2026-03-28",
+      "id": "p-006",
+      "company": "Helios Renewables",
+      "name": "Karabo Mthembu",
+      "role": "CTO",
+      "stage": "Qualified Intro",
+      "last_touch": "2026-04-12",
+      "estimated_contract_value_cents": 2000000,
+      "currency": "ZAR",
+      "tier": 1
     },
     {
-      id: "c-007",
-      name: "Kagiso Sithole",
-      stage: "sourced",
-      lastUpdate: "2026-04-09",
-      note: "7yrs DevOps, AWS + Azure certified. Assessing fit.",
-    },
+      "id": "p-007",
+      "company": "Sable Retail Group",
+      "name": "Naledi Mofokeng",
+      "role": "Head of Talent",
+      "stage": "Contacted",
+      "last_touch": "2026-04-20",
+      "estimated_contract_value_cents": 1000000,
+      "currency": "ZAR",
+      "tier": 3
+    }
   ],
-  commitments: [
+  "conversations": [
     {
-      promise: "5 qualified CVs within 14 days of mandate",
-      due: "2026-03-09",
-      met: true,
+      "id": "cv-001",
+      "prospect_id": "p-003",
+      "held_at": "2026-03-24",
+      "qualified": true,
+      "tier": 1,
+      "qualification_notes": "Scaling engineering team from 14 to 22 by Q3. Previous agency missed on three roles. Ready to retain us on two mandates immediately.",
+      "counts_toward_guarantee": true
     },
     {
-      promise: "All candidates background-cleared before submission",
-      due: "2026-04-10",
-      met: true,
+      "id": "cv-002",
+      "prospect_id": "p-004",
+      "held_at": "2026-03-27",
+      "qualified": true,
+      "tier": 2,
+      "qualification_notes": "Rotational mining-services staffing. Tight location constraints, but willing to pay premium for retained search. Mandate size 3 roles.",
+      "counts_toward_guarantee": true
     },
     {
-      promise: "Interview debrief delivered within 24 hours",
-      due: "2026-04-10",
-      met: true,
+      "id": "cv-003",
+      "prospect_id": "p-002",
+      "held_at": "2026-03-30",
+      "qualified": true,
+      "tier": 2,
+      "qualification_notes": "COO sponsoring. Logistics-tech niche, two operations leaders needed. Clean handover from incumbent partner.",
+      "counts_toward_guarantee": true
     },
     {
-      promise: "Written pipeline update every Monday",
-      due: "2026-04-13",
-      met: true,
+      "id": "cv-004",
+      "prospect_id": "p-001",
+      "held_at": "2026-04-02",
+      "qualified": true,
+      "tier": 1,
+      "qualification_notes": "Aurum moving to microservices. Needs a staff engineer and two seniors. Budgeted. Signed mandate on the second call.",
+      "counts_toward_guarantee": true
     },
     {
-      promise: "First placement within 45 days",
-      due: "2026-04-10",
-      met: true,
-    },
-    {
-      promise: "Full team of 3 placed within 90 days",
-      due: "2026-05-24",
-      met: false,
-    },
+      "id": "cv-005",
+      "prospect_id": "p-006",
+      "held_at": "2026-04-06",
+      "qualified": true,
+      "tier": 1,
+      "qualification_notes": "Helios hiring a CTO's first engineering lead. Series B closed in March. Retained search agreed pending mandate paperwork.",
+      "counts_toward_guarantee": true
+    }
   ],
-  activity: [
+  "commitments": [
     {
-      date: "2026-04-09",
-      entry: "Offer extended to A. Mokoena. Verbal confirmation expected by 11 April.",
+      "promise": "LinkedIn sequence live within 7 days of kickoff",
+      "due": "2026-03-17",
+      "met": true,
+      "met_at": "2026-03-16",
+      "author": "kc"
     },
     {
-      date: "2026-04-09",
-      entry: "K. Sithole identified — 7 years DevOps, AWS + Azure certified. Fit assessment in progress.",
+      "promise": "HubSpot CRM configured and mandate pipeline imported within 5 days",
+      "due": "2026-03-15",
+      "met": true,
+      "met_at": "2026-03-14",
+      "author": "kc"
     },
     {
-      date: "2026-04-08",
-      entry: "Final round confirmed: F. Al-Hassan — CEO interview, 14 April, 10:00.",
+      "promise": "Mandate-brief landing page live within 10 days of kickoff",
+      "due": "2026-03-20",
+      "met": true,
+      "met_at": "2026-03-20",
+      "author": "kc"
     },
     {
-      date: "2026-04-06",
-      entry: "Architecture panel confirmed: B. Swart — 15 April, 14:00.",
+      "promise": "5 qualified mandate briefs within 30 days",
+      "due": "2026-04-09",
+      "met": true,
+      "met_at": "2026-04-06",
+      "author": "kc"
     },
     {
-      date: "2026-04-05",
-      entry: "S. Dlamini accepted offer. Contract signed. Start date: 1 May. First placement confirmed on Day 40.",
+      "promise": "Weekly Loom briefing every Friday during build month",
+      "due": "2026-04-10",
+      "met": true,
+      "met_at": "2026-04-10",
+      "author": "kc"
     },
     {
-      date: "2026-04-03",
-      entry: "Background check cleared for A. Mokoena. Offer letter drafted and sent to Thandi for approval.",
-    },
-    {
-      date: "2026-04-01",
-      entry: "N. Vilakazi submitted. Senior DevOps, 6 years Kubernetes and GCP. CV and references sent.",
-    },
-    {
-      date: "2026-03-28",
-      entry: "J. Steyn submitted — second profile in DevOps stream. Awaiting Thandi's feedback.",
-    },
-    {
-      date: "2026-03-25",
-      entry: "S. Dlamini: final interview completed. Strong technical alignment. Offer recommendation sent.",
-    },
-    {
-      date: "2026-03-20",
-      entry: "Week 4 pipeline briefing delivered. 3 candidates active in process. No blockers.",
-    },
-    {
-      date: "2026-03-14",
-      entry: "F. Al-Hassan and B. Swart advanced to first interview. Scheduling underway.",
-    },
-    {
-      date: "2026-03-09",
-      entry: "5 qualified CVs submitted — 1 day ahead of commitment deadline.",
-    },
+      "promise": "Reporting dashboard live by Day 14",
+      "due": "2026-03-24",
+      "met": true,
+      "met_at": "2026-03-23",
+      "author": "kc"
+    }
   ],
-  upcoming: [
-    { date: "2026-04-11", description: "A. Mokoena: offer response deadline (Day 3 of 5)" },
-    { date: "2026-04-14", description: "F. Al-Hassan: CEO final interview — 10:00, virtual" },
-    { date: "2026-04-15", description: "B. Swart: architecture panel — 14:00, on-site Sandton" },
-    { date: "2026-04-17", description: "Week 7 pipeline review & briefing with Thandi" },
-    { date: "2026-04-25", description: "J. Steyn: follow-up call — awaiting feedback since 28 March" },
+  "activity": [
+    {
+      "date": "2026-04-20",
+      "entry": "Sable Retail Group identified — 200-head retail group, no current retained partner. Added to sequence.",
+      "actor": "automation",
+      "source": "hubspot"
+    },
+    {
+      "date": "2026-04-19",
+      "entry": "Mandate brief sent to Northbound Logistics (2 operations leaders). Client review by Friday.",
+      "actor": "kc",
+      "source": "manual"
+    },
+    {
+      "date": "2026-04-17",
+      "entry": "Discovery brief held with Meraki Digital Labs. 22-head engineering scale-up. Mandate paperwork drafted.",
+      "actor": "kc",
+      "source": "cal"
+    },
+    {
+      "date": "2026-04-16",
+      "entry": "Discovery brief held with Harbourline Mining Services. Rotational roles. Premium retained search agreed.",
+      "actor": "kc",
+      "source": "cal"
+    },
+    {
+      "date": "2026-04-14",
+      "entry": "Crown Print & Design replied to sequence. Agreed to an intro call next week.",
+      "actor": "automation",
+      "source": "lgm"
+    },
+    {
+      "date": "2026-04-10",
+      "entry": "Week 4 Loom briefing delivered. Pipeline: 5 mandate briefs qualified, 1 mandate signed.",
+      "actor": "kc",
+      "source": "manual"
+    },
+    {
+      "date": "2026-04-06",
+      "entry": "Helios Renewables agreed retained search. Day 28. Guarantee met: 5 of 5 qualified mandate briefs.",
+      "actor": "kc",
+      "source": "cal"
+    },
+    {
+      "date": "2026-04-02",
+      "entry": "Aurum Financial Services signed first mandate on the second call. 3-role brief.",
+      "actor": "kc",
+      "source": "hubspot"
+    },
+    {
+      "date": "2026-03-30",
+      "entry": "Discovery brief held with Northbound Logistics. COO sponsoring. Clean handover from incumbent.",
+      "actor": "kc",
+      "source": "cal"
+    },
+    {
+      "date": "2026-03-24",
+      "entry": "Discovery brief held with Meraki Digital Labs. First qualified mandate brief of the engagement.",
+      "actor": "kc",
+      "source": "cal"
+    },
+    {
+      "date": "2026-03-20",
+      "entry": "Mandate-brief landing page live at vantagetech.co.za/mandates. Calendly embed confirmed.",
+      "actor": "kc",
+      "source": "manual"
+    },
+    {
+      "date": "2026-03-14",
+      "entry": "HubSpot CRM configured. Mandate pipeline stages live. 120 prospects imported from Apollo.",
+      "actor": "kc",
+      "source": "manual"
+    },
+    {
+      "date": "2026-03-10",
+      "entry": "Engagement started. Kickoff call held. Outreach messaging approved by Thandi. Sequences authored in her voice.",
+      "actor": "kc",
+      "source": "manual"
+    }
   ],
-  nextUpdate: {
-    date: "2026-04-17",
-    description: "Week 7 review — 2 offers in flight, 1 confirmed start, 2 final interviews",
-  },
+  "hypothesis_thread": [],
+  "handover": [
+    {
+      "key": "outreach-sequences",
+      "name": "LinkedIn outreach sequences",
+      "state": "shipped",
+      "shipped_at": "2026-03-16"
+    },
+    {
+      "key": "crm-config",
+      "name": "HubSpot CRM configuration",
+      "state": "shipped",
+      "shipped_at": "2026-03-14"
+    },
+    {
+      "key": "copy-library",
+      "name": "Copy library (sequence, DM, landing)",
+      "state": "shipped",
+      "shipped_at": "2026-03-18"
+    },
+    {
+      "key": "prospect-list",
+      "name": "Apollo prospect list (120 records)",
+      "state": "shipped",
+      "shipped_at": "2026-03-12"
+    },
+    {
+      "key": "landing-page",
+      "name": "Mandate-brief landing page",
+      "state": "shipped",
+      "shipped_at": "2026-03-20"
+    },
+    {
+      "key": "sops-attestation",
+      "name": "SOP attestation pack",
+      "state": "ready-for-review"
+    }
+  ],
+  "briefings": [
+    {
+      "id": "b-week-1",
+      "week_of": "2026-03-09",
+      "loom_url": "https://www.loom.com/share/placeholder-rec-week-1",
+      "loom_duration_seconds": 264,
+      "written_summary_md": "Day 4. Kickoff held Tuesday. Outreach messaging approved by Thandi, sequences authored in her voice. HubSpot CRM configured Friday, mandate pipeline stages live, 120 prospects imported from Apollo. Landing-page copy drafted for review over the weekend. Week 2 opens with LinkedIn sequence going live and landing page shipping by Day 10.",
+      "authored_by_kc_at": "2026-03-13T15:10:00Z"
+    },
+    {
+      "id": "b-week-2",
+      "week_of": "2026-03-16",
+      "loom_url": "https://www.loom.com/share/placeholder-rec-week-2",
+      "loom_duration_seconds": 331,
+      "written_summary_md": "Day 10. LinkedIn sequence live Monday, one day ahead of commitment. Mandate-brief landing page shipped Friday at vantagetech.co.za/mandates, Calendly embed confirmed. First reply cluster landed Thursday, two intros warming inside engineering-services ICP. No discovery briefs held yet. Next week targets first qualified brief.",
+      "authored_by_kc_at": "2026-03-20T14:30:00Z"
+    },
+    {
+      "id": "b-week-3",
+      "week_of": "2026-03-23",
+      "loom_url": "https://www.loom.com/share/placeholder-rec-week-3",
+      "loom_duration_seconds": 397,
+      "written_summary_md": "Day 15. First discovery brief held Tuesday with Meraki Digital Labs, qualified. Second brief held Friday with Harbourline Mining Services, qualified on premium retained search. Pipeline reads 2 of 5 against the guarantee at the midpoint. Northbound Logistics intro scheduled for Monday. Sequence reply rate holding at 3.1 percent.",
+      "authored_by_kc_at": "2026-03-27T16:00:00Z"
+    },
+    {
+      "id": "b-week-4",
+      "week_of": "2026-04-06",
+      "loom_url": "https://www.loom.com/share/placeholder-week-4",
+      "loom_duration_seconds": 482,
+      "written_summary_md": "Guarantee met Day 28. 5 of 5 qualified mandate briefs. 1 mandate signed (Aurum). Week 5 focus: convert two remaining signed mandates into placement-ready briefs.",
+      "authored_by_kc_at": "2026-04-10T09:15:00Z"
+    }
+  ],
+  "next_briefing": {
+    "date": "2026-04-25",
+    "description": "Week 7 review — 1 mandate signed, 2 briefs sent, 2 in discovery. Pipeline cumulative over guarantee target."
+  }
 }

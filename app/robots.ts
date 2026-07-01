@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://integratedgrowthconsultants.com/sitemap.xml',
+    sitemap: 'https://portal.igc-growth.com/sitemap.xml',
   }
 }

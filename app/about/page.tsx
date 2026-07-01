@@ -22,14 +22,14 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper className="bg-[#080808]">
+      <SectionWrapper className="bg-[#0A0B0E]">
         <span className="gold-line mb-6 block" aria-hidden="true" />
         <motion.h1
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-display-lg text-[#F2EDE4] max-w-[16ch] mb-8"
+          className="font-display text-display-lg text-[#FAF9F7] max-w-[16ch] mb-8"
         >
           We are operators, not vendors.
         </motion.h1>
@@ -38,29 +38,29 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.4, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="font-sans text-body-lg text-[#C5C0BB] max-w-prose"
+          className="font-sans text-body-lg text-[#E7E5E2] max-w-prose"
         >
           IGC was built on one premise: most agencies sell activity. We sell outcomes. We build the infrastructure that makes acquisition predictable. Then we run it.
         </motion.p>
       </SectionWrapper>
 
       {/* Founder */}
-      <SectionWrapper className="bg-[#111110]">
+      <SectionWrapper className="bg-[#101215]">
         <p className="section-label mb-8">The Principal</p>
 
         <div className="max-w-prose">
-          <h2 className="font-display text-display-md text-[#F2EDE4] mb-2">
+          <h2 className="font-display text-display-md text-[#FAF9F7] mb-2">
             K.C. Viljoen
           </h2>
-          <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-[#C5C0BB] mb-6">
+          <p className="font-mono text-[11px] tracking-[0.15em] uppercase text-[#E7E5E2] mb-6">
             Group Chair, Ingenuity Industries South Africa
           </p>
 
-          <p className="font-sans text-body-md text-[#C5C0BB] mb-6">
+          <p className="font-sans text-body-md text-[#E7E5E2] mb-6">
             Growth infrastructure operator. Built acquisition systems across consumer, services, and technology sectors in South Africa. Focused on one question: what actually moves the booking number?
           </p>
 
-          <p className="font-sans text-body-md text-[#C5C0BB] mb-8">
+          <p className="font-sans text-body-md text-[#E7E5E2] mb-8">
             IGC is that capability, applied specifically to independent recruitment agencies. If your agency is winning fewer mandates than it should be, this is where to start.
           </p>
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
             href="https://linkedin.com/in/kai-viljoen"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.12em] uppercase text-[#C5C0BB] hover:text-[#F2EDE4] transition-colors duration-200"
+            className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.12em] uppercase text-[#E7E5E2] hover:text-[#FAF9F7] transition-colors duration-200"
           >
             <LinkedInIcon />
             View LinkedIn Profile
@@ -77,7 +77,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Philosophy */}
-      <SectionWrapper className="bg-[#080808]">
+      <SectionWrapper className="bg-[#0A0B0E]">
         <p className="section-label mb-8">The Approach</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[900px]">
@@ -99,18 +99,18 @@ export default function AboutPage() {
               body: 'You own the infrastructure we build. The retainer is operational, not contractual dependency. Walk away any time.',
             },
           ].map((item) => (
-            <div key={item.title} className="border-t border-[#2D2A27] pt-6">
-              <h3 className="font-sans font-medium text-[#F2EDE4] text-base mb-3">{item.title}</h3>
-              <p className="font-sans text-body-md text-[#C5C0BB]">{item.body}</p>
+            <div key={item.title} className="border-t border-[#262A30] pt-6">
+              <h3 className="font-sans font-medium text-[#FAF9F7] text-base mb-3">{item.title}</h3>
+              <p className="font-sans text-body-md text-[#E7E5E2]">{item.body}</p>
             </div>
           ))}
         </div>
       </SectionWrapper>
 
       {/* CTA */}
-      <SectionWrapper className="bg-[#111110]">
+      <SectionWrapper className="bg-[#101215]">
         <div className="flex flex-col items-start gap-4">
-          <p className="font-sans text-body-lg text-[#F2EDE4]">
+          <p className="font-sans text-body-lg text-[#FAF9F7]">
             Next step: see the full BD Build.
           </p>
           <Button href="/services" variant="primary" size="md">

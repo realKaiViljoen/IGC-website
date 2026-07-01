@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
-const BASE_URL = 'https://integratedgrowthconsultants.com'
+const BASE_URL = 'https://portal.igc-growth.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

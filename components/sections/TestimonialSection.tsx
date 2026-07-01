@@ -21,7 +21,7 @@ export function TestimonialSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper className="bg-[#080808]">
+    <SectionWrapper className="bg-[#0A0B0E]">
       <div className="relative overflow-hidden">
         {/* Depth whisper gradient */}
         <div
@@ -47,25 +47,25 @@ export function TestimonialSection() {
           >
             {/* Quote block */}
             <div>
-              <span className="font-display text-[8rem] leading-none text-[#CF9B2E]/[0.15] select-none block mb-4" aria-hidden="true">"</span>
-              <blockquote className="font-sans text-body-lg text-[#C5C0BB] font-normal leading-relaxed mb-8 max-w-[56ch]">
+              <span className="font-display text-[8rem] leading-none text-[#C78B28]/[0.15] select-none block mb-4" aria-hidden="true">"</span>
+              <blockquote className="font-sans text-body-lg text-[#E7E5E2] font-normal leading-relaxed mb-8 max-w-[56ch]">
                 {testimonial.quote}
               </blockquote>
-              <div className="border-t border-[#2D2A27] pt-5">
-                <p className="font-sans font-semibold text-[#F2EDE4] text-base">{testimonial.name}</p>
-                <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#A09890] mt-1">{testimonial.role}</p>
+              <div className="border-t border-[#262A30] pt-5">
+                <p className="font-sans font-semibold text-[#FAF9F7] text-base">{testimonial.name}</p>
+                <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#A8A6A3] mt-1">{testimonial.role}</p>
                 <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#857F74] italic mt-1">{testimonial.tag}</p>
               </div>
             </div>
 
             {/* Stat callout */}
-            <div className="bg-[#CF9B2E]/[0.06] border border-[#CF9B2E]/20 p-6 rounded-sm flex flex-col gap-5">
+            <div className="bg-[#C78B28]/[0.06] border border-[#C78B28]/20 p-6 rounded-sm flex flex-col gap-5">
               <div>
-                <p className="font-display text-display-lg text-[#F2EDE4] leading-none mb-1">{testimonial.statPrimary}</p>
-                <p className="font-mono font-medium text-[11px] tracking-[0.14em] uppercase text-[#A09890]">{testimonial.statPrimaryLabel}</p>
+                <p className="font-display text-display-lg text-[#FAF9F7] leading-none mb-1">{testimonial.statPrimary}</p>
+                <p className="font-mono font-medium text-[11px] tracking-[0.14em] uppercase text-[#A8A6A3]">{testimonial.statPrimaryLabel}</p>
               </div>
-              <div className="border-t border-[#CF9B2E]/15 pt-4">
-                <p className="font-display text-display-md text-[#F2EDE4]/60 leading-none mb-1">{testimonial.statSecondary}</p>
+              <div className="border-t border-[#C78B28]/15 pt-4">
+                <p className="font-display text-display-md text-[#FAF9F7]/60 leading-none mb-1">{testimonial.statSecondary}</p>
                 <p className="font-mono font-medium text-[11px] tracking-[0.14em] uppercase text-[#857F74]">{testimonial.statSecondaryLabel}</p>
               </div>
             </div>

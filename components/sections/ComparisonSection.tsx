@@ -11,9 +11,9 @@ const columns = [
     id: 'agency',
     label: 'Marketing Agency',
     labelColor: '#857F74',
-    borderClass: 'border border-[#2D2A27]',
-    bgClass: 'bg-[#080808]',
-    pointColor: 'text-[#C5C0BB]',
+    borderClass: 'border border-[#262A30]',
+    bgClass: 'bg-[#0A0B0E]',
+    pointColor: 'text-[#E7E5E2]',
     points: [
       'Optimises for impressions. You bill on placements.',
       'Monthly report shows reach. Not mandates won.',
@@ -25,10 +25,10 @@ const columns = [
   {
     id: 'igc',
     label: 'IGC',
-    labelColor: '#CF9B2E',
-    borderClass: 'border border-[#CF9B2E]/40 border-l-2 border-l-[#CF9B2E]/70',
-    bgClass: 'bg-[#111110]',
-    pointColor: 'text-[#F2EDE4]',
+    labelColor: '#C78B28',
+    borderClass: 'border border-[#C78B28]/40 border-l-2 border-l-[#C78B28]/70',
+    bgClass: 'bg-[#101215]',
+    pointColor: 'text-[#FAF9F7]',
     points: [
       'You own every sequence, page, and workflow we build.',
       'One metric tracked: new client conversations booked.',
@@ -41,9 +41,9 @@ const columns = [
     id: 'hire',
     label: 'In-House BD Person',
     labelColor: '#857F74',
-    borderClass: 'border border-[#2D2A27]',
-    bgClass: 'bg-[#080808]',
-    pointColor: 'text-[#C5C0BB]',
+    borderClass: 'border border-[#262A30]',
+    bgClass: 'bg-[#0A0B0E]',
+    pointColor: 'text-[#E7E5E2]',
     points: [
       'R40,000–55,000+ salary before commission.',
       '3-month ramp before meaningful BD output.',
@@ -59,7 +59,7 @@ export function ComparisonSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper className="bg-[#080808] text-[#F2EDE4]">
+    <SectionWrapper className="bg-[#0A0B0E] text-[#FAF9F7]">
       <motion.div
         ref={ref}
         variants={stagger}
@@ -70,7 +70,7 @@ export function ComparisonSection() {
         <motion.div variants={fadeUp}>
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <div className="flex items-center gap-2 mb-4">
-            <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M8 2v12M2 5l6-3 6 3M2 11l6 3 6-3"/>
               <path d="M2 5v6M14 5v6"/>
             </svg>
@@ -81,7 +81,7 @@ export function ComparisonSection() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#F2EDE4] mb-12 max-w-[28ch]"
+          className="font-display text-display-md text-[#FAF9F7] mb-12 max-w-[28ch]"
         >
           Why not hire a marketing agency or a dedicated BD person?
         </motion.h2>
@@ -103,7 +103,7 @@ export function ComparisonSection() {
             >
               {/* IGC "recommended" badge */}
               {col.id === 'igc' && (
-                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#CF9B2E]/80 to-transparent md:hidden" aria-hidden="true" />
+                <div className="absolute -top-px left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[#C78B28]/80 to-transparent md:hidden" aria-hidden="true" />
               )}
 
               {/* Column label */}
@@ -115,7 +115,7 @@ export function ComparisonSection() {
                   {col.label}
                 </p>
                 {col.id === 'igc' && (
-                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-[#CF9B2E] border border-[#CF9B2E]/30 px-2 py-0.5 rounded-full">
+                  <span className="font-mono text-[10px] tracking-[0.12em] uppercase text-[#C78B28] border border-[#C78B28]/30 px-2 py-0.5 rounded-full">
                     Recommended
                   </span>
                 )}
@@ -127,7 +127,7 @@ export function ComparisonSection() {
                   <li key={point} className="flex items-start gap-3">
                     {col.id === 'igc' ? (
                       <svg
-                        className="w-[14px] h-[14px] text-[#CF9B2E] shrink-0 mt-[3px]"
+                        className="w-[14px] h-[14px] text-[#C78B28] shrink-0 mt-[3px]"
                         viewBox="0 0 14 14"
                         fill="none"
                         stroke="currentColor"
@@ -162,8 +162,8 @@ export function ComparisonSection() {
           ))}
         </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#2D2A27] flex flex-col items-start gap-4">
-          <p className="font-sans font-normal text-body-md text-[#C5C0BB] max-w-[44ch]">
+        <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#262A30] flex flex-col items-start gap-4">
+          <p className="font-sans font-normal text-body-md text-[#E7E5E2] max-w-[44ch]">
             The BD audit is free. Twenty minutes and you will know exactly where your mandate pipeline is breaking, and whether the build is the right fix.
           </p>
           <Button href="/diagnostic" variant="primary" size="md">

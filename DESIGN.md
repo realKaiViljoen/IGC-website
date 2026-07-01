@@ -25,8 +25,8 @@ surface-soft:   #0D0D0C   — Grouped UI, forms, dropdowns, nested cards
 surface-raised: #1A1918   — Elevated cards, popovers
 border:         #242220   — Dividers, input borders (warm, not grey)
 text-primary:   #F2EDE4   — Primary text (warm white, NOT stark #FFF)
-text-secondary: #857F74   — Sub-headlines, muted copy, nav links default
-text-tertiary:  #4A4640   — Labels, meta, minimum emphasis
+text-secondary: #A09890   — Sub-headlines, muted copy, nav links default
+text-tertiary:  #A8A095   — Labels, meta, minimum emphasis (WCAG AA on #080808)
 gold:           #C9922A   — RESTRICTED (see Gold Rule below)
 gold-dim:       #7A5A1A   — Passive gold only when gold must appear subtly
 signal:         #1F4D3A   — CTA hover fill (primary button hover)
@@ -57,32 +57,38 @@ Gold (`#C9922A`) is the rarest element in the system. It signals: *this is the m
 
 ## Typography
 
-### Validated Pairing: Playfair Display + Inter
-Confirmed #1 "Classic Elegant" match for premium editorial operator positioning.
+### Reference Register
+**Allan Gray. Baillie Gifford. Oaktree Capital. Ruane Cunniff. FT weekend long-reads.** Institutional-investment-management register — quiet confidence, editorial serif display, generational-wealth gravitas. This is the luxury layer the "Bloomberg + Linear + Mercury" set doesn't carry alone. Not tech-startup. Not SaaS-dashboard-generic. Fraunces editorial with architectural bones.
 
-| Font | Role | When |
-|---|---|---|
-| Playfair Display | Headlines only | H1, H2, display text |
-| Inter | All UI text | Body, nav, buttons, labels, forms |
-| DM Mono | Mono metadata | Section labels, KPI sub-labels, code |
+### Canonical Pairing: Fraunces + Geist + Geist Mono
+Dashboard typography **matches the marketing site** (`igc-growth.com`) — one cross-brand family stack from editorial serif through body sans to monospace telemetry. Loaded via `next/font/google` in `app/layout.tsx`; CSS variables (`--font-fraunces`, `--font-geist-sans`, `--font-geist-mono`) are injected automatically.
+
+| Font | Role | When | Axes / Notes |
+|---|---|---|---|
+| Fraunces | Editorial display | H1, H2, principal-authored copy, K.C.'s typed annotations | `opsz` (9–144) for optical sizing; `SOFT` (0–100) tunes rigour vs warmth. Italics for K.C.'s voice moments. |
+| Geist | All UI body | Body, nav, buttons, labels, forms, table cells | Weights 300–700. Neutral geometric sans — reads as product, not tech-brochure. |
+| Geist Mono | Mono telemetry | Section labels, KPI sub-labels, tabular figures, automation output, timestamps, Bloomberg-ledger moments | Weights 400 / 500. `tabular-nums` locked on numeric columns. |
 
 ### Type Scale
 
 | Element | Font | Weight | Size | Tracking | Colour |
 |---|---|---|---|---|---|
-| Hero H1 | Playfair | **400** | `clamp(3.5rem, 7vw, 6.5rem)` | `-0.02em` | `#F2EDE4` |
-| Page H1 | Playfair | 400 | `clamp(2.5rem, 4.5vw, 4rem)` | `-0.015em` | `#F2EDE4` |
-| H2 (section) | Playfair | 400 | `clamp(1.75rem, 3vw, 2.5rem)` | `-0.015em` | `#F2EDE4` |
-| Lead copy | Inter | **300** | `1.125rem / 1.75` | `0` | `#857F74` |
-| Body | Inter | 400 | `1rem / 1.7` | `0` | `#857F74` |
-| Section label | DM Mono | 400 | `0.6875rem` | `0.16em` | `#4A4640` (tertiary) |
-| Nav links | Inter | 400 | `0.875rem` | `0.02em` | `#857F74 → #F2EDE4` |
-| Button | Inter | **500** | `0.75rem` | `0.1em` | varies |
+| Hero H1 | Fraunces | **400** | `clamp(3.5rem, 7vw, 6.5rem)` | `-0.02em` | `#F2EDE4` |
+| Page H1 | Fraunces | 400 | `clamp(2.5rem, 4.5vw, 4rem)` | `-0.015em` | `#F2EDE4` |
+| H2 (section) | Fraunces | 400 | `clamp(1.75rem, 3vw, 2.5rem)` | `-0.015em` | `#F2EDE4` |
+| Lead copy | Geist | **300** | `1.125rem / 1.75` | `0` | `#A09890` |
+| Body | Geist | 400 | `1rem / 1.7` | `0` | `#A09890` |
+| Section label | Geist Mono | 400 | `0.6875rem` | `0.16em` | `#A8A095` (tertiary) |
+| Nav links | Geist | 400 | `0.875rem` | `0.02em` | `#A09890 → #F2EDE4` |
+| Button | Geist | **500** | `0.75rem` | `0.1em` | varies |
 
 **Critical rules:**
-- Hero H1 uses Playfair **400 regular** — NOT bold. At 6.5rem, regular is more premium. Bold is for tabloids.
-- Lead copy (`body-lg`) uses Inter **300 light** — creates contrast against the regular/medium headline.
-- Section labels use `text-tertiary` (`#4A4640`) — NOT gold. Gold is reserved.
+- Hero H1 uses Fraunces **400 regular** — NOT bold. At 6.5rem, regular is more premium. Bold is for tabloids. Tune `opsz` to ~144 at display sizes for wider proportions; drop to ~9–14 at body-annotation sizes.
+- Fraunces **italic** is reserved for principal-authored content — K.C.'s hypothesis lines, inline annotations, the "Concede before claim" moments. Automation never writes in italic.
+- Lead copy (`body-lg`) uses Geist **300 light** — creates contrast against the regular/medium headline.
+- Section labels use `text-tertiary` (`#A8A095`) — NOT gold. Gold is reserved. Value bumped from `#4A4640` to meet WCAG AA on `#080808` (2.0:1 → ~5.6:1) and match marketing `--ink-3`.
+- Numeric columns (pipeline counts, guarantee N-of-5, timestamps): Geist Mono with `font-variant-numeric: tabular-nums` always on. No proportional figures in ledgers.
+- Principal-authored vs automated content must be **visibly distinct at a glance**: Fraunces for K.C.'s words, Geist Mono for machine output. Single highest-leverage brand rule at near-zero cost.
 
 ---
 
@@ -136,7 +142,7 @@ background: transparent
 border: 1px solid rgba(201, 146, 42, 0.5)
 color: #C9922A
 padding: 14px 36px
-font: Inter 500, 0.75rem, 0.1em tracking, uppercase
+font: Geist 500, 0.75rem, 0.1em tracking, uppercase
 
 hover:
   background: #C9922A
@@ -160,8 +166,8 @@ hover:
 ```css
 background: none
 border: none
-color: #857F74
-font: Inter 400, 0.875rem
+color: #A09890
+font: Geist 400, 0.875rem
 
 hover:
   color: #F2EDE4
@@ -199,14 +205,14 @@ This creates psychological funnel progression within the UI itself.
 
 ### Left Content Stack
 1. Gold line: `w-14 h-px bg-[#C9922A]/70` — lineReveal animation
-2. Section label: `"Growth Infrastructure Operators"` — DM Mono, `text-[#4A4640]`, 0.16em tracking (NOT gold)
-3. H1: `"We build acquisition engines."` — Playfair 400, `clamp(3.5rem, 7vw, 6.5rem)`, `-0.02em`, `max-w-[16ch]`, `#F2EDE4`
-4. Sub: Inter 300, `1.125rem`, `#857F74`, `max-w-[44ch]`, `1.75` line-height
+2. Section label: `"Growth Infrastructure Operators"` — Geist Mono, `text-[#A8A095]`, 0.16em tracking (NOT gold)
+3. H1: `"We build acquisition engines."` — Fraunces 400, `clamp(3.5rem, 7vw, 6.5rem)`, `-0.02em`, `max-w-[16ch]`, `#F2EDE4`
+4. Sub: Geist 300, `1.125rem`, `#A09890`, `max-w-[44ch]`, `1.75` line-height
 5. CTAs: `gap-3`, primary (gold) + ghost (dim white)
 
 ### Right Side
 - SVG grid: 40px squares, `stroke="#F2EDE4"` `strokeOpacity="0.04"`
-- Ghost "01": Playfair, `text-[20vw]`, `text-[#F2EDE4]/[0.025]`
+- Ghost "01": Fraunces, `text-[20vw]`, `text-[#F2EDE4]/[0.025]`
 
 ---
 

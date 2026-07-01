@@ -26,7 +26,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#080808] px-6 md:px-10 lg:px-16 pt-32 pb-16 md:pb-20 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#0A0B0E] px-6 md:px-10 lg:px-16 pt-32 pb-16 md:pb-20 overflow-hidden"
     >
       {/* ── Full-bleed precision grid ─────────────────────────── */}
       <motion.div
@@ -40,7 +40,7 @@ export function HeroSection() {
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="precision-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F2EDE4" strokeWidth="0.5" strokeOpacity="0.06" />
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FAF9F7" strokeWidth="0.5" strokeOpacity="0.06" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#precision-grid)" />
@@ -58,7 +58,7 @@ export function HeroSection() {
 
       {/* ── Ghost "01" — centered behind headline ─────────────── */}
       <span
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[28vw] leading-none text-[#F2EDE4]/[0.025] select-none pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[28vw] leading-none text-[#FAF9F7]/[0.025] select-none pointer-events-none"
         aria-hidden="true"
       >
         01
@@ -88,7 +88,7 @@ export function HeroSection() {
           className="inline-flex items-center gap-2 border-2 border-[rgba(242,237,228,0.22)] rounded-full px-4 py-1.5 mb-10"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#4CAF7A]" aria-hidden="true" />
-          <span className="font-mono font-medium text-[11px] tracking-[0.12em] uppercase text-[#A09890]">
+          <span className="font-mono font-medium text-[11px] tracking-[0.12em] uppercase text-[#A8A6A3]">
             6 agencies per quarter. Limited build capacity.
           </span>
         </motion.div>
@@ -99,7 +99,7 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.45, duration: 0.9, ease: ease }}
-          className="font-display text-display-xl text-[#F2EDE4] mb-8"
+          className="font-display text-display-xl text-[#FAF9F7] mb-8"
         >
           We build the BD pipeline<br className="hidden md:inline" />your billers will not.
         </motion.h1>
@@ -110,7 +110,7 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.6, duration: 0.7, ease: ease }}
-          className="font-sans text-body-lg text-[#A09890] max-w-[52ch] mb-3"
+          className="font-sans text-body-lg text-[#A8A6A3] max-w-[52ch] mb-3"
         >
           A done-for-you mandate acquisition system that books client conversations while your team fills roles. Built in 30 days. Owned by you.
         </motion.p>
@@ -141,7 +141,7 @@ export function HeroSection() {
               How it works
             </Button>
           </div>
-          <p className="font-mono font-medium text-[12px] tracking-[0.12em] uppercase text-[#A09890]">
+          <p className="font-mono font-medium text-[12px] tracking-[0.12em] uppercase text-[#A8A6A3]">
             20-minute audit. Free. You'll know exactly where your pipeline breaks.
           </p>
         </motion.div>
@@ -156,10 +156,10 @@ export function HeroSection() {
           {metrics.map((metric) => (
             <div key={metric.label} className="flex flex-col items-center gap-1 py-5 sm:py-0">
               <div className="flex items-baseline gap-1.5 justify-center">
-                <span className="font-display text-[1.75rem] leading-tight text-[#F2EDE4]">
+                <span className="font-display text-[1.75rem] leading-tight text-[#FAF9F7]">
                   {metric.value}
                 </span>
-                <span className="font-mono font-medium text-[11px] tracking-[0.08em] text-[#A09890]">
+                <span className="font-mono font-medium text-[11px] tracking-[0.08em] text-[#A8A6A3]">
                   {metric.unit}
                 </span>
               </div>
@@ -167,7 +167,7 @@ export function HeroSection() {
                 {metric.label}
               </p>
               {metric.note && (
-                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#CF9B2E]/90">
+                <p className="font-mono text-[10px] tracking-[0.10em] uppercase text-[#C78B28]/90">
                   {metric.note}
                 </p>
               )}
@@ -185,9 +185,9 @@ export function HeroSection() {
         className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1 pointer-events-none"
         aria-hidden="true"
       >
-        <div className="w-px h-8 bg-[#F2EDE4]/20" />
+        <div className="w-px h-8 bg-[#FAF9F7]/20" />
         <motion.div
-          className="w-1 h-1 rounded-full bg-[#F2EDE4]/30"
+          className="w-1 h-1 rounded-full bg-[#FAF9F7]/30"
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
         />

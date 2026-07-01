@@ -1,65 +1,73 @@
-import type { ClientData, AnalyticsResult, PipelineStage } from "@/types/client"
+import type { ClientData, AnalyticsResult } from "@/types/client"
 
-const STAGE_ORDER: PipelineStage[] = [
-  "sourced",
-  "submitted",
-  "interviewing",
-  "offer-extended",
-  "offer-accepted",
-  "placed",
-]
+const MS_PER_DAY = 86400000
 
+/**
+ * Compute the small set of derived numbers the Overview page needs at a glance.
+ *
+ * Niche-agnostic: stages come from `client.engagement.stage_config.stages`,
+ * so MSP and recruitment clients both render through this single path.
+ */
 export function computeAnalytics(client: ClientData): AnalyticsResult {
   const now = new Date()
-  const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
+  const sevenDaysAgo = new Date(now.getTime() - 7 * MS_PER_DAY)
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
+  const stages = client.engagement.stage_config.stages
 
-  const activeCandidatesThisWeek = client.pipeline.filter(
-    (c) => new Date(c.lastUpdate) >= sevenDaysAgo
+  const activeProspectsThisWeek = client.prospects.filter(
+    (p) => new Date(p.last_touch).getTime() >= sevenDaysAgo.getTime(),
   ).length
 
   const commitmentsMetCount = client.commitments.filter((c) => c.met).length
   const commitmentsTotalCount = client.commitments.length
 
-  const nextUpdateDate = new Date(client.nextUpdate.date)
-  const daysToNextUpdate = Math.max(
-    0,
-    Math.ceil((nextUpdateDate.getTime() - now.getTime()) / (24 * 60 * 60 * 1000))
-  )
+  const daysToNextUpdate = client.next_briefing
+    ? Math.max(
+        0,
+        Math.ceil(
+          (new Date(client.next_briefing.date).getTime() - now.getTime()) / MS_PER_DAY,
+        ),
+      )
+    : 0
 
   const sortedActivity = [...client.activity].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   )
   const lastActivityDaysAgo =
     sortedActivity.length > 0
-      ? Math.floor(
-          (now.getTime() - new Date(sortedActivity[0].date).getTime()) /
-            (24 * 60 * 60 * 1000)
+      ? Math.max(
+          0,
+          Math.floor(
+            (now.getTime() - new Date(sortedActivity[0].date).getTime()) / MS_PER_DAY,
+          ),
         )
       : 0
 
-  const closestToPlacement = client.pipeline.reduce<{
+  // Closest to contract: the prospect whose stage has the highest index in stage_config.stages.
+  // Unknown stages (index === -1) are excluded so they can't outrank a real stage.
+  const closestToContract = client.prospects.reduce<{
     name: string
-    stage: PipelineStage
-  } | null>((best, candidate) => {
-    const currentIndex = STAGE_ORDER.indexOf(candidate.stage)
-    const bestIndex = best ? STAGE_ORDER.indexOf(best.stage) : -1
+    stage: string
+  } | null>((best, prospect) => {
+    const currentIndex = stages.indexOf(prospect.stage)
+    if (currentIndex < 0) return best
+    const bestIndex = best ? stages.indexOf(best.stage) : -1
     return currentIndex > bestIndex
-      ? { name: candidate.name, stage: candidate.stage }
+      ? { name: prospect.company, stage: prospect.stage }
       : best
   }, null)
 
   const effortSignalThisMonth = client.activity.filter(
-    (a) => new Date(a.date) >= startOfMonth
+    (a) => new Date(a.date).getTime() >= startOfMonth.getTime(),
   ).length
 
   return {
-    activeCandidatesThisWeek,
+    activeProspectsThisWeek,
     commitmentsMetCount,
     commitmentsTotalCount,
     daysToNextUpdate,
     lastActivityDaysAgo,
-    closestToPlacement,
+    closestToContract,
     effortSignalThisMonth,
   }
 }

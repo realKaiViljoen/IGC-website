@@ -25,8 +25,8 @@ const base =
 const variants: Record<Variant, string> = {
   // Primary — white fill: clean, clinical, no-pitch confidence
   primary:
-    'font-semibold tracking-[0.08em] uppercase text-[#080808] ' +
-    'bg-[#F2EDE4] border border-[#F2EDE4]/80 ' +
+    'font-semibold tracking-[0.08em] uppercase text-[#0A0B0E] ' +
+    'bg-[#FAF9F7] border border-[#FAF9F7]/80 ' +
     'shadow-[0_0_28px_rgba(242,237,228,0.18),0_4px_14px_rgba(0,0,0,0.45)] ' +
     'hover:bg-white hover:border-white ' +
     'hover:shadow-[0_0_44px_rgba(207,155,46,0.20),0_6px_22px_rgba(0,0,0,0.55)] ' +
@@ -41,20 +41,20 @@ const variants: Record<Variant, string> = {
   // Outline — dark equivalent
   outline:
     'font-medium tracking-[0.08em] uppercase ' +
-    'bg-transparent text-[#F2EDE4] border-2 border-[#F2EDE4] ' +
-    'hover:bg-[#F2EDE4] hover:text-[#080808]',
+    'bg-transparent text-[#FAF9F7] border-2 border-[#FAF9F7] ' +
+    'hover:bg-[#FAF9F7] hover:text-[#0A0B0E]',
 
   // Light — for dark section CTA
   light:
     'font-medium tracking-[0.08em] uppercase ' +
-    'bg-transparent text-[#F2EDE4] border-2 border-[rgba(242,237,228,0.4)] ' +
-    'hover:bg-[#F2EDE4] hover:text-[#080808]',
+    'bg-transparent text-[#FAF9F7] border-2 border-[rgba(242,237,228,0.4)] ' +
+    'hover:bg-[#FAF9F7] hover:text-[#0A0B0E]',
 
   // Tertiary — text-only, no border, no uppercase, no tracking
   tertiary:
     'font-normal text-sm ' +
-    'bg-transparent border-none text-[#A09890] ' +
-    'hover:text-[#F2EDE4] hover:underline underline-offset-4',
+    'bg-transparent border-none text-[#A8A6A3] ' +
+    'hover:text-[#FAF9F7] hover:underline underline-offset-4',
 }
 
 const sizes: Record<Size, string> = {
@@ -121,7 +121,7 @@ export function Button({
       <button
         type={type}
         onClick={onClick}
-        className={`${classes} cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
+        className={`${classes} cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]`}
       >
         {content}
       </button>
@@ -143,7 +143,7 @@ export function Button({
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className={`${classes} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]`}
+      className={`${classes} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]`}
     >
       {content}
     </Link>

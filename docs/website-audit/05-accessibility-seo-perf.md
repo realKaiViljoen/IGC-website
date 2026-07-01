@@ -132,7 +132,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
   <Cal ... />
 </div>
 ```
-Add a `<noscript>` fallback: "JavaScript is required to load the booking calendar. Email hello@igc.co.za to book directly."
+Add a `<noscript>` fallback: "JavaScript is required to load the booking calendar. Email hello@igc-growth.com to book directly."
 
 ---
 

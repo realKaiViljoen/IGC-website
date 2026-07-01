@@ -3,5 +3,5 @@ export default function PortalRootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <div className="min-h-screen bg-[#080808]">{children}</div>
+  return <div className="min-h-screen bg-[#0A0B0E]">{children}</div>
 }

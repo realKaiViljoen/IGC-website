@@ -46,7 +46,7 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <SectionWrapper className="bg-[#111110] text-[#F2EDE4]">
+    <SectionWrapper className="bg-[#101215] text-[#FAF9F7]">
       <motion.div
         ref={ref}
         variants={stagger}
@@ -57,7 +57,7 @@ export function FAQSection() {
         <motion.span variants={fadeUp} className="gold-line mb-6 block" aria-hidden="true" />
         <motion.div variants={fadeUp}>
           <div className="flex items-center gap-2 mb-4">
-            <svg className="w-4 h-4 text-[#C5C0BB] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="8" cy="8" r="6.5"/>
               <path d="M6 6.5c0-1.1.9-2 2-2s2 .9 2 2c0 1.5-2 1.5-2 3"/>
               <circle cx="8" cy="11.5" r=".5" fill="currentColor"/>
@@ -69,7 +69,7 @@ export function FAQSection() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#F2EDE4] mb-16 max-w-[24ch]"
+          className="font-display text-display-md text-[#FAF9F7] mb-16 max-w-[24ch]"
         >
           Questions worth asking<br />before you sign anything.
         </motion.h2>
@@ -80,14 +80,14 @@ export function FAQSection() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="border-t border-[#2D2A27]"
+              className="border-t border-[#262A30]"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CF9B2E] focus-visible:ring-offset-1 focus-visible:ring-offset-[#111110]"
+                className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-1 focus-visible:ring-offset-[#101215]"
                 aria-expanded={openIndex === index}
               >
-                <span className={`font-sans font-medium text-xl leading-snug transition-colors duration-300 ${openIndex === index ? 'text-[#F2EDE4]' : 'text-[#C5C0BB]'}`}>
+                <span className={`font-sans font-medium text-xl leading-snug transition-colors duration-300 ${openIndex === index ? 'text-[#FAF9F7]' : 'text-[#E7E5E2]'}`}>
                   {faq.q}
                 </span>
                 <svg
@@ -96,7 +96,7 @@ export function FAQSection() {
                   viewBox="0 0 16 16"
                   fill="none"
                   aria-hidden="true"
-                  className={`shrink-0 text-[#CF9B2E] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
+                  className={`shrink-0 text-[#C78B28] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${openIndex === index ? 'rotate-180' : 'rotate-0'}`}
                 >
                   <path d="M3 6l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -112,8 +112,8 @@ export function FAQSection() {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="border-l-2 border-[#CF9B2E]/40 pl-4">
-                      <p className="font-sans text-body-md text-[#C5C0BB] font-normal max-w-[60ch] pb-6 pr-10">
+                    <div className="border-l-2 border-[#C78B28]/40 pl-4">
+                      <p className="font-sans text-body-md text-[#E7E5E2] font-normal max-w-[60ch] pb-6 pr-10">
                         {faq.a}
                       </p>
                     </div>
@@ -124,7 +124,7 @@ export function FAQSection() {
           ))}
 
           {/* Bottom border */}
-          <div className="border-t border-[#2D2A27]" />
+          <div className="border-t border-[#262A30]" />
         </motion.div>
       </motion.div>
     </SectionWrapper>

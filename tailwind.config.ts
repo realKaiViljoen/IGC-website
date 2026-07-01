@@ -9,33 +9,36 @@ export default {
     extend: {
       colors: {
         /* ── Dark theme base ─────────────────────────────────────── */
-        background:     '#080808',
-        surface:        '#111110',
+        background:     '#0A0B0E',
+        surface:        '#101215',
         'surface-soft': '#0D0D0C',
         'surface-raised': '#1A1918',
         border:         '#2D2A27',
 
         /* ── Text hierarchy ──────────────────────────────────────── */
-        'text-primary':   '#F2EDE4',
-        'text-secondary': '#A09890',
-        'text-mid':       '#C5C0BB',
-        'text-tertiary':  '#857F74',
+        /* text-tertiary bumped from #93918E → #93918E (WCAG AA on #0A0B0E, */
+        /* matches marketing site --ink-3). See DESIGN.md typography notes. */
+        'text-primary':   '#FAF9F7',
+        'text-secondary': '#A8A6A3',
+        'text-mid':       '#E7E5E2',
+        'text-tertiary':  '#93918E',
 
         /* ── Accents ─────────────────────────────────────────────── */
-        gold:    '#CF9B2E',
+        gold:    '#C78B28',
         'gold-dim': '#7A5A1A',
         signal:  '#1F4D3A',
 
         /* ── Legacy aliases (for backward compat) ────────────────── */
-        ink:          '#080808',
-        paper:        '#F2EDE4',
-        'paper-dark': '#111110',
-        muted:        '#A09890',
+        ink:          '#0A0B0E',
+        paper:        '#FAF9F7',
+        'paper-dark': '#101215',
+        muted:        '#A8A6A3',
       },
       fontFamily: {
-        display: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans:    ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
-        mono:    ['var(--font-dm-mono)', 'monospace'],
+        /* Single canonical stack — matches marketing site (igc-growth.com). */
+        display: ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        sans:    ['Satoshi', 'system-ui', '-apple-system', 'sans-serif'],
+        mono:    ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         'display-2xl': ['clamp(6rem, 16vw, 16rem)',           { lineHeight: '0.95', letterSpacing: '-0.04em' }],

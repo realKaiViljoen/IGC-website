@@ -497,13 +497,16 @@ Social proof signal — tells prospective clients that a portal exists (accounta
 
 **Environment variables needed for production**
 ```
-NEXTAUTH_SECRET=
-NEXTAUTH_URL=
+NEXTAUTH_SECRET=                              # generate: openssl rand -base64 32
+NEXTAUTH_URL=https://portal.igc-growth.com    # dashboard canonical (prod)
 COMETCHAT_APP_ID=
 COMETCHAT_REGION=
 COMETCHAT_AUTH_KEY=
 DATABASE_URL=          # when DB added
 ```
+
+Development (`.env.local`) uses `NEXTAUTH_URL=http://localhost:3000`.
+Marketing site canonical: `https://igc-growth.com`. Dashboard lives at the `portal.` subdomain.
 
 ---
 

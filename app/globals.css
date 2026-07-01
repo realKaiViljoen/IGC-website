@@ -1,40 +1,46 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* ── Dark theme base ─────────────────────────────────────────────── */
-  --color-background:     #080808;
-  --color-surface:        #111110;
-  --color-surface-soft:   #0D0D0C;
-  --color-surface-raised: #1A1918;
-  --color-border:         #2D2A27;
+  --color-background:     #0A0B0E;
+  --color-surface:        #101215;
+  --color-surface-soft:   #070809;
+  --color-surface-raised: #1A1D22;
+  --color-border:         #262A30;
 
   /* ── Text hierarchy ──────────────────────────────────────────────── */
-  --color-text-primary:   #F2EDE4;
-  --color-text-secondary: #A09890;
-  --color-text-mid:       #C5C0BB;
-  --color-text-tertiary:  #857F74;
+  /* text-tertiary bumped from #93918E → #93918E for WCAG AA on #0A0B0E. */
+  /* Matches marketing site --ink-3; aligns the dashboard to igc-growth.com.  */
+  --color-text-primary:   #FAF9F7;
+  --color-text-secondary: #A8A6A3;
+  --color-text-mid:       #E7E5E2;
+  --color-text-tertiary:  #93918E;
 
   /* ── Accent (restricted — see Gold Rule in DESIGN.md) ────────────── */
-  --color-gold:           #CF9B2E;
-  --color-gold-dim:       #7D5E1C;
+  --color-gold:           #C78B28;
+  --color-gold-dim:       #7E5403;
   --color-signal:         #1F4D3A;
 
   /* ── Signal level colors ─────────────────────────────────────────── */
   --color-signal-nominal:  #3D8B5E;   /* muted sage -- all clear */
-  --color-signal-watch:    #CF9B2E;   /* gold -- attention needed */
+  --color-signal-watch:    #C78B28;   /* gold -- attention needed */
   --color-signal-critical: #B84233;   /* brick red -- action required */
 
   /* ── Legacy aliases (keep for backward compat during migration) ───── */
-  --color-ink:            #080808;
-  --color-paper:          #F2EDE4;
-  --color-paper-dark:     #111110;
-  --color-muted:          #A09890;
+  --color-ink:            #0A0B0E;
+  --color-paper:          #FAF9F7;
+  --color-paper-dark:     #101215;
+  --color-muted:          #A8A6A3;
 
   /* ── Fonts ───────────────────────────────────────────────────────── */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-sans:    var(--font-dm-sans), system-ui, sans-serif;
-  --font-mono:    var(--font-dm-mono), monospace;
-  --font-poppins: var(--font-poppins), system-ui, sans-serif;
+  /* Canonical stack — matches marketing site (igc-growth.com).              */
+  /* Fraunces (opsz + SOFT axes) for editorial display; Geist for body; */
+  /* Geist Mono for Bloomberg-ledger telemetry. CSS vars are injected   */
+  /* by next/font in app/layout.tsx — do not duplicate @font-face here. */
+  --font-display: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:    'Satoshi', system-ui, -apple-system, sans-serif;
+  --font-mono:    var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 
   /* ── Type scale ──────────────────────────────────────────────────── */
   --text-display-2xl: clamp(6rem, 16vw, 16rem);
@@ -63,14 +69,14 @@ html {
 }
 
 body {
-  background-color: #080808;
-  color: #F2EDE4;
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background-color: #0A0B0E;
+  color: #FAF9F7;
+  font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
 }
 
 ::selection {
-  background-color: #CF9B2E;
-  color: #080808;
+  background-color: #C78B28;
+  color: #0A0B0E;
 }
 
 /* ── Gold micro-line utility ────────────────────────────────────────── */
@@ -88,16 +94,17 @@ body {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #A09890;
+  color: #A8A6A3;
 }
 
-/* ── Grain texture overlay ──────────────────────────────────────────── */
+/* ── Grain texture overlay · filmic noise, warm register ──────────────── */
 .grain {
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 9997;
   pointer-events: none;
-  opacity: 0.075;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
   will-change: transform;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;

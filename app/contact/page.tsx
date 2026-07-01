@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <SectionWrapper className="bg-[#080808]">
+      <SectionWrapper className="bg-[#0A0B0E]">
         <span className="gold-line mb-6 block" aria-hidden="true" />
         <p className="section-label mb-4">Contact</p>
 
-        <h1 className="font-display text-display-lg text-[#F2EDE4] max-w-[14ch] mb-4">
+        <h1 className="font-display text-display-lg text-[#FAF9F7] max-w-[14ch] mb-4">
           Book Your BD Audit
         </h1>
-        <p className="font-sans text-body-lg text-[#C5C0BB] max-w-prose mb-12">
+        <p className="font-sans text-body-lg text-[#E7E5E2] max-w-prose mb-12">
           Not a sales call. 20 minutes. We look at your current acquisition setup and tell you exactly where the leakage is. Then we tell you honestly whether we are the right fix.
         </p>
 
@@ -39,7 +39,7 @@ export default function ContactPage() {
               name="name"
               type="text"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
+              className="w-full bg-transparent border border-[#262A30] px-4 py-3 font-sans text-sm text-[#FAF9F7] placeholder:text-[#857F74] focus:outline-none focus:border-[#FAF9F7]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="Full name"
             />
           </div>
@@ -51,7 +51,7 @@ export default function ContactPage() {
               name="clinic"
               type="text"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
+              className="w-full bg-transparent border border-[#262A30] px-4 py-3 font-sans text-sm text-[#FAF9F7] placeholder:text-[#857F74] focus:outline-none focus:border-[#FAF9F7]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="Your recruitment agency name"
             />
           </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
               name="email"
               type="email"
               required
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
+              className="w-full bg-transparent border border-[#262A30] px-4 py-3 font-sans text-sm text-[#FAF9F7] placeholder:text-[#857F74] focus:outline-none focus:border-[#FAF9F7]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="you@youragency.co.za"
             />
           </div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
               id="phone"
               name="phone"
               type="tel"
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 appearance-none rounded-none"
+              className="w-full bg-transparent border border-[#262A30] px-4 py-3 font-sans text-sm text-[#FAF9F7] placeholder:text-[#857F74] focus:outline-none focus:border-[#FAF9F7]/50 transition-colors duration-200 appearance-none rounded-none"
               placeholder="+27 __ ___ ____"
             />
           </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
               id="challenge"
               name="challenge"
               rows={4}
-              className="w-full bg-transparent border border-[#2D2A27] px-4 py-3 font-sans text-sm text-[#F2EDE4] placeholder:text-[#857F74] focus:outline-none focus:border-[#F2EDE4]/50 transition-colors duration-200 resize-none appearance-none rounded-none"
+              className="w-full bg-transparent border border-[#262A30] px-4 py-3 font-sans text-sm text-[#FAF9F7] placeholder:text-[#857F74] focus:outline-none focus:border-[#FAF9F7]/50 transition-colors duration-200 resize-none appearance-none rounded-none"
               placeholder="Be specific. It helps us prepare."
             />
           </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
             </Button>
             <p className="font-mono text-[11px] tracking-[0.10em] text-[#857F74]">
               By submitting you agree to our{' '}
-              <a href="/privacy" className="underline underline-offset-2 hover:text-[#A09890] transition-colors duration-200">
+              <a href="/privacy" className="underline underline-offset-2 hover:text-[#A8A6A3] transition-colors duration-200">
                 Privacy Policy
               </a>
               . We do not share your data with third parties.
