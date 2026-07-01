@@ -2,22 +2,28 @@ import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 import { getClientDataWithGuarantee } from "@/lib/data"
 import { GuaranteeTracker } from "@/components/portal/guarantee"
-import { HandoverPack } from "@/components/portal/handover"
 import { CommitmentsLedger } from "@/components/portal/commitments"
 import { BriefingCard } from "@/components/portal/briefing"
 import { SystemPulse } from "@/components/portal/pulse"
 import { ActivityLog } from "@/components/portal/activity"
+import { NextCommitment } from "@/components/portal/overview/NextCommitment"
 
 /**
- * Overview — the surface the client opens to verify the engagement is real.
+ * Overview — the daily-touch home the client opens to answer, in one glance:
+ * "is my promise on track, and is someone working for me today?"
  *
- * Composition doctrine (Phase 1):
- *   1. A minimal page-level header — section label, company name, day counter.
- *   2. The GuaranteeTracker (compact) — the single most important number.
- *   3. Nothing else. The cleared surface is the point.
- *
- * Any addition here reprices the signal. Phase 2 intentionally adds what
- * earns its place; until then, restraint IS the feature.
+ * Composition doctrine (docs/PORTAL_REDESIGN_SPEC.md §1.3): committed future
+ * before logged past.
+ *   1. Header — company + day counter.
+ *   2. Guarantee (compact) — the single most important number, the hero.
+ *   3. Next commitment — the dated forward move, so the pre-outreach "0 of 5"
+ *      dead-zone never appears without a dated commitment beside it.
+ *   4. System Pulse — today's cadence (or an honest empty/pre-outreach state).
+ *   5. Commitments ledger — the fuller forward/settled record.
+ *   6. Weekly Briefing — the one place K.C.'s face appears; the return anchor.
+ *   7. Activity — the receipts spine.
+ * The Handover Pack is deliberately NOT here: a Day-3 "0 of 6 shipped" under an
+ * empty guarantee reads as total emptiness. It lives on the Handover screen.
  */
 export default async function OverviewPage() {
   const session = await auth()
@@ -31,43 +37,42 @@ export default async function OverviewPage() {
 
   return (
     <div className="px-8 pt-12 pb-24">
-      <header className="mb-12">
+      <header className="mb-12 section-in">
         <div className="flex items-baseline justify-between gap-8">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76]">
-              Overview
-            </div>
-            <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF8F5] mt-2 tracking-[-0.015em]">
+            <p className="eyebrow">Overview</p>
+            <h1 className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold text-[#FAF8F5] mt-2.5 tracking-[-0.02em] leading-[1.1]">
               {client.company}
             </h1>
           </div>
-          <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76] tabular-nums whitespace-nowrap">
+          <p className="eyebrow ledger whitespace-nowrap">
             Day {guarantee.day} of {guarantee.totalDays} · {engagement.phase}
-          </div>
+          </p>
         </div>
       </header>
 
-      {/* System Pulse · single mono line between header and tracker. Its own hairlines. */}
-      <SystemPulse initialData={{ client, guarantee }} />
-
+      {/* 01 · Guarantee — the hero number */}
       <GuaranteeTracker variant="compact" initialData={{ client, guarantee }} />
 
-      {/* 02 · Handover Pack */}
-      <div style={{ marginTop: 56 }}>
-        <HandoverPack initialData={{ client, guarantee }} />
+      {/* Next commitment — the dated forward move (dead-zone rule) */}
+      <NextCommitment client={client} />
+
+      {/* System Pulse — today's cadence, honest empty/pre-outreach states */}
+      <div style={{ marginTop: 44 }}>
+        <SystemPulse initialData={{ client, guarantee }} />
       </div>
 
-      {/* 03 · Commitments */}
-      <div style={{ marginTop: 56 }}>
+      {/* Commitments — the fuller forward/settled ledger */}
+      <div style={{ marginTop: 44 }}>
         <CommitmentsLedger initialData={{ client, guarantee }} />
       </div>
 
-      {/* 04 · Weekly Briefing */}
+      {/* Weekly Briefing — the return anchor, K.C.'s voice */}
       <div style={{ marginTop: 56 }}>
         <BriefingCard initialData={{ client, guarantee }} />
       </div>
 
-      {/* 05 · Activity Log — receipts spine, tail-follow, actor-distinct typography. */}
+      {/* Activity — receipts spine, actor-distinct typography */}
       <div style={{ marginTop: 56 }}>
         <ActivityLog initialData={{ client, guarantee }} />
       </div>
