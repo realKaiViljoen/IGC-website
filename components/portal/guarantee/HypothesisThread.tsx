@@ -15,7 +15,7 @@ import type { HypothesisEntry } from "@/types/client"
  *
  * Empty state: one-line editorial sentence. No "first entry will appear here" placeholder.
  *
- * Rules (brief §5 · Row 6):
+ * Rules (brief 5 · Row 6):
  *  - Entries separated by 24px vertical gaps.
  *  - Latest at top (append-only log, not a state ticker — always render whatever
  *    entries exist regardless of current state).
@@ -51,13 +51,13 @@ export function HypothesisThread({ entries }: { entries: HypothesisEntry[] }) {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
           marginBottom: 24,
         }}
       >
-        § 02 · Operator log
+        02 · Operator log
       </h3>
 
       {sorted.length === 0 ? (
@@ -67,7 +67,7 @@ export function HypothesisThread({ entries }: { entries: HypothesisEntry[] }) {
             fontWeight: 300,
             fontSize: "1.125rem",
             lineHeight: 1.75,
-            color: "#857F74",
+            color: "#7C7A76",
             margin: 0,
             maxWidth: "56ch",
             textWrap: "pretty",
@@ -106,7 +106,7 @@ export function HypothesisThread({ entries }: { entries: HypothesisEntry[] }) {
                     fontSize: "1.125rem",
                     lineHeight: 1.55,
                     letterSpacing: "-0.005em",
-                    color: "#FAF9F7",
+                    color: "#FAF8F5",
                     margin: 0,
                     maxWidth: "65ch",
                     fontOpticalSizing: "auto",
@@ -121,7 +121,7 @@ export function HypothesisThread({ entries }: { entries: HypothesisEntry[] }) {
                   style={{
                     fontSize: "0.6875rem",
                     letterSpacing: "0.14em",
-                    color: "#857F74",
+                    color: "#7C7A76",
                     fontVariantNumeric: "tabular-nums",
                     margin: 0,
                   }}
@@ -139,12 +139,12 @@ export function HypothesisThread({ entries }: { entries: HypothesisEntry[] }) {
           type="button"
           onClick={() => setExpanded((e) => !e)}
           aria-expanded={expanded}
-          className="self-start font-mono uppercase transition-colors duration-150 hover:text-[#C9922A] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E] rounded-sm"
+          className="self-start font-mono uppercase transition-colors duration-150 hover:text-[#C78B28] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F] rounded-sm"
           style={{
             marginTop: 24,
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             padding: 0,
             border: "none",

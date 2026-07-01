@@ -10,7 +10,7 @@ import type { PaletteItem as PaletteItemType } from "./usePaletteItems"
  *   [ glyph (16px) ]  [ primary / secondary ]  [ right-meta ]
  *
  * Highlighted state (arrow-key focus OR hover):
- *   background `#1A1D22`, left edge 1px gold `#C9922A`.
+ *   background `#151920`, left edge 1px gold `#C78B28`.
  *   1px strictly — honours the absolute ban on side-stripe borders >1px.
  */
 export function PaletteItem({
@@ -24,28 +24,28 @@ export function PaletteItem({
     <Command.Item
       value={`${item.label} ${item.keywords.join(" ")}`}
       onSelect={onSelect}
-      className="palette-item group relative flex cursor-pointer items-center gap-3 border-l border-l-transparent px-4 py-2.5 text-left outline-none transition-colors duration-75 data-[selected=true]:border-l-[#C9922A] data-[selected=true]:bg-[#1A1D22]"
+      className="palette-item group relative flex cursor-pointer items-center gap-3 border-l border-l-transparent px-4 py-2.5 text-left outline-none transition-colors duration-75 data-[selected=true]:border-l-[#C78B28] data-[selected=true]:bg-[#151920]"
     >
       <span
         aria-hidden="true"
-        className="inline-flex w-4 shrink-0 justify-center font-mono text-[13px] leading-none text-[#857F74] group-data-[selected=true]:text-[#93918E]"
+        className="inline-flex w-4 shrink-0 justify-center font-mono text-[13px] leading-none text-[#7C7A76] group-data-[selected=true]:text-[#9C9995]"
       >
         {item.glyph ?? ""}
       </span>
 
       <span className="min-w-0 flex-1">
-        <span className="block truncate font-sans text-sm text-[#FAF9F7]">
+        <span className="block truncate font-sans text-sm text-[#FAF8F5]">
           {item.label}
         </span>
         {item.secondary ? (
-          <span className="mt-0.5 block truncate font-sans text-[12px] text-[#857F74]">
+          <span className="mt-0.5 block truncate font-sans text-[12px] text-[#7C7A76]">
             {item.secondary}
           </span>
         ) : null}
       </span>
 
       {item.meta ? (
-        <span className="shrink-0 font-mono text-[11px] tabular-nums tracking-[0.02em] text-[#93918E]">
+        <span className="shrink-0 font-mono text-[11px] tabular-nums tracking-[0.02em] text-[#9C9995]">
           {item.meta}
         </span>
       ) : null}

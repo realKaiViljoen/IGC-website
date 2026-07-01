@@ -198,12 +198,12 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 02 · Prospect ledger
+          02 · Prospect ledger
         </p>
 
         <div className="flex items-center gap-4">
@@ -216,7 +216,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
               style={{
                 fontSize: "0.625rem",
                 letterSpacing: "0.16em",
-                color: "#857F74",
+                color: "#7C7A76",
                 fontVariantNumeric: "tabular-nums",
               }}
               aria-hidden="true"
@@ -235,9 +235,9 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
                 width: 200,
                 padding: "4px 8px",
                 fontSize: "0.8125rem",
-                color: "#FAF9F7",
-                background: "#101215",
-                border: "1px solid #262A30",
+                color: "#FAF8F5",
+                background: "#0F1216",
+                border: "1px solid #20242A",
                 borderRadius: 2,
               }}
             />
@@ -248,7 +248,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
             style={{
               fontSize: "0.6875rem",
               letterSpacing: "0.16em",
-              color: "#857F74",
+              color: "#7C7A76",
               fontVariantNumeric: "tabular-nums",
               textTransform: "lowercase",
               margin: 0,
@@ -263,7 +263,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
       {/* Column headers · mono, tabular, tracks the row grid exactly */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#2D2A27", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
       <div
         role="presentation"
@@ -290,7 +290,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
             style={{
               fontSize: "0.625rem",
               letterSpacing: "0.16em",
-              color: "#93918E",
+              color: "#9C9995",
               fontVariantNumeric: "tabular-nums",
               textAlign: h.align,
             }}
@@ -301,7 +301,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
       </div>
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#2D2A27", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
 
       {/* Rows */}
@@ -318,7 +318,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
               padding: "20px 12px",
               fontSize: "0.875rem",
               lineHeight: 1.55,
-              color: "#857F74",
+              color: "#7C7A76",
               margin: 0,
               maxWidth: "52ch",
             }}
@@ -352,7 +352,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
                   aria-hidden="true"
                   style={{
                     height: 1,
-                    backgroundColor: "#221E1A",
+                    backgroundColor: "#20242A",
                     width: "100%",
                   }}
                 />
@@ -365,7 +365,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
       {/* Bottom hairline */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#2D2A27", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
 
       {/* Keyboard hint · mono, low-key */}
@@ -375,7 +375,7 @@ export function PipelineLedger({ client }: PipelineLedgerProps) {
           marginTop: 12,
           fontSize: "0.625rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           textTransform: "lowercase",
           margin: "12px 0 0 0",

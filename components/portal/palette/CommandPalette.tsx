@@ -205,8 +205,8 @@ function PaletteScopedStyles() {
           max-height: 520px;
           display: flex;
           flex-direction: column;
-          background: #101215;
-          border: 1px solid #262A30;
+          background: #0F1216;
+          border: 1px solid #20242A;
           border-radius: 0;
           box-shadow: 0 24px 72px rgba(0, 0, 0, 0.55);
           z-index: 9999;
@@ -221,16 +221,16 @@ function PaletteScopedStyles() {
           padding: 0 16px;
           background: transparent;
           border: none;
-          border-bottom: 1px solid #262A30;
+          border-bottom: 1px solid #20242A;
           outline: none;
-          color: #FAF9F7;
+          color: #FAF8F5;
           font-family: 'Satoshi', system-ui, sans-serif;
           font-weight: 300;
           font-size: 20px;
           letter-spacing: -0.005em;
         }
         .igc-palette-input::placeholder {
-          color: #857F74;
+          color: #7C7A76;
           font-weight: 300;
         }
 
@@ -247,7 +247,7 @@ function PaletteScopedStyles() {
           padding: 24px 16px;
           font-family: var(--font-geist-mono), ui-monospace, monospace;
           font-size: 12px;
-          color: #857F74;
+          color: #7C7A76;
         }
 
         .palette-group [cmdk-group-heading] {
@@ -257,7 +257,7 @@ function PaletteScopedStyles() {
           font-weight: 400;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: #93918E;
+          color: #9C9995;
         }
 
         .palette-item {

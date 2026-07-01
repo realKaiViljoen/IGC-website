@@ -140,7 +140,7 @@ export function HandoverShelf({ items }: Props) {
             style={{
               fontSize: "0.6875rem",
               letterSpacing: "0.16em",
-              color: "#5E5850",
+              color: "#6B6966",
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -156,7 +156,7 @@ export function HandoverShelf({ items }: Props) {
             style={{
               fontSize: "0.8125rem",
               letterSpacing: "0.02em",
-              color: "#FAF9F7",
+              color: "#FAF8F5",
               border: "none",
               padding: 0,
             }}
@@ -168,7 +168,7 @@ export function HandoverShelf({ items }: Props) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
-            color: "#5E5850",
+            color: "#6B6966",
             fontVariantNumeric: "tabular-nums",
             whiteSpace: "nowrap",
           }}
@@ -180,7 +180,7 @@ export function HandoverShelf({ items }: Props) {
       {/* Top hairline — opens the ledger */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#242220" }}
+        style={{ height: 1, backgroundColor: "#20242A" }}
       />
 
       {/* Rows */}
@@ -195,7 +195,7 @@ export function HandoverShelf({ items }: Props) {
             style={{
               padding: "40px 0",
               fontSize: "0.9375rem",
-              color: "#5E5850",
+              color: "#6B6966",
               margin: 0,
             }}
           >
@@ -219,7 +219,7 @@ export function HandoverShelf({ items }: Props) {
               {!isLast && (
                 <div
                   aria-hidden="true"
-                  style={{ height: 1, backgroundColor: "#242220" }}
+                  style={{ height: 1, backgroundColor: "#20242A" }}
                 />
               )}
             </div>
@@ -230,7 +230,7 @@ export function HandoverShelf({ items }: Props) {
       {/* Bottom hairline — closes the ledger */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#242220" }}
+        style={{ height: 1, backgroundColor: "#20242A" }}
       />
 
       <HandoverItemDrawer

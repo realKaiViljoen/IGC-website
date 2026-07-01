@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 
@@ -31,11 +32,12 @@ export default function PortalLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        <div className="mb-10 text-center">
-          <span className="font-display text-2xl text-[#FAF9F7] tracking-tight">IGC</span>
-          <p className="text-[#93918E] text-xs font-mono mt-1 tracking-wider uppercase">
-            Client Portal
-          </p>
+        <div className="mb-10 flex flex-col items-center text-center">
+          <div className="flex items-center gap-2.5">
+            <Image src="/peak.png" alt="" width={22} height={23} className="h-[22px] w-auto" aria-hidden="true" priority />
+            <span className="text-[22px] font-bold tracking-[-0.03em] text-[#FAF8F5] leading-none">IGC</span>
+          </div>
+          <p className="eyebrow mt-3 text-[#9C9995]">Client Portal</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-3">
@@ -46,7 +48,7 @@ export default function PortalLoginPage() {
             placeholder="Email"
             autoComplete="email"
             required
-            className="w-full bg-[#101215] border border-[#262A30] text-[#FAF9F7] placeholder:text-[#93918E] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
+            className="w-full bg-[#0F1216] border border-[#20242A] text-[#FAF8F5] placeholder:text-[#9C9995] px-4 py-3 text-sm focus:outline-none focus:border-[#C78B28] transition-colors"
           />
           <input
             type="password"
@@ -55,7 +57,7 @@ export default function PortalLoginPage() {
             placeholder="Password"
             autoComplete="current-password"
             required
-            className="w-full bg-[#101215] border border-[#262A30] text-[#FAF9F7] placeholder:text-[#93918E] px-4 py-3 text-sm focus:outline-none focus:border-[#C9922A] transition-colors"
+            className="w-full bg-[#0F1216] border border-[#20242A] text-[#FAF8F5] placeholder:text-[#9C9995] px-4 py-3 text-sm focus:outline-none focus:border-[#C78B28] transition-colors"
           />
 
           {error && (
@@ -65,7 +67,7 @@ export default function PortalLoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full border border-[#C9922A] text-[#C9922A] px-4 py-3 text-sm hover:bg-[#1F4D3A] hover:text-[#FAF9F7] hover:border-[#1F4D3A] transition-colors disabled:opacity-40"
+            className="w-full border border-[#C78B28] text-[#C78B28] px-4 py-3 text-sm hover:bg-[#C78B28] hover:text-[#0A0C0F] transition-colors duration-150 disabled:opacity-40"
           >
             {loading ? "Signing in…" : "Sign in"}
           </button>

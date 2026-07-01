@@ -93,7 +93,7 @@ export function SprintSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper className="bg-[#101215] text-[#FAF9F7] overflow-hidden">
+    <SectionWrapper className="bg-[#0F1216] text-[#FAF8F5] overflow-hidden">
       <motion.div
         ref={ref}
         variants={stagger}
@@ -113,7 +113,7 @@ export function SprintSection() {
         <motion.div variants={fadeUp}>
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <div className="flex items-center gap-2 mb-4">
-            <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg className="w-4 h-4 text-[#E7E4E0] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M9 1L4 9h5l-2 6 7-8h-5l2-6z"/>
             </svg>
             <span className="section-label">The BD Build</span>
@@ -123,7 +123,7 @@ export function SprintSection() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#FAF9F7] mb-12 max-w-[22ch]"
+          className="font-display text-display-md text-[#FAF8F5] mb-12 max-w-[22ch]"
         >
           The 30-Day BD Infrastructure Build
         </motion.h2>
@@ -131,7 +131,7 @@ export function SprintSection() {
         {/* Body */}
         <motion.p
           variants={fadeUp}
-          className="font-sans text-body-lg text-[#E7E5E2] font-normal max-w-prose mb-12"
+          className="font-sans text-body-lg text-[#E7E4E0] font-normal max-w-prose mb-12"
         >
           A fixed-scope, fixed-fee engagement. We build your complete mandate acquisition infrastructure in 30 days. At the end, you own every asset. We operate it on retainer, or hand it over to your team. No lock-in.
         </motion.p>
@@ -139,7 +139,7 @@ export function SprintSection() {
         {/* Stat blocks — monumental numbers with decorative watermark */}
         <div className="relative">
           <span
-            className="absolute top-0 right-0 font-display text-[#FAF9F7]/[0.02] select-none pointer-events-none leading-none"
+            className="absolute top-0 right-0 font-display text-[#FAF8F5]/[0.02] select-none pointer-events-none leading-none"
             aria-hidden="true"
             style={{ fontSize: 'clamp(6rem, 18vw, 18rem)', lineHeight: 1 }}
           >
@@ -152,10 +152,10 @@ export function SprintSection() {
           >
             {stats.map((stat) => (
               <motion.div key={stat.id} variants={fadeUp} className="flex flex-col gap-2">
-                <p className="font-display text-display-lg text-[#FAF9F7] leading-none">
+                <p className="font-display text-display-lg text-[#FAF8F5] leading-none">
                   {stat.node}
                 </p>
-                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#E7E5E2] font-medium">
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#E7E4E0] font-medium">
                   {stat.label}
                 </p>
               </motion.div>
@@ -165,10 +165,10 @@ export function SprintSection() {
 
         {/* Revenue callout — elevated */}
         <motion.div variants={fadeUp} className="border-l-2 border-[#C78B28]/40 pl-6 mb-10">
-          <p className="font-display text-display-md text-[#FAF9F7] leading-tight mb-2">
+          <p className="font-display text-display-md text-[#FAF8F5] leading-tight mb-2">
             R40,000+
           </p>
-          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#E7E5E2] font-medium">
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#E7E4E0] font-medium">
             One retained mandate covers four months of retainer. Average placement fee, Gauteng tech and engineering.
           </p>
         </motion.div>
@@ -182,7 +182,7 @@ export function SprintSection() {
           ].map((item, index) => (
             <div
               key={item}
-              className={`flex items-start gap-4 py-3 px-4 rounded-sm ${index % 2 === 0 ? 'bg-[#FAF9F7]/[0.02]' : 'bg-transparent'}`}
+              className={`flex items-start gap-4 py-3 px-4 rounded-sm ${index % 2 === 0 ? 'bg-[#FAF8F5]/[0.02]' : 'bg-transparent'}`}
             >
               <span
                 className="font-display text-[#C78B28] shrink-0 leading-none"
@@ -191,7 +191,7 @@ export function SprintSection() {
               >
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <span className="font-sans text-body-md text-[#E7E5E2] font-normal mt-1">{item}</span>
+              <span className="font-sans text-body-md text-[#E7E4E0] font-normal mt-1">{item}</span>
             </div>
           ))}
         </motion.div>
@@ -204,10 +204,10 @@ export function SprintSection() {
           <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C78B28] font-medium mb-2">
             The guarantee
           </p>
-          <p className="font-sans text-body-lg text-[#FAF9F7] font-normal leading-snug mb-1">
+          <p className="font-sans text-body-lg text-[#FAF8F5] font-normal leading-snug mb-1">
             5 qualified client conversations in your first 30 days.
           </p>
-          <p className="font-sans text-body-md text-[#E7E5E2] font-normal">
+          <p className="font-sans text-body-md text-[#E7E4E0] font-normal">
             If we miss that mark, we keep running the system at no charge until we deliver. Unconditional.
           </p>
         </motion.div>

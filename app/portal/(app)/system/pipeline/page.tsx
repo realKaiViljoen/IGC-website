@@ -10,10 +10,10 @@ import {
  * Pipeline · the prospect surface.
  *
  * An institutional trading desk, not a kanban board. Two sections:
- *   § 01 · Stage density — one tabular row per canonical stage, with the
+ *   01 · Stage density — one tabular row per canonical stage, with the
  *         count and a 20-cell bar that reads like a Bloomberg ladder.
  *         Qualified stages render their count in gold.
- *   § 02 · Prospect ledger — dense, flat table of every prospect, sorted
+ *   02 · Prospect ledger — dense, flat table of every prospect, sorted
  *         stage-asc → last-touch-desc. Click or press Enter to open the
  *         drawer. `/` focuses the filter input. j/k navigates rows. Esc
  *         closes the drawer.
@@ -42,11 +42,11 @@ export default async function PipelinePage() {
       <header className="mb-12">
         <div className="flex items-baseline justify-between gap-8 flex-wrap">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#93918E]">
-              § Pipeline
+            <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#9C9995]">
+              Pipeline
             </div>
             <h1
-              className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF9F7] mt-3 tracking-[-0.015em]"
+              className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF8F5] mt-3 tracking-[-0.015em]"
               style={{
                 fontOpticalSizing: "auto",
                 fontVariationSettings: '"opsz" 72, "SOFT" 30',
@@ -59,13 +59,13 @@ export default async function PipelinePage() {
               style={{
                 fontSize: "0.9375rem",
                 lineHeight: 1.55,
-                color: "#A8A6A3",
+                color: "#C3C0BB",
                 maxWidth: "56ch",
                 margin: "16px 0 0 0",
               }}
             >
               {prospects.length} prospects live.{" "}
-              <span style={{ color: "#FAF9F7" }}>{guaranteeZoneCount}</span>{" "}
+              <span style={{ color: "#FAF8F5" }}>{guaranteeZoneCount}</span>{" "}
               in the guarantee zone. Ordered by stage, then last touch.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function PipelinePage() {
             style={{
               fontSize: "0.6875rem",
               letterSpacing: "0.16em",
-              color: "#857F74",
+              color: "#7C7A76",
               textTransform: "uppercase",
             }}
           >
@@ -83,13 +83,13 @@ export default async function PipelinePage() {
         </div>
       </header>
 
-      {/* § 01 · Stage density */}
+      {/* 01 · Stage density */}
       <PipelineStageDensity
         prospects={prospects}
         stageConfig={stage_config}
       />
 
-      {/* § 02 · Prospect ledger */}
+      {/* 02 · Prospect ledger */}
       <div style={{ marginTop: 56 }}>
         <PipelineLedger client={client} />
       </div>

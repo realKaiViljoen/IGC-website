@@ -6,7 +6,7 @@ import type { ClientData, Commitment, GuaranteeData } from "@/types/client"
 import { CommitmentRow, type CommitmentGroup } from "./CommitmentRow"
 
 /**
- * Commitments Ledger · § 03 of the Overview.
+ * Commitments Ledger · 03 of the Overview.
  *
  * Makes K.C.'s accountability radically transparent. Every promise he made
  * (plus anything the client owes him back) surfaces here with a due date
@@ -22,7 +22,7 @@ import { CommitmentRow, type CommitmentGroup } from "./CommitmentRow"
  *                         ink-primary, due-date in warm amber #C78B28.
  *   2. Due this week    — due within 7d AND !met. Promise in ink-primary.
  *   3. Upcoming         — due > 7d AND !met. Promise in text-secondary.
- *   4. Met              — met === true. Checkmark in gold #C9922A
+ *   4. Met              — met === true. Checkmark in gold #C78B28
  *                         (the Gold Rule — met commitments are receipts).
  *                         Row at opacity 0.7.
  *
@@ -173,7 +173,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
         transition: "opacity 200ms cubic-bezier(0.16, 1, 0.3, 1)",
       }}
     >
-      {/* Header row · § 03 · Commitments  ·  {met} of {total} */}
+      {/* Header row · 03 · Commitments  ·  {met} of {total} */}
       <div
         id="commitments-ledger-eyebrow"
         className="flex items-baseline justify-between gap-6"
@@ -184,12 +184,12 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 03 · Commitments
+          03 · Commitments
         </p>
         {!isEmpty && (
           <p
@@ -197,7 +197,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
             style={{
               fontSize: "0.6875rem",
               letterSpacing: "0.16em",
-              color: "#857F74",
+              color: "#7C7A76",
               fontVariantNumeric: "tabular-nums",
               textTransform: "lowercase",
               margin: 0,
@@ -216,7 +216,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
             fontWeight: 300,
             fontSize: "1rem",
             lineHeight: 1.7,
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             maxWidth: "52ch",
             margin: 0,
           }}
@@ -240,7 +240,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
                   aria-hidden="true"
                   style={{
                     height: 1,
-                    backgroundColor: "#2D2A27",
+                    backgroundColor: "#20242A",
                     width: "100%",
                   }}
                 />
@@ -253,13 +253,13 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
                     style={{
                       fontSize: "0.6875rem",
                       letterSpacing: "0.14em",
-                      color: "#93918E",
+                      color: "#9C9995",
                       fontVariantNumeric: "tabular-nums",
                       margin: 0,
                     }}
                   >
                     {GROUP_LABEL[group]}{" "}
-                    <span style={{ color: "#857F74" }}>
+                    <span style={{ color: "#7C7A76" }}>
                       · {items.length}
                     </span>
                   </p>
@@ -276,7 +276,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
                           aria-hidden="true"
                           style={{
                             height: 1,
-                            backgroundColor: "#2D2A27",
+                            backgroundColor: "#20242A",
                             width: "100%",
                           }}
                         />
@@ -300,7 +300,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
             fontSize: "0.6875rem",
             lineHeight: 1.3,
             letterSpacing: "0.14em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -336,7 +336,7 @@ export function CommitmentsLedger({ initialData }: CommitmentsLedgerProps) {
             shown. k.c. pages himself at{" "}
             <a
               href="mailto:hello@igc-growth.com"
-              className="underline transition-colors duration-150 hover:text-[#FAF9F7]"
+              className="underline transition-colors duration-150 hover:text-[#FAF8F5]"
               style={{ color: "#C78B28", textUnderlineOffset: "3px" }}
             >
               hello@igc-growth.com
@@ -366,7 +366,7 @@ function LastSyncedLine() {
         fontSize: "0.6875rem",
         lineHeight: 1.3,
         letterSpacing: "0.14em",
-        color: "#857F74",
+        color: "#7C7A76",
         fontVariantNumeric: "tabular-nums",
         textTransform: "lowercase",
         margin: 0,

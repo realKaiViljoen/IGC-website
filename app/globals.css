@@ -1,60 +1,72 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap");
 @import "tailwindcss";
 
+/*
+ * The System — igc-sa dark design system, PRODUCT register.
+ * Satoshi single-family; cool-black two-layer ground; one brass ember accent.
+ * Depth = background step + 1px hairline. No shadows, glows, scanlines, or grids.
+ * Spec: docs/PORTAL_REDESIGN_SPEC.md
+ */
 @theme {
-  /* ── Dark theme base ─────────────────────────────────────────────── */
-  --color-background:     #0A0B0E;
-  --color-surface:        #101215;
-  --color-surface-soft:   #070809;
-  --color-surface-raised: #1A1D22;
-  --color-border:         #262A30;
+  /* ── Two neutral layers (cool-black, hue ~265) ─────────────────────── */
+  --color-canvas-deep:    #060709;   /* sidebar / recessed chrome — deepest */
+  --color-background:     #0A0C0F;   /* working content canvas */
+  --color-surface-soft:   #0C0E12;   /* grouped wells, inputs */
+  --color-surface:        #0F1216;   /* cards, rows, panels */
+  --color-surface-raised: #151920;   /* hover / second lift */
+  --color-surface-2:      #151920;
+  --color-border:         #20242A;   /* structural hairline — the workhorse */
+  --color-border-strong:  #31363E;   /* emphasized boundary (sidebar seam) */
 
-  /* ── Text hierarchy ──────────────────────────────────────────────── */
-  /* text-tertiary bumped from #93918E → #93918E for WCAG AA on #0A0B0E. */
-  /* Matches marketing site --ink-3; aligns the dashboard to igc-growth.com.  */
-  --color-text-primary:   #FAF9F7;
-  --color-text-secondary: #A8A6A3;
-  --color-text-mid:       #E7E5E2;
-  --color-text-tertiary:  #93918E;
+  /* ── Text ramp (warm-neutral, hue ~80, for legibility on cool ground) ── */
+  --color-text-primary:   #FAF8F5;   /* headlines */
+  --color-text-mid:       #E7E4E0;   /* body, row primary */
+  --color-text-secondary: #C3C0BB;   /* secondary */
+  --color-text-tertiary:  #9C9995;   /* labels, meta */
+  --color-text-quiet:     #7C7A76;   /* quietest tier */
 
-  /* ── Accent (restricted — see Gold Rule in DESIGN.md) ────────────── */
+  /* ── The one accent — brass ember. See the Gold Rule in DESIGN.md ──── */
   --color-gold:           #C78B28;
+  --color-gold-bright:    #DE9C31;
   --color-gold-dim:       #7E5403;
-  --color-signal:         #1F4D3A;
 
-  /* ── Signal level colors ─────────────────────────────────────────── */
-  --color-signal-nominal:  #3D8B5E;   /* muted sage -- all clear */
-  --color-signal-watch:    #C78B28;   /* gold -- attention needed */
-  --color-signal-critical: #B84233;   /* brick red -- action required */
+  /* ── Functional status (not brand accent) ──────────────────────────── */
+  --color-signal:          #1F4D3A;   /* primary-action hover fill */
+  --color-signal-nominal:  #3D8B5E;
+  --color-signal-watch:    #C78B28;
+  --color-signal-critical: #B84233;
 
-  /* ── Legacy aliases (keep for backward compat during migration) ───── */
-  --color-ink:            #0A0B0E;
-  --color-paper:          #FAF9F7;
-  --color-paper-dark:     #101215;
-  --color-muted:          #A8A6A3;
+  /* ── Legacy aliases (kept so no import breaks) ─────────────────────── */
+  --color-ink:            #0A0C0F;
+  --color-paper:          #FAF8F5;
+  --color-paper-dark:     #0F1216;
+  --color-muted:          #C3C0BB;
 
-  /* ── Fonts ───────────────────────────────────────────────────────── */
-  /* Canonical stack — matches marketing site (igc-growth.com).              */
-  /* Fraunces (opsz + SOFT axes) for editorial display; Geist for body; */
-  /* Geist Mono for Bloomberg-ledger telemetry. CSS vars are injected   */
-  /* by next/font in app/layout.tsx — do not duplicate @font-face here. */
+  /* ── Fonts — Satoshi carries everything. No serif, no mono. ────────── */
   --font-display: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans:    'Satoshi', system-ui, -apple-system, sans-serif;
-  --font-mono:    var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-mono:    'Satoshi', system-ui, -apple-system, sans-serif;
 
-  /* ── Type scale ──────────────────────────────────────────────────── */
-  --text-display-2xl: clamp(6rem, 16vw, 16rem);
-  --text-display-xl: clamp(4rem, 9vw, 8rem);
-  --text-display-lg: clamp(2.75rem, 5.5vw, 5rem);
-  --text-display-md: clamp(1.875rem, 3.5vw, 3.25rem);
-  --text-display-sm: clamp(1.375rem, 2.2vw, 1.875rem);
-  --text-body-lg: 1.5rem;
-  --text-body-md: 1.25rem;
+  /* ── Product type scale (fixed rem, ~1.2 ratio) ────────────────────── */
+  --text-page-title: 1.75rem;   /* 28 / 700 / -0.02em */
+  --text-section:    1.25rem;   /* 20 / 700 / -0.015em */
+  --text-subsection: 1rem;      /* 16 / 500 */
+  --text-body:       0.9375rem; /* 15 / 400 */
+  --text-body-sm:    0.8125rem; /* 13 / 400 */
+  --text-eyebrow:    0.6875rem; /* 11 / 500 / 0.18em caps */
+  --text-label:      0.75rem;   /* 12 / 500 */
+  --text-figure-hero: 2.5rem;   /* 40 / 700 tabular */
+
+  /* legacy display tokens (marketing hero sizes; unused in portal) */
+  --text-display-md: 1.875rem;
+  --text-display-sm: 1.375rem;
+  --text-body-lg: 1.375rem;
+
+  /* ── Motion ────────────────────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -63,151 +75,88 @@ html {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 }
 
 body {
-  background-color: #0A0B0E;
-  color: #FAF9F7;
+  background-color: #0A0C0F;
+  color: #FAF8F5;
   font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
 }
 
-::selection {
-  background-color: #C78B28;
-  color: #0A0B0E;
-}
+::selection { background-color: #C78B28; color: #0A0C0F; }
 
-/* ── Gold micro-line utility ────────────────────────────────────────── */
-.gold-line {
-  display: block;
-  width: 3.5rem;
-  height: 2px;
-  background-color: rgba(207, 155, 46, 0.8);
-}
+/* Satoshi tabular figures do the machine-ledger job the mono font used to.
+   Any element still tagged font-mono gets tabular, evenly-spaced numerals. */
+.font-mono, [class*="tabular"] { font-variant-numeric: tabular-nums; }
 
-/* ── Section label utility ──────────────────────────────────────────── */
-.section-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+/* ── The eyebrow — replaces the "§ NN ·" mono label everywhere ───────── */
+.eyebrow, .section-label {
+  font-family: var(--font-sans);
   font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #A8A6A3;
+  color: var(--color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+.eyebrow-index { font-weight: 700; color: var(--color-text-tertiary); }
+
+/* ── Ledger figures — tabular, faintly tracked so times don't crowd ──── */
+.ledger { font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
+
+/* ── Principal voice (K.C.) vs automation — the serif-free distinction ── */
+.kc-voice {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  border-left: 2px solid var(--color-border);
+  padding-left: 0.875rem;
+}
+.auto-voice {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
 }
 
-/* ── Grain texture overlay · filmic noise, warm register ──────────────── */
+/* ── Keyboard focus — the one transient brass ────────────────────────── */
+:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+
+/* ── Square hairline surface (was a rounded, glowing, shadowed card) ──── */
+.portal-card {
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+/* ── Grain — a single 2% filmic ground that warms the flat black ─────── */
 .grain {
   position: fixed;
   inset: 0;
-  z-index: 9997;
+  z-index: 60;
   pointer-events: none;
-  opacity: 0.12;
-  mix-blend-mode: overlay;
-  will-change: transform;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
-  background-size: 256px 256px;
+  background-size: 220px 220px;
 }
 
-/* ── Section divider ────────────────────────────────────────────────── */
-.section-divide {
-  border-top: 1px solid rgba(242, 237, 228, 0.05);
+/* ── Value-arrival: a quiet fade+lift, no glow. 180ms. ──────────────── */
+@keyframes value-arrive { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.value-arrived { animation: value-arrive 180ms var(--ease-out-expo) both; }
+
+/* ── Section entrance ────────────────────────────────────────────────── */
+@keyframes section-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.section-in { animation: section-in 300ms var(--ease-out-expo) both; }
+@media (prefers-reduced-motion: reduce) {
+  .value-arrived, .section-in { animation-duration: 1ms; }
 }
 
-/* ── Portal: glow-pulse keyframe ────────────────────────────────────── */
-@keyframes glow-pulse {
-  0%, 100% {
-    box-shadow: 0 0 6px 2px rgba(207, 155, 46, 0.5), 0 0 14px 4px rgba(207, 155, 46, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 3px 1px rgba(207, 155, 46, 0.3), 0 0 8px 2px rgba(207, 155, 46, 0.1);
-  }
-}
-
-.animate-glow-pulse {
-  animation: glow-pulse 2s ease-in-out infinite;
-}
-
-/* ── Portal surface system ──────────────────────────────────────────── */
-.portal-card {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow:
-    inset 0 1px 0 0 rgba(242, 237, 228, 0.03),
-    0 1px 3px 0 rgba(0, 0, 0, 0.5),
-    0 4px 12px 0 rgba(0, 0, 0, 0.3);
-}
-
-.portal-glow-gold {
-  box-shadow:
-    0 0 6px 2px rgba(207, 155, 46, 0.5),
-    0 0 12px 4px rgba(207, 155, 46, 0.2);
-}
-
-.portal-glow-gold-subtle {
-  box-shadow: 0 0 4px 1px rgba(207, 155, 46, 0.4);
-}
-
-/* ── Portal: CRT scanline overlay ──────────────────────────────────── */
-.portal-scanlines::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 1px,
-    rgba(0, 0, 0, 0.025) 1px,
-    rgba(0, 0, 0, 0.025) 2px
-  );
-}
-
-/* ── Portal: ops grid (coordinate system feel) ──────────────────────── */
-.portal-grid {
-  background-image:
-    linear-gradient(rgba(207, 155, 46, 0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(207, 155, 46, 0.012) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* ── Portal: terminal data cursor ──────────────────────────────────── */
-@keyframes terminal-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.terminal-cursor::after {
-  content: '';
-  display: inline-block;
-  width: 2px;
-  height: 0.8em;
-  background: rgba(207, 155, 46, 0.5);
-  margin-left: 4px;
-  vertical-align: text-bottom;
-  animation: terminal-blink 1.2s step-end infinite;
-}
-
-/* ── Portal: signal number arrival ─────────────────────────────────── */
-@keyframes signal-arrive {
-  0%   { text-shadow: 0 0 24px rgba(207, 155, 46, 0.6), 0 0 48px rgba(207, 155, 46, 0.3); }
-  100% { text-shadow: 0 0 20px rgba(207, 155, 46, 0.08); }
-}
-
-.signal-arrived {
-  animation: signal-arrive 0.8s ease-out forwards;
-}
-
-/* ── Portal: breathing border ──────────────────────────────────────── */
-@keyframes border-breathe {
-  0%, 100% { border-color: rgba(207, 155, 46, 0.06); }
-  50%       { border-color: rgba(207, 155, 46, 0.14); }
-}
-
-.portal-breathe {
-  border: 1px solid rgba(207, 155, 46, 0.06);
-  animation: border-breathe 4s ease-in-out infinite;
-}
+/* ── Legacy HUD classes neutralised (scanlines, grid, glow, terminal,
+      breathe, glow-pulse). Kept as inert no-ops so any stray usage is safe. */
+.portal-glow-gold, .portal-glow-gold-subtle, .animate-glow-pulse,
+.signal-arrived, .portal-breathe, .gold-line, .portal-grid { }
+.section-divide { border-top: 1px solid var(--color-border); }

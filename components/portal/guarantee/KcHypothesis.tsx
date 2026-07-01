@@ -15,7 +15,7 @@ import type { HypothesisEntry } from "@/types/client"
  *   - Leading `K.C. ·` stamp in Geist Mono — machine-attribution contrast against
  *     principal-authored italic body.
  *
- * Format (brief §8):
+ * Format (brief 8):
  *   "{hypothesis_text}, {fix_action} {fix_date}." prefixed by a `K.C. ·` mono tag.
  *
  * ≤140 chars, hard two-line cap.
@@ -40,7 +40,7 @@ export function KcHypothesis({ entry }: { entry: HypothesisEntry }) {
         fontSize: "1.125rem",
         lineHeight: 1.55,
         letterSpacing: "-0.005em",
-        color: "#FAF9F7",
+        color: "#FAF8F5",
         margin: 0,
         maxWidth: "56ch",
         fontOpticalSizing: "auto",
@@ -57,7 +57,7 @@ export function KcHypothesis({ entry }: { entry: HypothesisEntry }) {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.14em",
-          color: "#93918E",
+          color: "#9C9995",
           fontVariantNumeric: "tabular-nums",
           marginRight: "0.5em",
           verticalAlign: "0.1em",

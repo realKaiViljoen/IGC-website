@@ -29,7 +29,7 @@ export function computeGuaranteeState(client: ClientData, now: Date = new Date()
   )
 
   // End-of-day-30 cutoff: conversations held strictly after Day totalDays are not counted toward guarantee
-  // (surfaced separately in Cumulative Results, per brief §10).
+  // (surfaced separately in Cumulative Results, per brief 10).
   const endOfDayTotal = new Date(start.getTime() + totalDays * MS_PER_DAY - 1)
 
   // Gather counted conversations in chronological order.

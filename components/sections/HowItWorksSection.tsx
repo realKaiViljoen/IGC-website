@@ -50,12 +50,12 @@ export function HowItWorksSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper id="how-it-works" className="bg-[#101215] text-[#FAF9F7] overflow-hidden">
+    <SectionWrapper id="how-it-works" className="bg-[#0F1216] text-[#FAF8F5] overflow-hidden">
       <div ref={ref}>
         {/* Section label */}
         <span className="gold-line mb-6 block" aria-hidden="true" />
         <div className="flex items-center gap-2 mb-4">
-          <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg className="w-4 h-4 text-[#E7E4E0] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <circle cx="3" cy="8" r="1.5"/>
             <circle cx="13" cy="8" r="1.5"/>
             <circle cx="8" cy="3" r="1.5"/>
@@ -69,7 +69,7 @@ export function HowItWorksSection() {
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="font-display text-display-md text-[#FAF9F7] mb-20 max-w-[18ch]"
+          className="font-display text-display-md text-[#FAF8F5] mb-20 max-w-[18ch]"
         >
           Three steps.<br className="hidden md:inline" />One outcome.
         </motion.h2>
@@ -93,7 +93,7 @@ export function HowItWorksSection() {
             >
               {/* Enormous background number — texture */}
               <span
-                className="absolute -top-8 left-0 font-display text-[12rem] leading-none text-[#FAF9F7]/[0.025] select-none pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.06]"
+                className="absolute -top-8 left-0 font-display text-[12rem] leading-none text-[#FAF8F5]/[0.025] select-none pointer-events-none transition-opacity duration-500 group-hover:opacity-[0.06]"
                 aria-hidden="true"
               >
                 {step.number}
@@ -105,11 +105,11 @@ export function HowItWorksSection() {
               </div>
 
               {/* Small step label */}
-              <p className="relative font-mono font-medium text-[11px] tracking-[0.16em] uppercase text-[#E7E5E2] mb-5 z-10">
+              <p className="relative font-mono font-medium text-[11px] tracking-[0.16em] uppercase text-[#E7E4E0] mb-5 z-10">
                 Step {step.number}
               </p>
 
-              <h3 className="relative font-sans font-medium text-display-sm text-[#FAF9F7] mb-1 z-10">
+              <h3 className="relative font-sans font-medium text-display-sm text-[#FAF8F5] mb-1 z-10">
                 {step.title}
               </h3>
 
@@ -119,14 +119,14 @@ export function HowItWorksSection() {
                 </p>
               )}
 
-              <p className="relative font-sans font-normal text-body-md text-[#E7E5E2] max-w-[30ch] z-10">
+              <p className="relative font-sans font-normal text-body-md text-[#E7E4E0] max-w-[30ch] z-10">
                 {step.body}
               </p>
             </motion.div>
           ))}
 
-          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#262A30]">
-            <p className="font-sans font-normal text-body-md text-[#E7E5E2] mb-6 max-w-[44ch]">
+          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#20242A]">
+            <p className="font-sans font-normal text-body-md text-[#E7E4E0] mb-6 max-w-[44ch]">
               Want to know exactly where your mandate pipeline is breaking? The audit takes 20 minutes.
             </p>
             <Button href="/diagnostic" variant="primary" size="md">

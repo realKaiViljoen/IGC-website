@@ -21,7 +21,7 @@ import { formatCurrency, formatRelativeDate } from "@/lib/pipeline"
  *
  * Behaviour:
  *   - <button> with roving tabIndex.
- *   - Hover: surface warms to #101215; gold only if already in qualified zone.
+ *   - Hover: surface warms to #0F1216; gold only if already in qualified zone.
  *   - Click → open drawer; Enter/Space from keyboard likewise.
  */
 export type PipelineRowProps = {
@@ -50,7 +50,7 @@ export const PipelineRow = forwardRef<HTMLButtonElement, PipelineRowProps>(
 
     const qualified = stageIndex >= qualifiedStageIndex
 
-    const stageColor = qualified ? "#C78B28" : "#FAF9F7"
+    const stageColor = qualified ? "#C78B28" : "#FAF8F5"
     const relative = formatRelativeDate(prospect.last_touch, nowUtcMs)
     const value = formatCurrency(
       prospect.estimated_contract_value_cents,
@@ -78,20 +78,20 @@ export const PipelineRow = forwardRef<HTMLButtonElement, PipelineRowProps>(
           alignItems: "center",
           padding: "6px 12px",
           minHeight: 30,
-          background: isFocused ? "#101215" : "transparent",
+          background: isFocused ? "#0F1216" : "transparent",
           border: "none",
           cursor: "pointer",
         }}
       >
         {/* Company */}
         <span
-          className="font-sans transition-colors duration-150 group-hover:text-[#FAF9F7]"
+          className="font-sans transition-colors duration-150 group-hover:text-[#FAF8F5]"
           style={{
             fontWeight: 400,
             fontSize: "0.875rem",
             lineHeight: 1.35,
             letterSpacing: "-0.005em",
-            color: "#FAF9F7",
+            color: "#FAF8F5",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -107,7 +107,7 @@ export const PipelineRow = forwardRef<HTMLButtonElement, PipelineRowProps>(
             fontWeight: 400,
             fontSize: "0.8125rem",
             lineHeight: 1.35,
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -138,7 +138,7 @@ export const PipelineRow = forwardRef<HTMLButtonElement, PipelineRowProps>(
           style={{
             fontSize: "0.75rem",
             letterSpacing: "0.02em",
-            color: "#93918E",
+            color: "#9C9995",
             fontVariantNumeric: "tabular-nums",
             whiteSpace: "nowrap",
           }}
@@ -164,7 +164,7 @@ export const PipelineRow = forwardRef<HTMLButtonElement, PipelineRowProps>(
           style={{
             fontSize: "0.75rem",
             letterSpacing: "0.02em",
-            color: "#FAF9F7",
+            color: "#FAF8F5",
             fontVariantNumeric: "tabular-nums",
             textAlign: "right",
             whiteSpace: "nowrap",

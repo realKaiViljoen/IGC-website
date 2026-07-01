@@ -29,10 +29,10 @@ export default async function BriefingsPage() {
   return (
     <div className="px-8 pt-12 pb-24 max-w-[760px]">
       <header className="mb-10">
-        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#93918E]">
-          § Briefings
+        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#9C9995]">
+          Briefings
         </div>
-        <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF9F7] mt-3 tracking-[-0.015em]">
+        <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF8F5] mt-3 tracking-[-0.015em]">
           The operator log.
         </h1>
         <p
@@ -40,7 +40,7 @@ export default async function BriefingsPage() {
           style={{
             fontSize: "0.9375rem",
             lineHeight: 1.7,
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             margin: "20px 0 0",
             maxWidth: "58ch",
           }}
@@ -54,7 +54,7 @@ export default async function BriefingsPage() {
       {/* Top hairline before the stream */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#262A30", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
 
       <BriefingsArchive

@@ -7,13 +7,13 @@ import type { HandoverItem } from "@/types/client"
  *
  * Not a progress bar. A ledger rail. Each segment is a quiet index of where
  * that item stands. Colour-per-state:
- *   not-started      → faint `#857F74`
- *   in-progress      → `#A8A6A3`
- *   ready-for-review → `#FAF9F7`
- *   shipped          → gold outline `#C9922A` (hairline at top)
- *   transferred      → solid gold fill `#C9922A` (OWNED moment)
+ *   not-started      → faint `#7C7A76`
+ *   in-progress      → `#C3C0BB`
+ *   ready-for-review → `#FAF8F5`
+ *   shipped          → gold outline `#C78B28` (hairline at top)
+ *   transferred      → solid gold fill `#C78B28` (OWNED moment)
  *
- * Hairlines between segments, 1px, `#2D2A27` — matches the ledger DNA.
+ * Hairlines between segments, 1px, `#20242A` — matches the ledger DNA.
  */
 type Props = {
   items: HandoverItem[]
@@ -22,19 +22,19 @@ type Props = {
 function segmentStyle(state: HandoverItem["state"]): React.CSSProperties {
   switch (state) {
     case "transferred":
-      return { backgroundColor: "#C9922A" }
+      return { backgroundColor: "#C78B28" }
     case "shipped":
       return {
         backgroundColor: "transparent",
-        boxShadow: "inset 0 1px 0 0 #C9922A",
+        boxShadow: "inset 0 1px 0 0 #C78B28",
       }
     case "ready-for-review":
-      return { backgroundColor: "#FAF9F7" }
+      return { backgroundColor: "#FAF8F5" }
     case "in-progress":
-      return { backgroundColor: "#A8A6A3" }
+      return { backgroundColor: "#C3C0BB" }
     case "not-started":
     default:
-      return { backgroundColor: "#3A342E" }
+      return { backgroundColor: "#31363E" }
   }
 }
 

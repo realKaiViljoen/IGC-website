@@ -150,11 +150,11 @@ export function ExportButton({ uid }: ExportButtonProps) {
     "inline-flex w-full h-9 items-center justify-center whitespace-nowrap " +
     "border px-[14px] font-mono text-[11px] font-medium uppercase tracking-[0.14em] tabular-nums " +
     "select-none transition-[border-color,background-color,color] duration-150 " +
-    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 " +
-    "focus-visible:ring-offset-[#0A0B0E] motion-reduce:transition-none"
+    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 " +
+    "focus-visible:ring-offset-[#0A0C0F] motion-reduce:transition-none"
   const palette = isError
-    ? "bg-[#101215] border-[#C78B28] text-[#C78B28] hover:border-[#C78B28] cursor-pointer"
-    : "bg-[#101215] border-[#262A30] text-[#FAF9F7] hover:border-[#C9922A] active:bg-[#1A1D22] " +
+    ? "bg-[#0F1216] border-[#C78B28] text-[#C78B28] hover:border-[#C78B28] cursor-pointer"
+    : "bg-[#0F1216] border-[#20242A] text-[#FAF8F5] hover:border-[#C78B28] active:bg-[#151920] " +
       (state.kind === "compiling" ? "cursor-progress opacity-[0.85]" : "cursor-pointer")
 
   return (

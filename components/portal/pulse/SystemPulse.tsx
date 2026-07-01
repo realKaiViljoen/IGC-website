@@ -26,7 +26,7 @@ const fetcher = async (url: string): Promise<Payload> => {
  *
  * Typography and color rules are calibrated to match GuaranteeHeader — Geist
  * Mono 11px, tabular-nums, warm-dark palette. Numbers brighten to text-primary
- * (`#FAF9F7`) when non-zero and quiet to text-tertiary (`#93918E`) when zero.
+ * (`#FAF8F5`) when non-zero and quiet to text-tertiary (`#9C9995`) when zero.
  *
  * States rendered:
  *   - default   (post-outreach, events present today)
@@ -56,11 +56,11 @@ export function SystemPulse({ initialData }: SystemPulseProps) {
   const pulse = computeSystemPulse(client)
 
   const COLOR = {
-    tertiary: "#93918E",
-    secondary: "#857F74",
-    primary: "#FAF9F7",
+    tertiary: "#9C9995",
+    secondary: "#7C7A76",
+    primary: "#FAF8F5",
     amber: "#C78B28",
-    hairline: "#262A30",
+    hairline: "#20242A",
   }
 
   // Entire sentence softens to tertiary when stale (per spec).
@@ -194,7 +194,7 @@ export function SystemPulse({ initialData }: SystemPulseProps) {
         style={{ minHeight: 16 }}
       >
         <p className="font-mono" style={eyebrowStyle}>
-          § System Pulse
+          System Pulse
         </p>
         <p
           className="font-mono text-right max-[640px]:text-left"
@@ -209,7 +209,7 @@ export function SystemPulse({ initialData }: SystemPulseProps) {
 
 /** Middle-dot separator in text-tertiary. */
 function Dot() {
-  return <span style={{ color: "#93918E" }}> · </span>
+  return <span style={{ color: "#9C9995" }}> · </span>
 }
 
 /** Tabular-nums number span. */

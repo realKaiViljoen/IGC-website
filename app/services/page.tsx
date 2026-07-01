@@ -45,49 +45,49 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper className="bg-[#101215] text-[#FAF9F7]">
+      <SectionWrapper className="bg-[#0F1216] text-[#FAF8F5]">
         <span className="gold-line mb-6 block" aria-hidden="true" />
         <p className="section-label mb-4">The BD Build</p>
-        <h1 className="font-display text-display-lg text-[#FAF9F7] mb-6 max-w-[20ch]">
+        <h1 className="font-display text-display-lg text-[#FAF8F5] mb-6 max-w-[20ch]">
           The 30-Day BD Infrastructure Build
         </h1>
-        <p className="font-sans text-body-lg text-[#E7E5E2] max-w-prose mb-6">
+        <p className="font-sans text-body-lg text-[#E7E4E0] max-w-prose mb-6">
           A fixed-scope, fixed-fee engagement. We build your complete mandate acquisition infrastructure in 30 days.
         </p>
-        <p className="font-sans text-body-md text-[#E7E5E2] max-w-prose mb-10">
+        <p className="font-sans text-body-md text-[#E7E4E0] max-w-prose mb-10">
           At the end, you own every asset. We operate it on retainer or hand it over to your team. No lock-in. No retainer trap. A system that generates new client conversations on a predictable cadence.
         </p>
 
-        <div className="flex flex-wrap gap-8 border-t border-[#262A30] pt-10">
+        <div className="flex flex-wrap gap-8 border-t border-[#20242A] pt-10">
           {[
             { value: '5+', label: 'Guaranteed client conversations' },
             { value: '30 days', label: 'Full system live' },
             { value: 'R10,000', label: 'Monthly retainer after build' },
           ].map((stat) => (
             <div key={stat.value}>
-              <p className="font-display text-display-md text-[#FAF9F7] leading-none mb-1">{stat.value}</p>
-              <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#857F74]">{stat.label}</p>
+              <p className="font-display text-display-md text-[#FAF8F5] leading-none mb-1">{stat.value}</p>
+              <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#7C7A76]">{stat.label}</p>
             </div>
           ))}
         </div>
       </SectionWrapper>
 
       {/* What is included */}
-      <SectionWrapper className="bg-[#0A0B0E]">
+      <SectionWrapper className="bg-[#0A0C0F]">
         <p className="section-label mb-4">What Is Included</p>
-        <h2 className="font-display text-display-md text-[#FAF9F7] mb-14 max-w-[22ch]">
+        <h2 className="font-display text-display-md text-[#FAF8F5] mb-14 max-w-[22ch]">
           Six system components. One deployment.
         </h2>
 
-        <div className="flex flex-col divide-y divide-[#262A30]">
+        <div className="flex flex-col divide-y divide-[#20242A]">
           {components.map((item) => (
             <div key={item.number} className="py-8 flex flex-col md:flex-row md:gap-12">
-              <span className="font-mono text-[12px] tracking-[0.15em] uppercase text-[#A8A6A3] mb-3 md:mb-0 md:w-12 shrink-0 pt-0.5">
+              <span className="font-mono text-[12px] tracking-[0.15em] uppercase text-[#C3C0BB] mb-3 md:mb-0 md:w-12 shrink-0 pt-0.5">
                 {item.number}
               </span>
               <div>
-                <h3 className="font-sans font-medium text-[#FAF9F7] text-base mb-2">{item.title}</h3>
-                <p className="font-sans text-body-md text-[#E7E5E2]">{item.body}</p>
+                <h3 className="font-sans font-medium text-[#FAF8F5] text-base mb-2">{item.title}</h3>
+                <p className="font-sans text-body-md text-[#E7E4E0]">{item.body}</p>
               </div>
             </div>
           ))}
@@ -95,12 +95,12 @@ export default function ServicesPage() {
       </SectionWrapper>
 
       {/* CTA */}
-      <SectionWrapper className="bg-[#101215]">
+      <SectionWrapper className="bg-[#0F1216]">
         <div className="flex flex-col items-start gap-4">
-          <p className="font-sans text-body-lg text-[#FAF9F7] max-w-prose">
+          <p className="font-sans text-body-lg text-[#FAF8F5] max-w-prose">
             Your Q2 2026 build slot is open.
           </p>
-          <p className="font-sans text-body-md text-[#E7E5E2] max-w-prose">
+          <p className="font-sans text-body-md text-[#E7E4E0] max-w-prose">
             Book a 20-minute BD audit. No commitment. We tell you honestly whether your agency is a fit for the build.
           </p>
           <Button href="/diagnostic" variant="primary" size="lg">

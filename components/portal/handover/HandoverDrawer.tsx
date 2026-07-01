@@ -126,8 +126,8 @@ export function HandoverDrawer({ item, onClose, returnFocusRef }: Props) {
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             className="fixed top-0 right-0 bottom-0 z-50 flex w-full flex-col overflow-y-auto sm:w-[480px]"
             style={{
-              backgroundColor: "#0A0B0E",
-              borderLeft: "1px solid #262A30",
+              backgroundColor: "#0A0C0F",
+              borderLeft: "1px solid #20242A",
             }}
           >
             <button
@@ -135,13 +135,13 @@ export function HandoverDrawer({ item, onClose, returnFocusRef }: Props) {
               type="button"
               onClick={handleClose}
               aria-label="Close handover item detail"
-              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C9922A] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
               style={{
                 width: 42,
                 height: 42,
-                color: "#857F74",
+                color: "#7C7A76",
                 backgroundColor: "transparent",
-                border: "1px solid #262A30",
+                border: "1px solid #20242A",
               }}
             >
               <span aria-hidden="true" style={{ fontSize: "1rem", lineHeight: 1 }}>
@@ -157,20 +157,20 @@ export function HandoverDrawer({ item, onClose, returnFocusRef }: Props) {
                   fontSize: "0.6875rem",
                   letterSpacing: "0.16em",
                   color:
-                    item.state === "transferred" ? "#C9922A" : "#857F74",
+                    item.state === "transferred" ? "#C78B28" : "#7C7A76",
                   fontVariantNumeric: "tabular-nums",
                   margin: 0,
                 }}
               >
                 {STATE_LABEL[item.state]}
                 {item.shipped_at && item.state !== "transferred" && (
-                  <span style={{ color: "#857F74" }}>
+                  <span style={{ color: "#7C7A76" }}>
                     {" "}
                     · {formatUKDate(item.shipped_at)}
                   </span>
                 )}
                 {item.transferred_at && (
-                  <span style={{ color: "#857F74" }}>
+                  <span style={{ color: "#7C7A76" }}>
                     {" "}
                     · {formatUKDate(item.transferred_at)}
                   </span>
@@ -186,7 +186,7 @@ export function HandoverDrawer({ item, onClose, returnFocusRef }: Props) {
                   fontSize: "1.5rem",
                   lineHeight: 1.2,
                   letterSpacing: "-0.015em",
-                  color: "#FAF9F7",
+                  color: "#FAF8F5",
                   margin: 0,
                   fontOpticalSizing: "auto",
                   fontVariationSettings: '"opsz" 72, "SOFT" 30',
@@ -233,11 +233,11 @@ export function HandoverDrawer({ item, onClose, returnFocusRef }: Props) {
                     href={item.artifact_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C9922A] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
                     style={{
                       fontSize: "0.6875rem",
                       letterSpacing: "0.14em",
-                      color: "#857F74",
+                      color: "#7C7A76",
                       fontVariantNumeric: "tabular-nums",
                       textDecoration: "underline",
                       textUnderlineOffset: "4px",
@@ -266,7 +266,7 @@ function TimelineRow({
   tone: "quiet" | "live" | "gold"
 }) {
   const valueColor =
-    tone === "gold" ? "#C9922A" : tone === "live" ? "#FAF9F7" : "#857F74"
+    tone === "gold" ? "#C78B28" : tone === "live" ? "#FAF8F5" : "#7C7A76"
   return (
     <div className="flex items-baseline justify-between gap-6">
       <dt
@@ -274,7 +274,7 @@ function TimelineRow({
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
         }}

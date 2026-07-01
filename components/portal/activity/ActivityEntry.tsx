@@ -16,7 +16,7 @@ export type ActivityEntryProps = {
  * Anatomy (desktop ≥720px, 4-column):
  *   [timestamp 80px] · [actor 48px] · [entry flex] · [link arrow]
  *
- * Brand rule — actor-distinct typography (PRODUCT.md §Brand #6):
+ * Brand rule — actor-distinct typography (PRODUCT.md Brand #6):
  *   • K.C. entries render in Fraunces italic 400 (voice-register).
  *   • Automation entries render in Geist Mono (machine-register).
  *   • Client entries render in Geist sans (neutral — neither voice nor telemetry).
@@ -59,7 +59,7 @@ export function ActivityEntry({ event, bucket, isNew }: ActivityEntryProps) {
       style={{
         fontSize: "0.6875rem",
         letterSpacing: "0.02em",
-        color: "#93918E",
+        color: "#9C9995",
         fontVariantNumeric: "tabular-nums",
         whiteSpace: "nowrap",
         gridArea: "ts",
@@ -75,7 +75,7 @@ export function ActivityEntry({ event, bucket, isNew }: ActivityEntryProps) {
       style={{
         fontSize: "0.6875rem",
         letterSpacing: "0.14em",
-        color: actor === "kc" ? "#FAF9F7" : "#93918E",
+        color: actor === "kc" ? "#FAF8F5" : "#9C9995",
         fontVariantNumeric: "tabular-nums",
         whiteSpace: "nowrap",
         gridArea: "actor",
@@ -93,7 +93,7 @@ export function ActivityEntry({ event, bucket, isNew }: ActivityEntryProps) {
       className="font-mono"
       style={{
         fontSize: "0.75rem",
-        color: "#93918E",
+        color: "#9C9995",
         gridArea: "link",
         lineHeight: 1,
       }}
@@ -183,7 +183,7 @@ function renderEntryText(actor: ActivityEvent["actor"], entry: string) {
           fontSize: "0.9375rem",
           lineHeight: 1.55,
           letterSpacing: "-0.005em",
-          color: "#FAF9F7",
+          color: "#FAF8F5",
           fontOpticalSizing: "auto",
           fontVariationSettings: '"opsz" 72, "SOFT" 80',
         }}
@@ -203,7 +203,7 @@ function renderEntryText(actor: ActivityEvent["actor"], entry: string) {
           fontSize: "0.875rem",
           lineHeight: 1.55,
           letterSpacing: "-0.005em",
-          color: "#A8A6A3",
+          color: "#C3C0BB",
         }}
       >
         {entry}
@@ -220,7 +220,7 @@ function renderEntryText(actor: ActivityEvent["actor"], entry: string) {
         fontSize: "0.8125rem",
         lineHeight: 1.55,
         letterSpacing: "0em",
-        color: "#A8A6A3",
+        color: "#C3C0BB",
         fontVariantNumeric: "tabular-nums",
       }}
     >

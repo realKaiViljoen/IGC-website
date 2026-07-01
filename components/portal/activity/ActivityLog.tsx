@@ -24,13 +24,13 @@ const TAIL_SCROLL_THRESHOLD_PX = 50
 const NEW_ENTRIES_PILL_TIMEOUT_MS = 3000
 
 /**
- * Activity Log · § 05 of the Overview — the receipts spine.
+ * Activity Log · 05 of the Overview — the receipts spine.
  *
  * Register: Bloomberg terminal tail-log. Entries flow top-to-bottom, newest
  * first, grouped by date divider ("Today", "Yesterday", "This week",
  * "Earlier"). The visual language literally distinguishes principal-led work
  * from automation — K.C.'s entries render in Fraunces italic, automation in
- * Geist Mono. That distinction IS the brand (PRODUCT.md §Brand #6).
+ * Geist Mono. That distinction IS the brand (PRODUCT.md Brand #6).
  *
  * Data:
  *   - Seeded by `initialData` (RSC hydration).
@@ -175,19 +175,19 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 05 · Activity
+          05 · Activity
         </p>
         <p
           className="font-mono"
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -200,7 +200,7 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
       {/* Top hairline */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#2D2A27", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
 
       {/* "New entries above" pill — shown for 3s when entries arrive while
@@ -224,9 +224,9 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#FAF9F7",
-            backgroundColor: "#101215",
-            border: "1px solid #262A30",
+            color: "#FAF8F5",
+            backgroundColor: "#0F1216",
+            border: "1px solid #20242A",
             borderRadius: 2,
             cursor: "pointer",
             fontVariantNumeric: "tabular-nums",
@@ -247,7 +247,7 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
             fontWeight: 300,
             fontSize: "0.9375rem",
             lineHeight: 1.6,
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             maxWidth: "56ch",
             margin: "24px 0 0",
           }}
@@ -279,7 +279,7 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
                         aria-hidden="true"
                         style={{
                           height: 1,
-                          backgroundColor: "#262A30",
+                          backgroundColor: "#20242A",
                           width: "100%",
                         }}
                       />
@@ -306,15 +306,15 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
                 fontSize: "0.6875rem",
                 letterSpacing: "0.14em",
                 textTransform: "lowercase",
-                color: "#93918E",
+                color: "#9C9995",
                 backgroundColor: "transparent",
                 border: "none",
                 cursor: "pointer",
                 fontVariantNumeric: "tabular-nums",
                 transition: "color 150ms cubic-bezier(0.16, 1, 0.3, 1)",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#FAF9F7")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#93918E")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#FAF8F5")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#9C9995")}
             >
               show earlier ({olderCount}) {"\u2192"}
             </button>
@@ -332,7 +332,7 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
             fontSize: "0.6875rem",
             lineHeight: 1.3,
             letterSpacing: "0.14em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -368,7 +368,7 @@ export function ActivityLog({ initialData }: ActivityLogProps) {
             shown. k.c. pages himself at{" "}
             <a
               href="mailto:hello@igc-growth.com"
-              className="underline transition-colors duration-150 hover:text-[#FAF9F7]"
+              className="underline transition-colors duration-150 hover:text-[#FAF8F5]"
               style={{ color: "#C78B28", textUnderlineOffset: "3px" }}
             >
               hello@igc-growth.com
@@ -496,7 +496,7 @@ const SCOPED_CSS = `
 }
 
 [data-igc-component="activity-log"] a.igc-activity-row:focus-visible {
-  box-shadow: inset 0 0 0 1px #262A30;
+  box-shadow: inset 0 0 0 1px #20242A;
 }
 
 @media (max-width: 720px) {

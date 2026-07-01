@@ -29,20 +29,20 @@ export default async function GuaranteePage() {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           marginBottom: 32,
         }}
       >
         <Link
           href="/portal/system/overview"
-          className="no-underline transition-colors duration-150 hover:text-[#FAF9F7] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E] rounded-sm"
-          style={{ color: "#857F74" }}
+          className="no-underline transition-colors duration-150 hover:text-[#FAF8F5] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F] rounded-sm"
+          style={{ color: "#7C7A76" }}
         >
           Overview
         </Link>
         <span aria-hidden="true"> / </span>
-        <span style={{ color: "#FAF9F7" }}>Guarantee</span>
+        <span style={{ color: "#FAF8F5" }}>Guarantee</span>
       </nav>
 
       <GuaranteeTracker variant="expanded" initialData={{ client, guarantee }} />

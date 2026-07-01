@@ -34,14 +34,14 @@ export default async function OverviewPage() {
       <header className="mb-12">
         <div className="flex items-baseline justify-between gap-8">
           <div>
-            <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#857F74]">
-              § Overview
+            <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76]">
+              Overview
             </div>
-            <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF9F7] mt-2 tracking-[-0.015em]">
+            <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF8F5] mt-2 tracking-[-0.015em]">
               {client.company}
             </h1>
           </div>
-          <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#857F74] tabular-nums whitespace-nowrap">
+          <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76] tabular-nums whitespace-nowrap">
             Day {guarantee.day} of {guarantee.totalDays} · {engagement.phase}
           </div>
         </div>
@@ -52,22 +52,22 @@ export default async function OverviewPage() {
 
       <GuaranteeTracker variant="compact" initialData={{ client, guarantee }} />
 
-      {/* § 02 · Handover Pack */}
+      {/* 02 · Handover Pack */}
       <div style={{ marginTop: 56 }}>
         <HandoverPack initialData={{ client, guarantee }} />
       </div>
 
-      {/* § 03 · Commitments */}
+      {/* 03 · Commitments */}
       <div style={{ marginTop: 56 }}>
         <CommitmentsLedger initialData={{ client, guarantee }} />
       </div>
 
-      {/* § 04 · Weekly Briefing */}
+      {/* 04 · Weekly Briefing */}
       <div style={{ marginTop: 56 }}>
         <BriefingCard initialData={{ client, guarantee }} />
       </div>
 
-      {/* § 05 · Activity Log — receipts spine, tail-follow, actor-distinct typography. */}
+      {/* 05 · Activity Log — receipts spine, tail-follow, actor-distinct typography. */}
       <div style={{ marginTop: 56 }}>
         <ActivityLog initialData={{ client, guarantee }} />
       </div>

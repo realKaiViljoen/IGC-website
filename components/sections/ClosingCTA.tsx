@@ -11,10 +11,10 @@ export function ClosingCTA() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper className="bg-[#0A0B0E] min-h-screen flex items-center overflow-hidden relative">
+    <SectionWrapper className="bg-[#0A0C0F] min-h-screen flex items-center overflow-hidden relative">
       {/* Large decorative background text */}
       <span
-        className="absolute bottom-0 left-0 right-0 font-display text-[#FAF9F7]/[0.04] select-none pointer-events-none text-center leading-none"
+        className="absolute bottom-0 left-0 right-0 font-display text-[#FAF8F5]/[0.04] select-none pointer-events-none text-center leading-none"
         style={{ fontSize: 'clamp(5rem, 20vw, 22rem)', lineHeight: 0.85 }}
         aria-hidden="true"
       >
@@ -45,14 +45,14 @@ export function ClosingCTA() {
 
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-lg text-[#FAF9F7] mb-8 max-w-[18ch]"
+          className="font-display text-display-lg text-[#FAF8F5] mb-8 max-w-[18ch]"
         >
           Your next build slot<br />is open.
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
-          className="font-sans text-body-lg text-[#E7E5E2] font-normal max-w-[48ch] mb-12"
+          className="font-sans text-body-lg text-[#E7E4E0] font-normal max-w-[48ch] mb-12"
         >
           Build capacity is limited to 6 agencies per quarter. Book a 20-minute BD audit and find out whether your agency is a fit for the build. No commitment. No pitch. An honest look at your current mandate pipeline.
         </motion.p>
@@ -61,7 +61,7 @@ export function ClosingCTA() {
           <Button href="/diagnostic" variant="primary" size="lg">
             Claim Your Build Slot
           </Button>
-          <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#E7E5E2] font-medium">
+          <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#E7E4E0] font-medium">
             20-minute BD audit. Free. We tell you honestly what we find.
           </p>
         </motion.div>

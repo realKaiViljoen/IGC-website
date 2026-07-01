@@ -5,15 +5,15 @@ import type { GuaranteeData } from "@/types/client"
  *
  * Horizontal Days 1–30 ruler with dots at each counted conversation.
  *
- * Visual grammar (brief §5 · Row 7):
- *  - 1px baseline `#262A30`, full-width.
+ * Visual grammar (brief 5 · Row 7):
+ *  - 1px baseline `#20242A`, full-width.
  *  - 30 tick marks evenly distributed. Every 5th labeled below (5, 10, 15, 20, 25, 30).
  *  - Day 1 and the current day get slightly longer ticks.
  *  - Phase boundaries (1 / 14 / 30) get subtly-longer ticks + label above:
  *    Build (1–13), Launch (14–30), Operate (post-30, only when relevant).
- *  - Current-day marker: vertical 1px `#857F74`, 12px tall, `Day N` label below.
- *  - Conversation dots: 6px circle `#FAF9F7` at held_at column. Multiple same-day dots stack vertically above baseline with 8px offset.
- *  - Met dot: the conversation that tipped count to 5 renders 6px gold `#C9922A` with 1px ring.
+ *  - Current-day marker: vertical 1px `#7C7A76`, 12px tall, `Day N` label below.
+ *  - Conversation dots: 6px circle `#FAF8F5` at held_at column. Multiple same-day dots stack vertically above baseline with 8px offset.
+ *  - Met dot: the conversation that tipped count to 5 renders 6px gold `#C78B28` with 1px ring.
  *    Exactly one gold dot per ruler.
  *  - Unpaid-extension: ruler continues past Day 30 as 1px dashed line to the current day, labeled `Extension` above.
  *  - No animation, no fill, no gradient.
@@ -83,7 +83,7 @@ export function EngagementTimeline({
   })
 
   // Tick marks at every day 1..totalDays plus extension days when present.
-  // Phase boundaries per brief §5 Row 7: Day 1 (Build starts), Day 13 (Build→Launch),
+  // Phase boundaries per brief 5 Row 7: Day 1 (Build starts), Day 13 (Build→Launch),
   // Day 30 (Launch→Operate).
   const ticks: Array<{ day: number; height: number; label?: string }> = []
   for (let d = 1; d <= totalDays; d += 1) {
@@ -107,13 +107,13 @@ export function EngagementTimeline({
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
           marginBottom: 24,
         }}
       >
-        § 03 · Engagement timeline
+        03 · Engagement timeline
       </h3>
 
       <div
@@ -133,7 +133,7 @@ export function EngagementTimeline({
             transform: "translateX(-50%)",
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#93918E",
+            color: "#9C9995",
             fontVariantNumeric: "tabular-nums",
           }}
         >
@@ -147,7 +147,7 @@ export function EngagementTimeline({
             transform: "translateX(-50%)",
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#93918E",
+            color: "#9C9995",
             fontVariantNumeric: "tabular-nums",
           }}
         >
@@ -162,7 +162,7 @@ export function EngagementTimeline({
               transform: "translateX(-50%)",
               fontSize: "0.6875rem",
               letterSpacing: "0.16em",
-              color: "#93918E",
+              color: "#9C9995",
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -179,7 +179,7 @@ export function EngagementTimeline({
             width: `${day30Pct - pctForDay(1)}%`,
             top: BASELINE_TOP,
             height: 1,
-            backgroundColor: "#262A30",
+            backgroundColor: "#20242A",
           }}
         />
 
@@ -193,7 +193,7 @@ export function EngagementTimeline({
               width: `${100 - day30Pct}%`,
               top: BASELINE_TOP,
               height: 0,
-              borderTop: "1px dashed #262A30",
+              borderTop: "1px dashed #20242A",
             }}
           />
         )}
@@ -208,7 +208,7 @@ export function EngagementTimeline({
                 top: BASELINE_TOP,
                 height: t.height,
                 width: 1,
-                backgroundColor: "#262A30",
+                backgroundColor: "#20242A",
                 transform: "translateX(-0.5px)",
               }}
             />
@@ -221,7 +221,7 @@ export function EngagementTimeline({
                   transform: "translateX(-50%)",
                   fontSize: "0.6875rem",
                   letterSpacing: "0.08em",
-                  color: "#93918E",
+                  color: "#9C9995",
                   fontVariantNumeric: "tabular-nums",
                 }}
               >
@@ -244,8 +244,8 @@ export function EngagementTimeline({
               width: DOT_SIZE,
               height: DOT_SIZE,
               borderRadius: "50%",
-              backgroundColor: d.isGold ? "#C9922A" : "#FAF9F7",
-              boxShadow: d.isGold ? "0 0 0 1px #C9922A" : "none",
+              backgroundColor: d.isGold ? "#C78B28" : "#FAF8F5",
+              boxShadow: d.isGold ? "0 0 0 1px #C78B28" : "none",
               transform: "translateX(-50%)",
             }}
           />
@@ -260,7 +260,7 @@ export function EngagementTimeline({
             top: BASELINE_TOP - 6,
             height: 12,
             width: 1,
-            backgroundColor: "#857F74",
+            backgroundColor: "#7C7A76",
             transform: "translateX(-0.5px)",
           }}
         />
@@ -272,7 +272,7 @@ export function EngagementTimeline({
             transform: "translateX(-50%)",
             fontSize: "0.6875rem",
             letterSpacing: "0.1em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             whiteSpace: "nowrap",
           }}

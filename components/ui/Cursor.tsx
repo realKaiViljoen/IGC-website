@@ -92,7 +92,7 @@ export function Cursor() {
           marginLeft: -2.5,
           marginTop: -2.5,
           borderRadius: '50%',
-          backgroundColor: '#FAF9F7',
+          backgroundColor: '#FAF8F5',
           opacity: visible ? 1 : 0,
           transition: 'opacity 0.2s',
         }}

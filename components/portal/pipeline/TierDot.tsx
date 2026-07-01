@@ -18,7 +18,7 @@ export function TierDot({
   tier?: 1 | 2 | 3
   qualified: boolean
 }) {
-  const color = qualified ? "#C78B28" : "#A8A6A3"
+  const color = qualified ? "#C78B28" : "#C3C0BB"
 
   if (tier === 1) {
     return (
@@ -79,7 +79,7 @@ export function TierDot({
       aria-label="No tier"
       style={{
         display: "inline-block",
-        color: "#857F74",
+        color: "#7C7A76",
         fontSize: "0.6875rem",
         verticalAlign: "middle",
       }}

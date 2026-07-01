@@ -99,7 +99,7 @@ export function BriefingsArchive({ briefings, startDate }: BriefingsArchiveProps
           style={{
             fontSize: "0.9375rem",
             lineHeight: 1.7,
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             margin: 0,
             maxWidth: "52ch",
           }}
@@ -119,7 +119,7 @@ export function BriefingsArchive({ briefings, startDate }: BriefingsArchiveProps
             {i < sorted.length - 1 && (
               <div
                 aria-hidden="true"
-                style={{ height: 1, backgroundColor: "#262A30", width: "100%" }}
+                style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
               />
             )}
           </div>
@@ -131,7 +131,7 @@ export function BriefingsArchive({ briefings, startDate }: BriefingsArchiveProps
         style={{
           marginTop: 56,
           paddingTop: 28,
-          borderTop: "1px solid #262A30",
+          borderTop: "1px solid #20242A",
           display: "flex",
           flexDirection: "column",
           gap: 16,
@@ -144,7 +144,7 @@ export function BriefingsArchive({ briefings, startDate }: BriefingsArchiveProps
           style={{
             fontSize: "0.625rem",
             letterSpacing: "0.16em",
-            color: "#6E685E",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}

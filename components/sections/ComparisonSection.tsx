@@ -10,10 +10,10 @@ const columns = [
   {
     id: 'agency',
     label: 'Marketing Agency',
-    labelColor: '#857F74',
-    borderClass: 'border border-[#262A30]',
-    bgClass: 'bg-[#0A0B0E]',
-    pointColor: 'text-[#E7E5E2]',
+    labelColor: '#7C7A76',
+    borderClass: 'border border-[#20242A]',
+    bgClass: 'bg-[#0A0C0F]',
+    pointColor: 'text-[#E7E4E0]',
     points: [
       'Optimises for impressions. You bill on placements.',
       'Monthly report shows reach. Not mandates won.',
@@ -27,8 +27,8 @@ const columns = [
     label: 'IGC',
     labelColor: '#C78B28',
     borderClass: 'border border-[#C78B28]/40 border-l-2 border-l-[#C78B28]/70',
-    bgClass: 'bg-[#101215]',
-    pointColor: 'text-[#FAF9F7]',
+    bgClass: 'bg-[#0F1216]',
+    pointColor: 'text-[#FAF8F5]',
     points: [
       'You own every sequence, page, and workflow we build.',
       'One metric tracked: new client conversations booked.',
@@ -40,10 +40,10 @@ const columns = [
   {
     id: 'hire',
     label: 'In-House BD Person',
-    labelColor: '#857F74',
-    borderClass: 'border border-[#262A30]',
-    bgClass: 'bg-[#0A0B0E]',
-    pointColor: 'text-[#E7E5E2]',
+    labelColor: '#7C7A76',
+    borderClass: 'border border-[#20242A]',
+    bgClass: 'bg-[#0A0C0F]',
+    pointColor: 'text-[#E7E4E0]',
     points: [
       'R40,000–55,000+ salary before commission.',
       '3-month ramp before meaningful BD output.',
@@ -59,7 +59,7 @@ export function ComparisonSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper className="bg-[#0A0B0E] text-[#FAF9F7]">
+    <SectionWrapper className="bg-[#0A0C0F] text-[#FAF8F5]">
       <motion.div
         ref={ref}
         variants={stagger}
@@ -70,7 +70,7 @@ export function ComparisonSection() {
         <motion.div variants={fadeUp}>
           <span className="gold-line mb-6 block" aria-hidden="true" />
           <div className="flex items-center gap-2 mb-4">
-            <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg className="w-4 h-4 text-[#E7E4E0] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M8 2v12M2 5l6-3 6 3M2 11l6 3 6-3"/>
               <path d="M2 5v6M14 5v6"/>
             </svg>
@@ -81,7 +81,7 @@ export function ComparisonSection() {
         {/* Headline */}
         <motion.h2
           variants={fadeUp}
-          className="font-display text-display-md text-[#FAF9F7] mb-12 max-w-[28ch]"
+          className="font-display text-display-md text-[#FAF8F5] mb-12 max-w-[28ch]"
         >
           Why not hire a marketing agency or a dedicated BD person?
         </motion.h2>
@@ -162,8 +162,8 @@ export function ComparisonSection() {
           ))}
         </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#262A30] flex flex-col items-start gap-4">
-          <p className="font-sans font-normal text-body-md text-[#E7E5E2] max-w-[44ch]">
+        <motion.div variants={fadeUp} className="mt-16 pt-10 border-t border-[#20242A] flex flex-col items-start gap-4">
+          <p className="font-sans font-normal text-body-md text-[#E7E4E0] max-w-[44ch]">
             The BD audit is free. Twenty minutes and you will know exactly where your mandate pipeline is breaking, and whether the build is the right fix.
           </p>
           <Button href="/diagnostic" variant="primary" size="md">

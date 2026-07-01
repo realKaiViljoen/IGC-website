@@ -3,7 +3,7 @@ import type { GuaranteeData } from "@/types/client"
 /**
  * Row 1 · Eyebrow · Day counter.
  *
- * Left: `§ 01 · GUARANTEE` — the permanent section label.
+ * Left: `01 · GUARANTEE` — the permanent section label.
  * Right: `Day N of 30`, with optional tail for behind / ahead / met / extension.
  *
  * The day counter is an anchor link to `#days-ruler` (Agent C will insert the
@@ -12,7 +12,7 @@ import type { GuaranteeData } from "@/types/client"
  *
  * Typography:
  *   - Geist Mono 11px, 0.16em tracking, tabular-nums.
- *   - Color `#857F74` (text-secondary). text-tertiary was bumped to `#93918E`
+ *   - Color `#7C7A76` (text-secondary). text-tertiary was bumped to `#9C9995`
  *     at the token level, but the eyebrow role still wants the slightly firmer
  *     secondary tone against the warm-dark ground so it registers as a label,
  *     not a whisper.
@@ -48,30 +48,30 @@ export function GuaranteeHeader({ guarantee }: { guarantee: GuaranteeData }) {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
         }}
       >
-        § 01 · Guarantee
+        01 · Guarantee
       </p>
 
       <a
         href="#days-ruler"
-        className="font-mono no-underline transition-colors duration-200 hover:text-[#FAF9F7] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E] rounded-sm"
+        className="font-mono no-underline transition-colors duration-200 hover:text-[#FAF8F5] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F] rounded-sm"
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           textTransform: "lowercase",
         }}
       >
         {counterText.prefix && (
-          <span style={{ color: "#857F74" }}>{counterText.prefix} · </span>
+          <span style={{ color: "#7C7A76" }}>{counterText.prefix} · </span>
         )}
         <span>{counterText.suffix}</span>
         {tail && (
-          <span style={{ color: "#857F74" }}> · {tail.text}</span>
+          <span style={{ color: "#7C7A76" }}> · {tail.text}</span>
         )}
       </a>
     </div>

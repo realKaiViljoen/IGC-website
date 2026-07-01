@@ -49,7 +49,7 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
       <Link
         href={href}
         className={`font-sans text-base transition-colors duration-200 ${
-          isActive ? 'text-[#FAF9F7]' : 'text-[#E7E5E2] hover:text-[#FAF9F7]'
+          isActive ? 'text-[#FAF8F5]' : 'text-[#E7E4E0] hover:text-[#FAF8F5]'
         }`}
         onClick={onClick}
       >
@@ -61,8 +61,8 @@ function NavLink({ href, label, isActive, onClick, mobile = false }: NavLinkProp
   return (
     <a
       href={href}
-      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0A0B0E] rounded-sm ${
-        isActive ? 'text-[#FAF9F7]' : 'text-[#E7E5E2] hover:text-[#FAF9F7]'
+      className={`relative font-sans text-sm tracking-[0.02em] transition-colors duration-200 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C78B28] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0A0C0F] rounded-sm ${
+        isActive ? 'text-[#FAF8F5]' : 'text-[#E7E4E0] hover:text-[#FAF8F5]'
       }`}
       onClick={onClick}
     >
@@ -130,7 +130,7 @@ export function Nav() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/portal"
-              className="flex items-center gap-1.5 text-[#6E6762] hover:text-[#A8A6A3] transition-colors duration-200"
+              className="flex items-center gap-1.5 text-[#6E6762] hover:text-[#C3C0BB] transition-colors duration-200"
             >
               <LockIcon />
               <span className="font-mono text-[11px] tracking-[0.12em] uppercase">Client Portal</span>
@@ -141,7 +141,7 @@ export function Nav() {
               href="https://linkedin.com/in/kai-viljoen"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#857F74] hover:text-[#E7E5E2] transition-colors duration-200"
+              className="text-[#7C7A76] hover:text-[#E7E4E0] transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <LinkedInIcon />
@@ -159,13 +159,13 @@ export function Nav() {
             aria-expanded={open}
           >
             <span
-              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 origin-center ${open ? 'rotate-45 translate-y-[6px]' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF8F5] transition-all duration-300 origin-center ${open ? 'rotate-45 translate-y-[6px]' : ''}`}
             />
             <span
-              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 ${open ? 'opacity-0 scale-x-0' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF8F5] transition-all duration-300 ${open ? 'opacity-0 scale-x-0' : ''}`}
             />
             <span
-              className={`block w-[18px] h-px bg-[#FAF9F7] transition-all duration-300 origin-center ${open ? '-rotate-45 -translate-y-[6px]' : ''}`}
+              className={`block w-[18px] h-px bg-[#FAF8F5] transition-all duration-300 origin-center ${open ? '-rotate-45 -translate-y-[6px]' : ''}`}
             />
           </button>
 
@@ -197,7 +197,7 @@ export function Nav() {
 
               <Link
                 href="/portal"
-                className="flex items-center text-[#6E6762] hover:text-[#A8A6A3] transition-colors duration-200"
+                className="flex items-center text-[#6E6762] hover:text-[#C3C0BB] transition-colors duration-200"
                 onClick={() => setOpen(false)}
               >
                 <LockIcon />
@@ -211,7 +211,7 @@ export function Nav() {
                   href="https://linkedin.com/in/kai-viljoen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#857F74] hover:text-[#E7E5E2] transition-colors duration-200"
+                  className="text-[#7C7A76] hover:text-[#E7E4E0] transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <LinkedInIcon />

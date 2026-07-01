@@ -16,11 +16,11 @@ import type { HandoverItem } from "@/types/client"
  * muted (no hover gold), but do open the drawer to show the empty state note.
  *
  * States → chip text / colour (Gold Rule):
- *   not-started      → "NOT STARTED"       — #5E5850 (faint)
- *   in-progress      → "IN PROGRESS"       — #A8A6A3
- *   ready-for-review → "READY FOR REVIEW"  — #FAF9F7
- *   shipped          → "SHIPPED"           — #C9922A (OWNED)
- *   transferred      → "TRANSFERRED"       — #C9922A (OWNED)
+ *   not-started      → "NOT STARTED"       — #6B6966 (faint)
+ *   in-progress      → "IN PROGRESS"       — #C3C0BB
+ *   ready-for-review → "READY FOR REVIEW"  — #FAF8F5
+ *   shipped          → "SHIPPED"           — #C78B28 (OWNED)
+ *   transferred      → "TRANSFERRED"       — #C78B28 (OWNED)
  */
 export type HandoverShelfRowProps = {
   item: HandoverItem
@@ -42,14 +42,14 @@ function stateColor(state: HandoverItem["state"]): string {
   switch (state) {
     case "transferred":
     case "shipped":
-      return "#C9922A"
+      return "#C78B28"
     case "ready-for-review":
-      return "#FAF9F7"
+      return "#FAF8F5"
     case "in-progress":
-      return "#A8A6A3"
+      return "#C3C0BB"
     case "not-started":
     default:
-      return "#5E5850"
+      return "#6B6966"
   }
 }
 
@@ -82,7 +82,7 @@ export const HandoverShelfRow = forwardRef<HTMLButtonElement, HandoverShelfRowPr
     const label = STATE_LABEL[item.state]
     const color = stateColor(item.state)
     const timestamp = timestampFor(item)
-    const nameColor = isEmpty ? "#5E5850" : "#FAF9F7"
+    const nameColor = isEmpty ? "#6B6966" : "#FAF8F5"
 
     return (
       <button
@@ -95,7 +95,7 @@ export const HandoverShelfRow = forwardRef<HTMLButtonElement, HandoverShelfRowPr
         aria-label={`${item.name}, ${label.toLowerCase()}. Open detail.`}
         data-igc-handover-shelf-row={item.key}
         data-igc-state={item.state}
-        className="group block w-full text-left transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808]"
+        className="group block w-full text-left transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
         style={{
           padding: "28px 0",
           background: "transparent",
@@ -117,7 +117,7 @@ export const HandoverShelfRow = forwardRef<HTMLButtonElement, HandoverShelfRowPr
             style={{
               fontSize: "0.75rem",
               letterSpacing: "0.14em",
-              color: isEmpty ? "#5E5850" : "#857F74",
+              color: isEmpty ? "#6B6966" : "#7C7A76",
               fontVariantNumeric: "tabular-nums",
               minWidth: "2ch",
             }}
@@ -165,7 +165,7 @@ export const HandoverShelfRow = forwardRef<HTMLButtonElement, HandoverShelfRowPr
             style={{
               fontSize: "0.6875rem",
               letterSpacing: "0.04em",
-              color: isEmpty ? "#5E5850" : "#857F74",
+              color: isEmpty ? "#6B6966" : "#7C7A76",
               fontVariantNumeric: "tabular-nums",
               whiteSpace: "nowrap",
               minWidth: "9ch",

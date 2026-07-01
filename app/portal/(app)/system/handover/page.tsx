@@ -67,11 +67,11 @@ export default async function HandoverPage() {
   return (
     <div className="px-8 pt-12 pb-24 max-w-[960px]">
       <header className="mb-10">
-        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#857F74]">
-          § Handover
+        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76]">
+          Handover
         </div>
         <h1
-          className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF9F7] mt-3"
+          className="font-display text-[clamp(2rem,4vw,3rem)] font-normal text-[#FAF8F5] mt-3"
           style={{
             letterSpacing: "-0.015em",
             fontOpticalSizing: "auto",
@@ -81,7 +81,7 @@ export default async function HandoverPage() {
           Your asset shelf.
         </h1>
         <p
-          className="font-sans mt-4 text-[#A8A6A3]"
+          className="font-sans mt-4 text-[#C3C0BB]"
           style={{
             fontSize: "0.9375rem",
             lineHeight: 1.7,

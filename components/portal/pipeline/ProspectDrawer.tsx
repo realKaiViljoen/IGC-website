@@ -115,8 +115,8 @@ export function ProspectDrawer({
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             className="fixed top-0 right-0 bottom-0 z-50 flex w-full flex-col overflow-y-auto sm:w-[520px]"
             style={{
-              backgroundColor: "#0A0B0E",
-              borderLeft: "1px solid #262A30",
+              backgroundColor: "#0A0C0F",
+              borderLeft: "1px solid #20242A",
             }}
           >
             {/* Close */}
@@ -125,13 +125,13 @@ export function ProspectDrawer({
               type="button"
               onClick={handleClose}
               aria-label="Close prospect detail"
-              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
               style={{
                 width: 42,
                 height: 42,
-                color: "#857F74",
+                color: "#7C7A76",
                 backgroundColor: "transparent",
-                border: "1px solid #262A30",
+                border: "1px solid #20242A",
               }}
             >
               <span aria-hidden="true" style={{ fontSize: "1rem", lineHeight: 1 }}>
@@ -146,7 +146,7 @@ export function ProspectDrawer({
                 style={{
                   fontSize: "0.6875rem",
                   letterSpacing: "0.14em",
-                  color: qualified ? "#C78B28" : "#857F74",
+                  color: qualified ? "#C78B28" : "#7C7A76",
                   fontVariantNumeric: "tabular-nums",
                   textTransform: "uppercase",
                   margin: 0,
@@ -164,7 +164,7 @@ export function ProspectDrawer({
                   fontSize: "1.5rem",
                   lineHeight: 1.2,
                   letterSpacing: "-0.015em",
-                  color: "#FAF9F7",
+                  color: "#FAF8F5",
                   margin: 0,
                   fontOpticalSizing: "auto",
                   fontVariationSettings: '"opsz" 72, "SOFT" 30',
@@ -172,8 +172,8 @@ export function ProspectDrawer({
                 }}
               >
                 {prospect.company}
-                <span style={{ color: "#857F74" }}> · </span>
-                <span style={{ color: "#857F74" }}>
+                <span style={{ color: "#7C7A76" }}> · </span>
+                <span style={{ color: "#7C7A76" }}>
                   {prospect.name}, {prospect.role}
                 </span>
               </h2>
@@ -187,8 +187,8 @@ export function ProspectDrawer({
                   rowGap: 12,
                   paddingTop: 4,
                   paddingBottom: 4,
-                  borderTop: "1px solid #2D2A27",
-                  borderBottom: "1px solid #2D2A27",
+                  borderTop: "1px solid #20242A",
+                  borderBottom: "1px solid #20242A",
                 }}
               >
                 <MetaCell label="Tier">
@@ -198,7 +198,7 @@ export function ProspectDrawer({
                       className="font-sans"
                       style={{
                         fontSize: "0.875rem",
-                        color: "#FAF9F7",
+                        color: "#FAF8F5",
                       }}
                     >
                       {prospect.tier ? `Tier ${prospect.tier}` : "Untiered"}
@@ -210,7 +210,7 @@ export function ProspectDrawer({
                     className="font-mono"
                     style={{
                       fontSize: "0.875rem",
-                      color: "#FAF9F7",
+                      color: "#FAF8F5",
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >
@@ -230,7 +230,7 @@ export function ProspectDrawer({
                     style={{
                       fontSize: "0.6875rem",
                       letterSpacing: "0.16em",
-                      color: "#857F74",
+                      color: "#7C7A76",
                       fontVariantNumeric: "tabular-nums",
                       margin: 0,
                     }}
@@ -251,7 +251,7 @@ export function ProspectDrawer({
                             style={{
                               fontSize: "0.6875rem",
                               letterSpacing: "0.14em",
-                              color: qualifiedConv ? "#C78B28" : "#857F74",
+                              color: qualifiedConv ? "#C78B28" : "#7C7A76",
                               fontVariantNumeric: "tabular-nums",
                               textTransform: "uppercase",
                               margin: 0,
@@ -267,7 +267,7 @@ export function ProspectDrawer({
                                 fontSize: "1rem",
                                 lineHeight: 1.55,
                                 letterSpacing: "-0.005em",
-                                color: "#FAF9F7",
+                                color: "#FAF8F5",
                                 margin: 0,
                                 maxWidth: "52ch",
                                 fontOpticalSizing: "auto",
@@ -289,7 +289,7 @@ export function ProspectDrawer({
                   style={{
                     fontSize: "0.875rem",
                     lineHeight: 1.55,
-                    color: "#857F74",
+                    color: "#7C7A76",
                     margin: 0,
                     maxWidth: "52ch",
                   }}
@@ -306,11 +306,11 @@ export function ProspectDrawer({
                     href={prospect.hubspot_deal_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
                     style={{
                       fontSize: "0.6875rem",
                       letterSpacing: "0.14em",
-                      color: "#857F74",
+                      color: "#7C7A76",
                       fontVariantNumeric: "tabular-nums",
                       textDecoration: "underline",
                       textUnderlineOffset: "4px",
@@ -345,7 +345,7 @@ function MetaCell({
         style={{
           fontSize: "0.625rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
         }}
       >

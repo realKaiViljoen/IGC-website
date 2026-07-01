@@ -35,7 +35,7 @@ export function GoldHairline(props: {
       style={{
         width,
         height: 1,
-        backgroundColor: "#C9922A",
+        backgroundColor: "#C78B28",
         transformOrigin: "left center",
         willChange: "transform",
       }}

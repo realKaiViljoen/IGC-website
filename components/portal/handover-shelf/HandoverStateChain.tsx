@@ -43,19 +43,19 @@ export function HandoverStateChain({ state }: Props) {
 
           // dot
           const dotBg = isGold
-            ? "#C9922A"
+            ? "#C78B28"
             : isCurrent
-              ? "#FAF9F7"
+              ? "#FAF8F5"
               : isPast
-                ? "#857F74"
+                ? "#7C7A76"
                 : "transparent"
           const dotBorder = isGold
-            ? "#C9922A"
+            ? "#C78B28"
             : isCurrent
-              ? "#FAF9F7"
+              ? "#FAF8F5"
               : isPast
-                ? "#857F74"
-                : "#3A342E"
+                ? "#7C7A76"
+                : "#31363E"
 
           return (
             <div key={s} className="flex items-center" style={{ flex: i === STATES.length - 1 ? "0 0 auto" : "1 1 auto" }}>
@@ -75,7 +75,7 @@ export function HandoverStateChain({ state }: Props) {
                   aria-hidden="true"
                   style={{
                     height: 1,
-                    backgroundColor: i < currentIdx ? "#857F74" : "#2D2A27",
+                    backgroundColor: i < currentIdx ? "#7C7A76" : "#20242A",
                     flex: "1 1 auto",
                     margin: "0 6px",
                     minWidth: 12,
@@ -99,9 +99,9 @@ export function HandoverStateChain({ state }: Props) {
                 letterSpacing: "0.14em",
                 color: isCurrent
                   ? s === "transferred"
-                    ? "#C9922A"
-                    : "#FAF9F7"
-                  : "#5E5850",
+                    ? "#C78B28"
+                    : "#FAF8F5"
+                  : "#6B6966",
                 fontVariantNumeric: "tabular-nums",
                 whiteSpace: "nowrap",
                 textAlign: i === 0 ? "left" : i === STATES.length - 1 ? "right" : "left",

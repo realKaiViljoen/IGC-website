@@ -32,12 +32,12 @@ export function LoomThumbnail({ briefing }: { briefing: Briefing }) {
       aria-label={`Open weekly briefing Loom video${
         duration ? ` (${duration})` : ""
       }`}
-      className="group relative block overflow-hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+      className="group relative block overflow-hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
       style={{
         width: 160,
         height: 90,
-        backgroundColor: "#101215",
-        border: "1px solid #262A30",
+        backgroundColor: "#0F1216",
+        border: "1px solid #20242A",
         flexShrink: 0,
       }}
     >
@@ -64,13 +64,13 @@ export function LoomThumbnail({ briefing }: { briefing: Briefing }) {
             cy={16}
             r={15}
             fill="rgba(8, 8, 8, 0.55)"
-            stroke="#262A30"
+            stroke="#20242A"
             strokeWidth={1}
             className="transition-colors duration-150 group-hover:stroke-[#C78B28]"
           />
           <path
             d="M13 10.5 L23 16 L13 21.5 Z"
-            fill="#857F74"
+            fill="#7C7A76"
             className="transition-colors duration-150 group-hover:fill-[#C78B28]"
             style={{ color: GOLD }}
           />
@@ -86,7 +86,7 @@ export function LoomThumbnail({ briefing }: { briefing: Briefing }) {
             bottom: 6,
             fontSize: "0.625rem",
             letterSpacing: "0.06em",
-            color: "#FAF9F7",
+            color: "#FAF8F5",
             fontVariantNumeric: "tabular-nums",
             backgroundColor: "rgba(8, 8, 8, 0.7)",
             padding: "1px 5px",

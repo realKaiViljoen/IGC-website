@@ -12,7 +12,7 @@ import type { GuaranteeTrackerState } from "@/types/client"
  *   - Cold mount already in `met`: static render, no motion.
  *   - Cold mount in behind/on-pace/ahead, SWR revalidation flips to `met`: play once.
  *
- * Replay policy per brief §7:
+ * Replay policy per brief 7:
  *   localStorage `igc-guarantee-met-seen-{uid}` → set once after first play.
  *   Subsequent mounts never replay.
  *

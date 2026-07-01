@@ -72,7 +72,7 @@ export function BriefingEntry({
       data-entry-index={entryIndex}
       tabIndex={-1}
       aria-labelledby={`briefing-week-${weekNumber}`}
-      className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-8 focus-visible:ring-offset-[#0A0B0E]"
+      className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-8 focus-visible:ring-offset-[#0A0C0F]"
       style={{ scrollMarginTop: 32, paddingTop: 48, paddingBottom: 48 }}
     >
       {/* Week anchor row */}
@@ -82,7 +82,7 @@ export function BriefingEntry({
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             marginBottom: 10,
             display: "flex",
@@ -116,7 +116,7 @@ export function BriefingEntry({
             fontSize: "1.75rem",
             lineHeight: 1.15,
             letterSpacing: "-0.015em",
-            color: "#FAF9F7",
+            color: "#FAF8F5",
             margin: 0,
             fontOpticalSizing: "auto",
             fontVariationSettings: '"opsz" 48, "SOFT" 60',
@@ -150,7 +150,7 @@ export function BriefingEntry({
               style={{
                 fontSize: "0.6875rem",
                 letterSpacing: "0.14em",
-                color: "#857F74",
+                color: "#7C7A76",
                 fontVariantNumeric: "tabular-nums",
               }}
             >
@@ -161,10 +161,10 @@ export function BriefingEntry({
             href={briefing.loom_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group font-sans inline-flex items-center gap-2 transition-colors duration-150 hover:text-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+            className="group font-sans inline-flex items-center gap-2 transition-colors duration-150 hover:text-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
             style={{
               fontSize: "0.875rem",
-              color: "#FAF9F7",
+              color: "#FAF8F5",
               width: "fit-content",
             }}
           >
@@ -188,7 +188,7 @@ export function BriefingEntry({
             fontWeight: 400,
             fontSize: "0.9375rem",
             lineHeight: 1.7,
-            color: "#E6DFD2",
+            color: "#E7E4E0",
             margin: 0,
             maxWidth: "62ch",
             textWrap: "pretty",
@@ -204,7 +204,7 @@ export function BriefingEntry({
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.14em",
-          color: "#6E685E",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
           marginTop: 24,

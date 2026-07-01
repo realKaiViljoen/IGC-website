@@ -17,7 +17,7 @@ const fetcher = async (url: string): Promise<Payload> => {
 }
 
 /**
- * Weekly Briefing Card · § 04 of the Overview.
+ * Weekly Briefing Card · 04 of the Overview.
  *
  * The one place K.C.'s face appears in the entire portal.
  *
@@ -102,7 +102,7 @@ function headerTagFor(latest: Briefing, today: Date) {
   }
   return {
     text: `Latest · ${formatShortDate(latest.week_of)} · this week`,
-    color: "#A8A6A3",
+    color: "#C3C0BB",
   }
 }
 
@@ -166,12 +166,12 @@ export function BriefingCard({ initialData }: BriefingCardProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 04 · Weekly Briefing
+          04 · Weekly Briefing
         </p>
         {latest && (
           <p
@@ -196,7 +196,7 @@ export function BriefingCard({ initialData }: BriefingCardProps) {
         aria-hidden="true"
         style={{
           height: 1,
-          backgroundColor: "#2D2A27",
+          backgroundColor: "#20242A",
           width: "100%",
         }}
       />
@@ -238,7 +238,7 @@ export function BriefingCard({ initialData }: BriefingCardProps) {
           utc. last-known-good shown. k.c. pages himself at{" "}
           <a
             href="mailto:hello@igc-growth.com"
-            className="underline transition-colors duration-150 hover:text-[#FAF9F7]"
+            className="underline transition-colors duration-150 hover:text-[#FAF8F5]"
             style={{ color: AMBER, textUnderlineOffset: "3px" }}
           >
             hello@igc-growth.com
@@ -287,7 +287,7 @@ function DefaultBody({
               fontSize: "1.0625rem",
               lineHeight: 1.55,
               letterSpacing: "-0.005em",
-              color: "#FAF9F7",
+              color: "#FAF8F5",
               margin: 0,
               maxWidth: "52ch",
               fontOpticalSizing: "auto",
@@ -304,7 +304,7 @@ function DefaultBody({
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
-            color: "#A8A6A3",
+            color: "#C3C0BB",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
             textTransform: "uppercase",
@@ -358,13 +358,13 @@ function LoomThumbnail({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Open weekly briefing Loom video (${duration ?? "watch"})`}
-      className="group relative block overflow-hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+      className="group relative block overflow-hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
       style={{
         width: "100%",
         maxWidth: 240,
         aspectRatio: "16 / 9",
-        backgroundColor: "#101215",
-        border: "1px solid #262A30",
+        backgroundColor: "#0F1216",
+        border: "1px solid #20242A",
         boxShadow: isSlaBreach ? `0 0 0 1px ${AMBER}` : undefined,
         transition: "opacity 150ms cubic-bezier(0.16, 1, 0.3, 1)",
       }}
@@ -423,7 +423,7 @@ function LoomThumbnail({
             bottom: 8,
             fontSize: "0.6875rem",
             letterSpacing: "0.06em",
-            color: "#FAF9F7",
+            color: "#FAF8F5",
             fontVariantNumeric: "tabular-nums",
             backgroundColor: "rgba(8, 8, 8, 0.7)",
             padding: "2px 6px",
@@ -453,12 +453,12 @@ function PlayTriangle({ muted }: { muted: boolean }) {
         cy={22}
         r={21}
         fill="rgba(8, 8, 8, 0.55)"
-        stroke={muted ? "#262A30" : "rgba(242, 237, 228, 0.6)"}
+        stroke={muted ? "#20242A" : "rgba(242, 237, 228, 0.6)"}
         strokeWidth={1}
       />
       <path
         d="M18 14.5 L31 22 L18 29.5 Z"
-        fill={muted ? "#857F74" : "#FAF9F7"}
+        fill={muted ? "#7C7A76" : "#FAF8F5"}
       />
     </svg>
   )
@@ -473,18 +473,18 @@ function BriefingLink({ loomUrl }: { loomUrl: string }) {
       href={loomUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="group font-mono inline-flex items-center gap-2 uppercase focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+      className="group font-mono inline-flex items-center gap-2 uppercase focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
       style={{
         fontSize: "0.6875rem",
         letterSpacing: "0.14em",
-        color: "#FAF9F7",
+        color: "#FAF8F5",
         fontVariantNumeric: "tabular-nums",
         marginTop: 4,
         width: "fit-content",
       }}
     >
       <span
-        className="group-hover:border-b group-hover:border-[#C9922A]"
+        className="group-hover:border-b group-hover:border-[#C78B28]"
         style={{
           borderBottom: "1px solid transparent",
           paddingBottom: 1,
@@ -549,7 +549,7 @@ function EmptyEarly() {
         fontWeight: 300,
         fontSize: "1rem",
         lineHeight: 1.7,
-        color: "#A8A6A3",
+        color: "#C3C0BB",
         margin: 0,
         maxWidth: "52ch",
       }}

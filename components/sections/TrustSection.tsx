@@ -32,12 +32,12 @@ export function TrustSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <SectionWrapper id="why-igc" className="bg-[#0A0B0E]">
+    <SectionWrapper id="why-igc" className="bg-[#0A0C0F]">
       <div ref={ref}>
         {/* Section label */}
         <span className="gold-line mb-6 block" aria-hidden="true" />
         <div className="flex items-center gap-2 mb-4">
-          <svg className="w-4 h-4 text-[#E7E5E2] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg className="w-4 h-4 text-[#E7E4E0] shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M8 1l5.5 2.5v4c0 3.5-2.5 6-5.5 7-3-1-5.5-3.5-5.5-7v-4L8 1z"/>
             <path d="M5.5 8l2 2 3-3"/>
           </svg>
@@ -49,7 +49,7 @@ export function TrustSection() {
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="font-display text-display-md text-[#FAF9F7] mb-16 max-w-[20ch]"
+          className="font-display text-display-md text-[#FAF8F5] mb-16 max-w-[20ch]"
         >
           Built for recruitment.<br className="hidden md:inline" />Accountable for results.
         </motion.h2>
@@ -65,26 +65,26 @@ export function TrustSection() {
             <motion.div
               key={point.title}
               variants={fadeUp}
-              className="relative border-t border-[#262A30] pt-8 overflow-hidden"
+              className="relative border-t border-[#20242A] pt-8 overflow-hidden"
             >
               {/* Large background ordinal — texture */}
               <span
-                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#FAF9F7]/[0.03] select-none pointer-events-none"
+                className="absolute -top-4 -right-2 font-display text-[8rem] leading-none text-[#FAF8F5]/[0.03] select-none pointer-events-none"
                 aria-hidden="true"
               >
                 {String(index + 1).padStart(2, '0')}
               </span>
 
               {/* Small ordinal label */}
-              <p className="font-mono text-[12px] tracking-[0.15em] uppercase text-[#E7E5E2] font-medium mb-4">
+              <p className="font-mono text-[12px] tracking-[0.15em] uppercase text-[#E7E4E0] font-medium mb-4">
                 {String(index + 1).padStart(2, '0')}
               </p>
 
-              <h3 className="font-sans font-medium text-[#FAF9F7] text-display-sm mb-4">
+              <h3 className="font-sans font-medium text-[#FAF8F5] text-display-sm mb-4">
                 {point.title}
               </h3>
 
-              <p className="font-sans font-normal text-body-md text-[#E7E5E2] mb-4 max-w-[32ch]">
+              <p className="font-sans font-normal text-body-md text-[#E7E4E0] mb-4 max-w-[32ch]">
                 {point.body}
               </p>
 
@@ -93,7 +93,7 @@ export function TrustSection() {
                   href={point.link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#E7E5E2] hover:text-[#FAF9F7] transition-colors duration-200"
+                  className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#E7E4E0] hover:text-[#FAF8F5] transition-colors duration-200"
                 >
                   {point.link.label}
                 </a>
@@ -101,9 +101,9 @@ export function TrustSection() {
             </motion.div>
           ))}
 
-          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#262A30]">
+          <motion.div variants={fadeUp} className="md:col-span-3 mt-16 pt-10 border-t border-[#20242A]">
             {/* Social proof anchor */}
-            <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#857F74] mb-8">
+            <p className="font-mono text-[11px] tracking-[0.12em] uppercase text-[#7C7A76] mb-8">
               Working with recruitment agencies across Johannesburg, Cape Town, and Durban
             </p>
             <div className="border-l-2 border-[#C78B28]/30 pl-6">

@@ -9,9 +9,9 @@ import type { GuaranteeData } from "@/types/client"
  * Row shape:
  *   ┌─ `20 Apr` · `Acme Logistics` · Sarah Chen, CFO              → HubSpot ─┐
  *   │   "30-seat site in Leeds, current MSP contract expires..."            │
- *   └──────────────────────────── 1px #262A30 ────────────────────────────┘
+ *   └──────────────────────────── 1px #20242A ────────────────────────────┘
  *
- * Rules (brief §5 · Row 5):
+ * Rules (brief 5 · Row 5):
  *  - Date column Geist Mono tabular-nums, left-anchored.
  *  - Company · Decision-maker, Role in Geist, sharing the date's baseline.
  *  - HubSpot link right-aligned in Geist Mono, gold on hover.
@@ -20,7 +20,7 @@ import type { GuaranteeData } from "@/types/client"
  *  - `met` state: 5th row's date gets a subtle gold tint (one more receipt of the Gold Rule).
  *  - `pre-outreach`: editorial sentence. No empty rows.
  *
- * Section eyebrow: `§ 01 · Conversations counted` — mirrors GuaranteeHeader cadence.
+ * Section eyebrow: `01 · Conversations counted` — mirrors GuaranteeHeader cadence.
  */
 
 function formatHeldAt(iso: string): string {
@@ -44,13 +44,13 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
           marginBottom: 24,
         }}
       >
-        § 01 · Conversations counted
+        01 · Conversations counted
       </h3>
 
       {state === "pre-outreach" || conversations.length === 0 ? (
@@ -60,7 +60,7 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
             fontWeight: 300,
             fontSize: "1.125rem",
             lineHeight: 1.75,
-            color: "#857F74",
+            color: "#7C7A76",
             margin: 0,
             maxWidth: "56ch",
             textWrap: "pretty",
@@ -79,20 +79,20 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
             padding: 0,
             // Each row gets its own bottom hairline; we also render a top hairline
             // on the list so the first row has a consistent divider above it.
-            borderTop: "1px solid #262A30",
+            borderTop: "1px solid #20242A",
           }}
         >
           {conversations.map((c, idx) => {
             const isMetFifth =
               (state === "met" || state === "archive") && idx === total - 1
-            const dateColor = isMetFifth ? "#C9922A" : "#857F74"
+            const dateColor = isMetFifth ? "#C78B28" : "#7C7A76"
 
             return (
               <li
                 key={c.id}
                 className="flex flex-col"
                 style={{
-                  borderBottom: "1px solid #262A30",
+                  borderBottom: "1px solid #20242A",
                   paddingTop: 20,
                   paddingBottom: 20,
                   gap: 10,
@@ -118,13 +118,13 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
                       style={{
                         fontWeight: 400,
                         fontSize: "1rem",
-                        color: "#FAF9F7",
+                        color: "#FAF8F5",
                         lineHeight: 1.5,
                       }}
                     >
                       {c.company}
-                      <span style={{ color: "#93918E" }}> · </span>
-                      <span style={{ color: "#857F74" }}>
+                      <span style={{ color: "#9C9995" }}> · </span>
+                      <span style={{ color: "#7C7A76" }}>
                         {c.decision_maker}
                         {c.role ? `, ${c.role}` : ""}
                       </span>
@@ -136,11 +136,11 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
                       href={c.hubspot_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono uppercase no-underline transition-colors duration-150 hover:text-[#C9922A] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E] rounded-sm"
+                      className="font-mono uppercase no-underline transition-colors duration-150 hover:text-[#C78B28] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F] rounded-sm"
                       style={{
                         fontSize: "0.6875rem",
                         letterSpacing: "0.14em",
-                        color: "#857F74",
+                        color: "#7C7A76",
                         fontVariantNumeric: "tabular-nums",
                         textUnderlineOffset: "3px",
                         flexShrink: 0,
@@ -159,7 +159,7 @@ export function ConversationList({ guarantee }: { guarantee: GuaranteeData }) {
                       fontSize: "1.125rem",
                       lineHeight: 1.55,
                       letterSpacing: "-0.005em",
-                      color: "#FAF9F7",
+                      color: "#FAF8F5",
                       margin: 0,
                       maxWidth: "65ch",
                       fontOpticalSizing: "auto",

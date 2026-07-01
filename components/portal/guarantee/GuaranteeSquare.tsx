@@ -14,11 +14,11 @@ export type SquareFill =
  * Individual square. 52×52 desktop, 44×44 sub-360px.
  *
  * Visual:
- *   - hollow: 1px `#262A30` border, no fill. `role="presentation"`, not focusable.
- *   - filled-ink: solid `#FAF9F7` fill, 1px same-color border. Button. Tab-index managed by parent.
- *   - filled-gold: solid `#C9922A` fill. Animated via Framer Motion when shouldAnimate=true.
+ *   - hollow: 1px `#20242A` border, no fill. `role="presentation"`, not focusable.
+ *   - filled-ink: solid `#FAF8F5` fill, 1px same-color border. Button. Tab-index managed by parent.
+ *   - filled-gold: solid `#C78B28` fill. Animated via Framer Motion when shouldAnimate=true.
  *
- * Focus ring: 1px `#C9922A`, 2px offset, focus-visible only (keyboard, not mouse).
+ * Focus ring: 1px `#C78B28`, 2px offset, focus-visible only (keyboard, not mouse).
  * Hover: cursor-only effect — the custom PortalCursor grows 28→40. No scale, no tooltip.
  *
  * Accessibility:
@@ -62,14 +62,14 @@ export const GuaranteeSquare = forwardRef<HTMLButtonElement | HTMLDivElement, Pr
     const isHollow = fill === "hollow"
 
     // Target color — ink by default; gold only for the 5th-on-met square.
-    // Hollow gets #101215 (bg-elev) — dim surface-in-waiting, not transparent void.
+    // Hollow gets #0F1216 (bg-elev) — dim surface-in-waiting, not transparent void.
     // This fixes the "reads like content didn't load" comprehension failure.
-    const targetColor = isGold ? "#C9922A" : isFilled ? "#FAF9F7" : "#101215"
+    const targetColor = isGold ? "#C78B28" : isFilled ? "#FAF8F5" : "#0F1216"
     const borderColor = isGold
-      ? "#C9922A"
+      ? "#C78B28"
       : isFilled
-        ? "#FAF9F7"
-        : "#262A30"
+        ? "#FAF8F5"
+        : "#20242A"
 
     if (isHollow) {
       return (
@@ -124,9 +124,9 @@ export const GuaranteeSquare = forwardRef<HTMLButtonElement | HTMLDivElement, Pr
         data-igc-fill={fill}
         initial={{
           backgroundColor:
-            shouldAnimate && isGold && !reducedMotion ? "#FAF9F7" : targetColor,
+            shouldAnimate && isGold && !reducedMotion ? "#FAF8F5" : targetColor,
           borderColor:
-            shouldAnimate && isGold && !reducedMotion ? "#FAF9F7" : borderColor,
+            shouldAnimate && isGold && !reducedMotion ? "#FAF8F5" : borderColor,
         }}
         animate={animate}
         transition={transition}
@@ -139,7 +139,7 @@ export const GuaranteeSquare = forwardRef<HTMLButtonElement | HTMLDivElement, Pr
           cursor: "pointer",
           outline: "none",
         }}
-        className="focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+        className="focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
       />
     )
   },

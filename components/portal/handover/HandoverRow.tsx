@@ -7,18 +7,18 @@ import type { HandoverItem } from "@/types/client"
  * A single ledger row. Six of these, stacked, form the Handover Pack.
  *
  * Visual contract:
- *   - Leading ordinal (01 · 02 · …) — Geist Mono, text-tertiary `#93918E`.
+ *   - Leading ordinal (01 · 02 · …) — Geist Mono, text-tertiary `#9C9995`.
  *   - Item name — Fraunces 400 (NOT italic; italic reserved for K.C.'s voice).
  *   - Subtext line — Geist sans, text-secondary, smaller.
  *   - State label on the right — Geist Mono, uppercase, tabular-nums.
  *     Colour is the state's signal (see stateColor below).
  *
  * States & colours (Gold Rule — gold only for OWNED / transferred):
- *   not-started       → QUEUED   · #93918E (tertiary — quiet, waiting)
- *   in-progress       → IN PROG  · #857F74 (secondary — muted, working)
- *   ready-for-review  → READY    · #FAF9F7 (primary — asks attention)
- *   shipped           → SHIPPED  · #FAF9F7 (primary — completed)
- *   transferred       → OWNED    · #C9922A (gold — the ownership-transfer moment)
+ *   not-started       → QUEUED   · #9C9995 (tertiary — quiet, waiting)
+ *   in-progress       → IN PROG  · #7C7A76 (secondary — muted, working)
+ *   ready-for-review  → READY    · #FAF8F5 (primary — asks attention)
+ *   shipped           → SHIPPED  · #FAF8F5 (primary — completed)
+ *   transferred       → OWNED    · #C78B28 (gold — the ownership-transfer moment)
  *
  * Actionability:
  *   not-started rows are non-focusable, non-clickable, aria-disabled. No detail yet.
@@ -52,15 +52,15 @@ const STATE_LABEL: Record<HandoverItem["state"], string> = {
 function stateColor(state: HandoverItem["state"]): string {
   switch (state) {
     case "transferred":
-      return "#C9922A"
+      return "#C78B28"
     case "shipped":
     case "ready-for-review":
-      return "#FAF9F7"
+      return "#FAF8F5"
     case "in-progress":
-      return "#857F74"
+      return "#7C7A76"
     case "not-started":
     default:
-      return "#93918E"
+      return "#9C9995"
   }
 }
 
@@ -113,7 +113,7 @@ export const HandoverRow = forwardRef<HTMLButtonElement | HTMLDivElement, Handov
         aria-label={`${item.name}, ${label.toLowerCase()}. Open detail.`}
         data-igc-handover-row={item.key}
         data-igc-state={item.state}
-        className="group block w-full text-left transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+        className="group block w-full text-left transition-colors duration-150 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
         style={{
           padding: "20px 0",
           background: "transparent",
@@ -151,7 +151,7 @@ function RowInner({
   color: string
   dim?: boolean
 }) {
-  const nameColor = dim ? "#A8A6A3" : "#FAF9F7"
+  const nameColor = dim ? "#C3C0BB" : "#FAF8F5"
   return (
     <div className="flex flex-col gap-1.5">
       {/* Line 1 · ordinal · name · spec  |  state label */}
@@ -162,7 +162,7 @@ function RowInner({
           style={{
             fontSize: "0.75rem",
             letterSpacing: "0.12em",
-            color: "#93918E",
+            color: "#9C9995",
             fontVariantNumeric: "tabular-nums",
             flex: "0 0 auto",
             minWidth: "2ch",
@@ -172,7 +172,7 @@ function RowInner({
         </span>
 
         <span
-          className="font-sans transition-colors duration-150 group-hover:text-[#FAF9F7]"
+          className="font-sans transition-colors duration-150 group-hover:text-[#FAF8F5]"
           style={{
             fontWeight: 400,
             fontSize: "1.0625rem",
@@ -191,7 +191,7 @@ function RowInner({
             <span
               className="font-sans"
               style={{
-                color: "#857F74",
+                color: "#7C7A76",
                 fontWeight: 400,
                 fontSize: "0.8125rem",
                 letterSpacing: 0,
@@ -227,7 +227,7 @@ function RowInner({
             marginLeft: "calc(2ch + 1rem)", // align under name, offset past ordinal
             fontSize: "0.8125rem",
             lineHeight: 1.55,
-            color: "#857F74",
+            color: "#7C7A76",
             maxWidth: "64ch",
           }}
         >

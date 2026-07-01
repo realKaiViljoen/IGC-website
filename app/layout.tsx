@@ -52,10 +52,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${geistMono.variable}`}
     >
-      <body className="bg-[#0A0B0E] text-[#FAF9F7] antialiased">
+      <body className="bg-[#0A0C0F] text-[#FAF8F5] antialiased">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-[#FAF9F7] focus:text-[#0A0B0E] focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:bg-[#FAF8F5] focus:text-[#0A0C0F] focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold"
         >
           Skip to main content
         </a>

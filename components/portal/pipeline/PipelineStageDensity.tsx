@@ -15,7 +15,7 @@ import type { Prospect, StageConfig } from "@/types/client"
  *     tabular, not a canvas.
  *
  * Stages at or beyond `qualified_stage_index` render their count in gold.
- * Empty stages render at the muted `#857F74` tone.
+ * Empty stages render at the muted `#7C7A76` tone.
  *
  * No card wrapper, no borders wider than 1px, no side-stripe accents.
  */
@@ -64,19 +64,19 @@ export function PipelineStageDensity({
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 01 · Stage density
+          01 · Stage density
         </p>
         <p
           className="font-mono"
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -89,7 +89,7 @@ export function PipelineStageDensity({
       {/* Top hairline */}
       <div
         aria-hidden="true"
-        style={{ height: 1, backgroundColor: "#2D2A27", width: "100%" }}
+        style={{ height: 1, backgroundColor: "#20242A", width: "100%" }}
       />
 
       <div role="list" aria-label="Pipeline stage density">
@@ -100,21 +100,21 @@ export function PipelineStageDensity({
           const ordinal = String(i + 1).padStart(2, "0")
           const isLast = i === stages.length - 1
 
-          const nameColor = isEmpty ? "#857F74" : "#FAF9F7"
+          const nameColor = isEmpty ? "#7C7A76" : "#FAF8F5"
           const countColor = isEmpty
-            ? "#857F74"
+            ? "#7C7A76"
             : isQualified
               ? "#C78B28"
-              : "#FAF9F7"
+              : "#FAF8F5"
 
           // Bar: scale count to BAR_SLOTS cells relative to max.
           const filled =
             maxCount > 0 ? Math.round((count / maxCount) * BAR_SLOTS) : 0
           const barColor = isEmpty
-            ? "#2D2A27"
+            ? "#20242A"
             : isQualified
               ? "#C78B28"
-              : "#A8A6A3"
+              : "#C3C0BB"
 
           return (
             <div key={stage} role="listitem">
@@ -138,7 +138,7 @@ export function PipelineStageDensity({
                   style={{
                     fontSize: "0.6875rem",
                     letterSpacing: "0.12em",
-                    color: isEmpty ? "#857F74" : "#93918E",
+                    color: isEmpty ? "#7C7A76" : "#9C9995",
                     fontVariantNumeric: "tabular-nums",
                   }}
                 >
@@ -179,7 +179,7 @@ export function PipelineStageDensity({
                       style={{
                         height: 8,
                         backgroundColor:
-                          j < filled ? barColor : "#221E1A",
+                          j < filled ? barColor : "#20242A",
                         opacity: j < filled ? 1 : 1,
                       }}
                     />
@@ -206,7 +206,7 @@ export function PipelineStageDensity({
                   aria-hidden="true"
                   style={{
                     height: 1,
-                    backgroundColor: "#221E1A",
+                    backgroundColor: "#20242A",
                     width: "100%",
                   }}
                 />

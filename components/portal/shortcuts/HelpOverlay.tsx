@@ -81,7 +81,7 @@ export function HelpOverlay() {
         className="igc-help-panel"
       >
         <div className="igc-help-header">
-          <span className="igc-help-title">§ KEYBOARD · THE SYSTEM</span>
+          <span className="igc-help-title">KEYBOARD · THE SYSTEM</span>
         </div>
 
         <div className="igc-help-grid">
@@ -135,8 +135,8 @@ function HelpScopedStyles() {
           top: 14vh;
           transform: translateX(-50%);
           width: min(560px, calc(100vw - 48px));
-          background: #101215;
-          border: 1px solid #262A30;
+          background: #0F1216;
+          border: 1px solid #20242A;
           border-radius: 0;
           outline: none;
           z-index: 9999;
@@ -145,14 +145,14 @@ function HelpScopedStyles() {
         }
         .igc-help-header {
           padding: 16px 20px 12px 20px;
-          border-bottom: 1px solid #262A30;
+          border-bottom: 1px solid #20242A;
         }
         .igc-help-title {
           font-family: var(--font-geist-mono), ui-monospace, monospace;
           font-size: 11px;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: #93918E;
+          color: #9C9995;
         }
         .igc-help-grid {
           display: grid;
@@ -165,7 +165,7 @@ function HelpScopedStyles() {
           font-size: 10px;
           letter-spacing: 0.16em;
           text-transform: uppercase;
-          color: #93918E;
+          color: #9C9995;
           margin-bottom: 10px;
         }
         .igc-help-dl {
@@ -182,22 +182,22 @@ function HelpScopedStyles() {
           font-family: var(--font-geist-mono), ui-monospace, monospace;
           font-size: 12px;
           font-variant-numeric: tabular-nums;
-          color: #FAF9F7;
+          color: #FAF8F5;
         }
         .igc-help-action {
           margin: 0;
           font-family: 'Satoshi', system-ui, sans-serif;
           font-size: 12px;
-          color: #857F74;
+          color: #7C7A76;
         }
         .igc-help-footer {
           padding: 10px 20px 14px 20px;
-          border-top: 1px solid #262A30;
+          border-top: 1px solid #20242A;
           display: flex;
           justify-content: flex-end;
           font-family: var(--font-geist-mono), ui-monospace, monospace;
           font-size: 10px;
-          color: #93918E;
+          color: #9C9995;
           letter-spacing: 0.08em;
         }
 

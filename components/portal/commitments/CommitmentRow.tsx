@@ -7,7 +7,7 @@ import type { Commitment } from "@/types/client"
  *
  * Visual contract (ledger register, same DNA as HandoverRow):
  *   - Author column (52px) — Geist Mono 11px uppercase, 0.14em tracking,
- *     text-tertiary #93918E. "K.C." or "YOU" (client-authored commitments).
+ *     text-tertiary #9C9995. "K.C." or "YOU" (client-authored commitments).
  *   - Promise column (flex) — Fraunces 400 (NOT italic; italic is reserved
  *     for K.C.'s voice moments). 16px. Ink-primary for active commitments,
  *     text-secondary for met / upcoming quieter groups.
@@ -15,7 +15,7 @@ import type { Commitment } from "@/types/client"
  *     tabular-nums. Format:
  *       · `Due {Wk DD Mon}`  — active, ink-secondary
  *       · `Due {Wk DD Mon}`  — overdue, warm amber #C78B28
- *       · `✓ Met {Wk DD Mon}` — met, gold checkmark #C9922A + text-tertiary
+ *       · `✓ Met {Wk DD Mon}` — met, gold checkmark #C78B28 + text-tertiary
  *
  * Subtext (line 2): optional. Renders when the promise contains a colon or
  * "within …" qualifier — the part after the primary phrase becomes subtext.
@@ -84,19 +84,19 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
   // Promise colour per group.
   const promiseColor =
     group === "overdue" || group === "due-this-week"
-      ? "#FAF9F7"
+      ? "#FAF8F5"
       : group === "upcoming"
-        ? "#A8A6A3"
-        : "#A8A6A3" // met — text-secondary with lower opacity via wrapper
+        ? "#C3C0BB"
+        : "#C3C0BB" // met — text-secondary with lower opacity via wrapper
 
   // Right column — date + label.
   const rightLine = (() => {
     if (commitment.met && commitment.met_at) {
       return {
         marker: "✓",
-        markerColor: "#C9922A",
+        markerColor: "#C78B28",
         text: `Met ${formatLedgerDate(commitment.met_at)}`,
-        textColor: "#93918E",
+        textColor: "#9C9995",
       }
     }
     if (group === "overdue") {
@@ -111,7 +111,7 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
       marker: null,
       markerColor: null,
       text: `Due ${formatLedgerDate(commitment.due)}`,
-      textColor: group === "upcoming" ? "#857F74" : "#93918E",
+      textColor: group === "upcoming" ? "#7C7A76" : "#9C9995",
     }
   })()
 
@@ -141,7 +141,7 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.14em",
-            color: "#93918E",
+            color: "#9C9995",
             fontVariantNumeric: "tabular-nums",
             whiteSpace: "nowrap",
           }}
@@ -173,7 +173,7 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
               style={{
                 fontSize: "0.875rem",
                 lineHeight: 1.55,
-                color: "#857F74",
+                color: "#7C7A76",
                 maxWidth: "52ch",
               }}
             >
@@ -218,7 +218,7 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
             style={{
               fontSize: "0.625rem",
               letterSpacing: "0.14em",
-              color: "#93918E",
+              color: "#9C9995",
               fontVariantNumeric: "tabular-nums",
             }}
           >
@@ -270,7 +270,7 @@ export function CommitmentRow({ commitment, group }: CommitmentRowProps) {
             style={{
               fontSize: "0.8125rem",
               lineHeight: 1.5,
-              color: "#857F74",
+              color: "#7C7A76",
             }}
           >
             {subtext}

@@ -25,7 +25,7 @@ const fetcher = async (url: string): Promise<Payload> => {
 }
 
 /**
- * Handover Pack Status · § 02 of the Overview.
+ * Handover Pack Status · 02 of the Overview.
  *
  * Makes the no-lock-in positioning tangible pixel-by-pixel: the six handover
  * items are visible from Day 1, each with its live build state. By Day 30 all
@@ -198,19 +198,19 @@ export function HandoverPack({ initialData }: HandoverPackProps) {
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             margin: 0,
           }}
         >
-          § 02 · Handover Pack
+          02 · Handover Pack
         </p>
         <p
           className="font-mono"
           style={{
             fontSize: "0.6875rem",
             letterSpacing: "0.16em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -225,7 +225,7 @@ export function HandoverPack({ initialData }: HandoverPackProps) {
         aria-hidden="true"
         style={{
           height: 1,
-          backgroundColor: "#2D2A27",
+          backgroundColor: "#20242A",
           width: "100%",
         }}
       />
@@ -259,7 +259,7 @@ export function HandoverPack({ initialData }: HandoverPackProps) {
                   aria-hidden="true"
                   style={{
                     height: 1,
-                    backgroundColor: "#2D2A27",
+                    backgroundColor: "#20242A",
                     width: "100%",
                   }}
                 />
@@ -279,7 +279,7 @@ export function HandoverPack({ initialData }: HandoverPackProps) {
             fontSize: "0.6875rem",
             lineHeight: 1.3,
             letterSpacing: "0.14em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
             margin: 0,
@@ -315,7 +315,7 @@ export function HandoverPack({ initialData }: HandoverPackProps) {
             shown. k.c. pages himself at{" "}
             <a
               href="mailto:hello@igc-growth.com"
-              className="underline transition-colors duration-150 hover:text-[#FAF9F7]"
+              className="underline transition-colors duration-150 hover:text-[#FAF8F5]"
               style={{ color: "#C78B28", textUnderlineOffset: "3px" }}
             >
               hello@igc-growth.com
@@ -351,7 +351,7 @@ function LastSyncedLine() {
         fontSize: "0.6875rem",
         lineHeight: 1.3,
         letterSpacing: "0.14em",
-        color: "#857F74",
+        color: "#7C7A76",
         fontVariantNumeric: "tabular-nums",
         textTransform: "lowercase",
         margin: 0,

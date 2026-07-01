@@ -113,8 +113,8 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             className="fixed top-0 right-0 bottom-0 z-50 flex w-full flex-col overflow-y-auto sm:w-[520px]"
             style={{
-              backgroundColor: "#0D0D0C",
-              borderLeft: "1px solid #242220",
+              backgroundColor: "#0F1216",
+              borderLeft: "1px solid #20242A",
             }}
           >
             <button
@@ -122,13 +122,13 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
               type="button"
               onClick={handleClose}
               aria-label="Close handover item detail"
-              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C9922A] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D0D0C]"
+              className="absolute top-4 right-4 z-10 flex items-center justify-center rounded-sm transition-colors duration-150 hover:ring-1 hover:ring-[#C78B28] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1216]"
               style={{
                 width: 42,
                 height: 42,
-                color: "#857F74",
+                color: "#7C7A76",
                 backgroundColor: "transparent",
-                border: "1px solid #242220",
+                border: "1px solid #20242A",
               }}
             >
               <span aria-hidden="true" style={{ fontSize: "1rem", lineHeight: 1 }}>
@@ -145,13 +145,13 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                   letterSpacing: "0.18em",
                   color:
                     item.state === "transferred" || item.state === "shipped"
-                      ? "#C9922A"
-                      : "#857F74",
+                      ? "#C78B28"
+                      : "#7C7A76",
                   fontVariantNumeric: "tabular-nums",
                   margin: 0,
                 }}
               >
-                § Asset · {stateEyebrow(item.state)}
+                Asset · {stateEyebrow(item.state)}
               </p>
 
               {/* Item name — Fraunces display */}
@@ -163,7 +163,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                   fontSize: "1.75rem",
                   lineHeight: 1.2,
                   letterSpacing: "-0.015em",
-                  color: "#FAF9F7",
+                  color: "#FAF8F5",
                   margin: 0,
                   fontOpticalSizing: "auto",
                   fontVariationSettings: '"opsz" 72, "SOFT" 30',
@@ -181,7 +181,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
               {/* Hairline */}
               <div
                 aria-hidden="true"
-                style={{ height: 1, backgroundColor: "#242220" }}
+                style={{ height: 1, backgroundColor: "#20242A" }}
               />
 
               {/* Dates */}
@@ -223,7 +223,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                     style={{
                       fontSize: "0.6875rem",
                       letterSpacing: "0.16em",
-                      color: "#857F74",
+                      color: "#7C7A76",
                       margin: 0,
                       marginBottom: 8,
                     }}
@@ -234,11 +234,11 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                     href={item.artifact_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C9922A] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0D0D0C]"
+                    className="inline-flex items-center font-mono transition-colors duration-150 hover:text-[#C78B28] hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1216]"
                     style={{
                       fontSize: "0.8125rem",
                       letterSpacing: "0.02em",
-                      color: "#FAF9F7",
+                      color: "#FAF8F5",
                       fontVariantNumeric: "tabular-nums",
                       textUnderlineOffset: "4px",
                       wordBreak: "break-all",
@@ -256,7 +256,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                   style={{
                     fontSize: "0.75rem",
                     letterSpacing: "0.04em",
-                    color: "#C9922A",
+                    color: "#C78B28",
                     margin: 0,
                     fontVariantNumeric: "tabular-nums",
                   }}
@@ -273,7 +273,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                   style={{
                     fontSize: "0.6875rem",
                     letterSpacing: "0.16em",
-                    color: "#857F74",
+                    color: "#7C7A76",
                     margin: 0,
                     marginBottom: 10,
                   }}
@@ -285,7 +285,7 @@ export function HandoverItemDrawer({ item, onClose, returnFocusRef }: Props) {
                   style={{
                     fontSize: "0.9375rem",
                     lineHeight: 1.65,
-                    color: "#857F74",
+                    color: "#7C7A76",
                     margin: 0,
                     maxWidth: "48ch",
                   }}
@@ -327,7 +327,7 @@ function DetailRow({
   value: string
   tone: "quiet" | "gold"
 }) {
-  const valueColor = tone === "gold" ? "#C9922A" : "#FAF9F7"
+  const valueColor = tone === "gold" ? "#C78B28" : "#FAF8F5"
   return (
     <div className="flex items-baseline justify-between gap-6">
       <dt
@@ -335,7 +335,7 @@ function DetailRow({
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.16em",
-          color: "#857F74",
+          color: "#7C7A76",
           fontVariantNumeric: "tabular-nums",
           margin: 0,
         }}

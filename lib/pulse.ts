@@ -9,7 +9,7 @@ const STALE_THRESHOLD_MS = 4 * 60 * 60 * 1000 // 4 hours
  *
  * Rendered by `components/portal/pulse/SystemPulse.tsx` as one mono line:
  *
- *   § SYSTEM PULSE    Today · 48 sent · 12 connected · 4 replies · 1 booked · last batch 11:42 UTC
+ *   SYSTEM PULSE    Today · 48 sent · 12 connected · 4 replies · 1 booked · last batch 11:42 UTC
  *
  * Phase 2a derives this from `client.activity[]` (fixture data). Phase 2b
  * replaces derivation with live HubSpot / LGM / Gmail ingestion — the component

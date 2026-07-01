@@ -36,7 +36,7 @@ const fetcher = async (url: string): Promise<Payload> => {
  *     append the named-escalation error overlay line.
  *   - Orchestrate the conversation drawer (right-side peek on square click).
  *
- * Layout is non-card by design (brief §5). Max-width 680px compact, 1024px expanded.
+ * Layout is non-card by design (brief 5). Max-width 680px compact, 1024px expanded.
  * Vertical rhythm on the 4pt grid: 24 / 32 / 24 (row 1→2, 2→3, 3→4).
  */
 export function GuaranteeTracker({ variant, initialData }: GuaranteeTrackerProps) {
@@ -160,7 +160,7 @@ export function GuaranteeTracker({ variant, initialData }: GuaranteeTrackerProps
             fontSize: "0.6875rem",
             lineHeight: 1.3,
             letterSpacing: "0.14em",
-            color: "#857F74",
+            color: "#7C7A76",
             fontVariantNumeric: "tabular-nums",
             textTransform: "lowercase",
           }}
@@ -193,7 +193,7 @@ export function GuaranteeTracker({ variant, initialData }: GuaranteeTrackerProps
             hubspot sync failed at {new Date().toISOString().substring(11, 16)} utc · retrying every 30s · k.c. pages himself at{" "}
             <a
               href="mailto:hello@igc-growth.com"
-              className="underline transition-colors duration-150 hover:text-[#FAF9F7]"
+              className="underline transition-colors duration-150 hover:text-[#FAF8F5]"
               style={{ color: "#C78B28", textUnderlineOffset: "3px" }}
             >
               hello@igc-growth.com
@@ -207,7 +207,7 @@ export function GuaranteeTracker({ variant, initialData }: GuaranteeTrackerProps
                 fontSize: "0.6875rem",
                 lineHeight: 1.3,
                 letterSpacing: "0.14em",
-                color: "#857F74",
+                color: "#7C7A76",
                 fontVariantNumeric: "tabular-nums",
                 textTransform: "lowercase",
                 margin: 0,

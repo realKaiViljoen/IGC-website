@@ -30,7 +30,7 @@ export function Logo({ size = 'md', href = '/' }: LogoProps) {
         aria-hidden="true"
       />
       <span
-        className={`${text} font-normal leading-none tracking-[0.01em] transition-opacity duration-300 group-hover:opacity-80 inline text-[#FAF9F7]`}
+        className={`${text} font-normal leading-none tracking-[0.01em] transition-opacity duration-300 group-hover:opacity-80 inline text-[#FAF8F5]`}
         style={{ fontFamily: 'Satoshi, -apple-system, sans-serif' }}
       >
         Integrated Growth Consultants

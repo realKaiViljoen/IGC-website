@@ -8,7 +8,7 @@
  *   - "Earlier"    — before the current week
  *
  * Register: Bloomberg terminal section break. A 1px hairline in border-mute
- * (#262A30) runs edge-to-edge; the label sits inline on the left, spaced off
+ * (#20242A) runs edge-to-edge; the label sits inline on the left, spaced off
  * the rule with a small gutter. Geist Mono 11px, uppercase, 0.14em tracking,
  * text-tertiary — same mono eyebrow idiom used in HandoverPack headers.
  *
@@ -26,7 +26,7 @@ export function DateDivider({ label }: { label: string }) {
         style={{
           fontSize: "0.6875rem",
           letterSpacing: "0.14em",
-          color: "#93918E",
+          color: "#9C9995",
           fontVariantNumeric: "tabular-nums",
           whiteSpace: "nowrap",
           flexShrink: 0,
@@ -39,7 +39,7 @@ export function DateDivider({ label }: { label: string }) {
         style={{
           flex: 1,
           height: 1,
-          backgroundColor: "#262A30",
+          backgroundColor: "#20242A",
         }}
       />
     </div>

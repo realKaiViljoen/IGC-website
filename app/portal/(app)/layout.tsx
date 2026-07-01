@@ -26,7 +26,7 @@ export default async function PortalAppLayout({
     <PaletteProvider client={client}>
       <div className="flex min-h-screen">
         <Sidebar engagement={client.engagement} uid={client.uid} />
-        <main className="flex-1 overflow-auto portal-scanlines portal-grid" style={{ background: 'radial-gradient(ellipse 80% 50% at 70% -20%, rgba(207,155,46,0.04) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 0% 60%, rgba(207,155,46,0.025) 0%, transparent 60%), #0A0B0E' }}>
+        <main className="flex-1 overflow-auto portal-scanlines portal-grid" style={{ background: 'radial-gradient(ellipse 80% 50% at 70% -20%, rgba(207,155,46,0.04) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 0% 60%, rgba(207,155,46,0.025) 0%, transparent 60%), #0A0C0F' }}>
           {children}
         </main>
         <div className="grain" aria-hidden="true" />

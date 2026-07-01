@@ -44,7 +44,7 @@ export function ArchiveExportButton() {
       type="button"
       onClick={onClick}
       aria-live="polite"
-      className="font-sans inline-flex items-center justify-center h-9 px-4 border bg-transparent text-[#FAF9F7] border-[#262A30] transition-colors duration-150 hover:border-[#857F74] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C9922A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0B0E]"
+      className="font-sans inline-flex items-center justify-center h-9 px-4 border bg-transparent text-[#FAF8F5] border-[#20242A] transition-colors duration-150 hover:border-[#7C7A76] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#C78B28] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0F]"
       style={{
         fontSize: "0.875rem",
         letterSpacing: "0",
