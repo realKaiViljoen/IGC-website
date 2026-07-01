@@ -1,4 +1,14 @@
-# IGC — Design System v2 (Canonical)
+> **SUPERSEDED (2026-07-02).** The portal has migrated OFF this warm
+> Fraunces/Geist/`#080808`/`#C9922A` system onto the **igc-sa dark system**
+> (Satoshi single-family, cool-black oklch ground, one brass ember `#C78B28`,
+> the peak mark). The authoritative spec is now
+> [`docs/PORTAL_REDESIGN_SPEC.md`](docs/PORTAL_REDESIGN_SPEC.md), and the live
+> tokens are in `app/globals.css` `@theme`. This file is kept for historical
+> reference only. Do not build against it. The Gold Rule, the anti-references,
+> the older-eyes law, and the receipts-over-claims doctrine below all still
+> hold, restated for the ember accent in the new spec.
+
+# IGC — Design System v2 (Canonical, SUPERSEDED)
 
 ## The Positioning
 
