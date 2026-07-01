@@ -229,6 +229,12 @@ activity, streaks/badges/confetti, "Welcome back!".
 
 ## 4. Build order
 
+> **Status (2026-07-02):** Track A (visual rebrand) and Track B (IA
+> recomposition) are DONE on branch `portal-redesign-overnight` and verified
+> across all five screens — see `docs/SESSION_LOG_2026-07-02.md`. Track C (the
+> evidence-layer data model: real timestamps, receipt links, "since last visit")
+> is queued.
+
 **Track A — Visual rebrand (makes it read as our system).** Satoshi + oklch
 tokens in `globals.css`; delete Fraunces/Geist/mono; kill `§`, the ticking clock,
 the Pulse frame; unify the two golds → ember; build the shared primitives
