@@ -4,6 +4,7 @@ import { Sidebar } from "@/components/portal/Sidebar"
 import { getClientData } from "@/lib/data"
 import { PaletteProvider, CommandPalette } from "@/components/portal/palette"
 import { KeyboardShortcuts, HelpOverlay } from "@/components/portal/shortcuts"
+import { PortalAtmosphere } from "@/components/portal/PortalAtmosphere"
 
 export default async function PortalAppLayout({
   children,
@@ -24,12 +25,13 @@ export default async function PortalAppLayout({
     // The CommandPalette, KeyboardShortcuts listener, and HelpOverlay sit
     // here so they're present on every portal route, not scoped to a page.
     <PaletteProvider client={client}>
-      <div className="flex min-h-screen">
+      {/* The living brand atmosphere, behind everything */}
+      <PortalAtmosphere />
+      <div className="relative z-10 flex min-h-screen">
         <Sidebar engagement={client.engagement} uid={client.uid} />
-        <main className="flex-1 overflow-auto portal-scanlines portal-grid" style={{ background: 'radial-gradient(ellipse 80% 50% at 70% -20%, rgba(207,155,46,0.04) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 0% 60%, rgba(207,155,46,0.025) 0%, transparent 60%), #0A0C0F' }}>
+        <main className="flex-1 overflow-auto">
           {children}
         </main>
-        <div className="grain" aria-hidden="true" />
       </div>
       <CommandPalette />
       <HelpOverlay />
