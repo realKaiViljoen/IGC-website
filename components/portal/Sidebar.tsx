@@ -39,7 +39,10 @@ export function Sidebar({ engagement, uid }: SidebarProps) {
   const day = Math.max(1, Math.floor((Date.now() - startMs) / 86400000) + 1)
 
   return (
-    <aside className="w-56 flex-shrink-0 border-r border-[#31363E] flex flex-col bg-[#060709]">
+    <aside
+      className="w-56 flex-shrink-0 border-r border-[#31363E] flex flex-col"
+      style={{ background: "rgba(7,9,12,0.72)" }}
+    >
       {/* Lockup — the one branding placement in the whole portal */}
       <div className="px-5 py-6 border-b border-[#20242A]">
         <div className="flex items-center gap-2.5">

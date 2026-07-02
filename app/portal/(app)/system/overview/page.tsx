@@ -36,12 +36,12 @@ export default async function OverviewPage() {
   const { engagement } = client
 
   return (
-    <div className="px-8 pt-12 pb-24">
-      <header className="mb-12 section-in">
+    <div className="mx-auto w-full max-w-[1080px] px-10 pt-16 pb-28 md:px-14">
+      <header className="mb-10 section-in">
         <div className="flex items-baseline justify-between gap-8">
           <div>
             <p className="eyebrow">Overview</p>
-            <h1 className="text-[clamp(1.75rem,3.5vw,2.5rem)] font-bold text-[#FAF8F5] mt-2.5 tracking-[-0.02em] leading-[1.1]">
+            <h1 className="mt-3 text-[clamp(2rem,4vw,3rem)] font-bold text-[#FAF8F5] tracking-[-0.025em] leading-[1.05]">
               {client.company}
             </h1>
           </div>
@@ -51,29 +51,35 @@ export default async function OverviewPage() {
         </div>
       </header>
 
-      {/* 01 · Guarantee — the hero number */}
-      <GuaranteeTracker variant="compact" initialData={{ client, guarantee }} />
+      {/* The focal block — status + the next move, lifted off the atmosphere as
+          one crisp, instantly-readable material panel (the balanced priority). */}
+      <section
+        className="section-in relative overflow-hidden"
+        style={{
+          border: "1px solid #20242A",
+          background:
+            "linear-gradient(180deg, rgba(15,18,22,0.72) 0%, rgba(10,12,15,0.60) 100%)",
+          padding: "34px 36px 30px",
+        }}
+      >
+        <GuaranteeTracker variant="compact" initialData={{ client, guarantee }} />
+        <NextCommitment client={client} />
+      </section>
 
-      {/* Next commitment — the dated forward move (dead-zone rule) */}
-      <NextCommitment client={client} />
-
-      {/* System Pulse — today's cadence, honest empty/pre-outreach states */}
-      <div style={{ marginTop: 44 }}>
+      {/* Everything below flows editorially on the atmosphere — no boxes. */}
+      <div className="mt-14">
         <SystemPulse initialData={{ client, guarantee }} />
       </div>
 
-      {/* Commitments — the fuller forward/settled ledger */}
-      <div style={{ marginTop: 44 }}>
+      <div className="mt-14">
         <CommitmentsLedger initialData={{ client, guarantee }} />
       </div>
 
-      {/* Weekly Briefing — the return anchor, K.C.'s voice */}
-      <div style={{ marginTop: 56 }}>
+      <div className="mt-16">
         <BriefingCard initialData={{ client, guarantee }} />
       </div>
 
-      {/* Activity — receipts spine, actor-distinct typography */}
-      <div style={{ marginTop: 56 }}>
+      <div className="mt-16">
         <ActivityLog initialData={{ client, guarantee }} />
       </div>
     </div>
