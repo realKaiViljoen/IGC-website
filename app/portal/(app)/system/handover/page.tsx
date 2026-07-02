@@ -65,7 +65,7 @@ export default async function HandoverPage() {
   ).length
 
   return (
-    <div className="px-8 pt-12 pb-24 max-w-[960px]">
+    <div className="mx-auto w-full max-w-[1000px] px-10 pt-16 pb-28 md:px-14">
       <header className="mb-10">
         <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-[#7C7A76]">
           Handover

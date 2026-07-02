@@ -38,7 +38,7 @@ export default async function PipelinePage() {
   ).length
 
   return (
-    <div className="px-8 pt-12 pb-24 max-w-[1200px]">
+    <div className="mx-auto w-full max-w-[1200px] px-10 pt-16 pb-28 md:px-14">
       <header className="mb-12">
         <div className="flex items-baseline justify-between gap-8 flex-wrap">
           <div>

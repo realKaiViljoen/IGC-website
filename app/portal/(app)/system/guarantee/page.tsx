@@ -22,7 +22,7 @@ export default async function GuaranteePage() {
   const { client, guarantee } = data
 
   return (
-    <div className="px-8 pt-10 pb-16">
+    <div className="mx-auto w-full max-w-[1080px] px-10 pt-16 pb-28 md:px-14">
       <nav
         aria-label="Breadcrumb"
         className="font-mono uppercase"
